@@ -1,18 +1,4 @@
-  .chat {
-    width: 300px;
-    border: solid 1px #EEE;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-  }
-  
-  .messages {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .message {
+  .bubble {
     border-radius: 15px;
     padding: 8px 15px;
     margin-top: 0px;
@@ -20,17 +6,17 @@
     display: inline-block;
   }
   
-  .yours {
+  .your {
     align-items: flex-start;
   }
   
-  .yours .message {
+  .your .bubble {
     margin-right: 25%;
     background-color: #eee;
     position: relative;
   }
   
-  .yours .message.last:before {
+  .your .bubble.last:before {
     content: "";
     position: absolute;
     z-index: 0;
@@ -41,7 +27,7 @@
     background: #eee;
     border-bottom-right-radius: 15px;
   }
-  .yours .message.last:after {
+  .your .bubble.last:after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -53,11 +39,11 @@
     border-bottom-right-radius: 10px;
   }
   
-  .mine {
+  .me {
     align-items: flex-end;
   }
   
-  .mine .message {
+  .me .bubble {
     color: white;
     margin-left: 25%;
     background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
@@ -65,7 +51,7 @@
     position: relative;
   }
   
-  .mine .message.last:before {
+  .me .bubble.last:before {
     content: "";
     position: absolute;
     z-index: 0;
@@ -78,7 +64,7 @@
     border-bottom-left-radius: 15px;
   }
   
-  .mine .message.last:after {
+  .me .bubble.last:after {
     content: "";
     position: absolute;
     z-index: 1;
