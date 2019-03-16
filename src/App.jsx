@@ -8,8 +8,12 @@ import BubbleContainer from './components/bubbleContainer/bubbleContainer';
 class App extends Component {
   render() {
     return (
-      <div className={classes.chat}>
+      <div className={classes.Conversation}>
         <BubbleContainer align="end" color="blue">
+          <Bubble />
+          <Bubble />
+        </BubbleContainer>
+        <BubbleContainer align="start" color="gray">
           <Bubble />
           <Bubble />
         </BubbleContainer>

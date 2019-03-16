@@ -2,17 +2,12 @@ body {
   font-family: helvetica;
   display: flex ;
   flex-direction: column;
-  margin: 1rem 1.5rem;
 }
 
-.chat {
+.Conversation {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-}
-.messages {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
+  padding: 1.5rem;
+  box-sizing: border-box;
 }
