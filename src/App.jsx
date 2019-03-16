@@ -3,22 +3,16 @@ import React, { Component } from 'react';
 import classes from './App.module.css';
 
 import Bubble from './components/bubble/bubble';
-import BubbleGroup from './components/bubbleGroup/bubbleGroup';
+import BubbleContainer from './components/bubbleContainer/bubbleContainer';
 
 class App extends Component {
   render() {
     return (
       <div className={classes.chat}>
-        {/* <div className={classes.messages}> */}
-        <BubbleGroup color="blue">
+        <BubbleContainer align="end" color="blue">
           <Bubble />
           <Bubble />
-        </BubbleGroup>
-        {/* </div> */}
-        {/* <div className={classes.messages}>
-          <Bubble color="gray" />
-          <Bubble color="gray" tail />
-        </div> */}
+        </BubbleContainer>
       </div>
     );
   }

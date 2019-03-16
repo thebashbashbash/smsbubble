@@ -3,3 +3,11 @@
     display: flex;
     flex-direction: column;
 }
+
+.BubbleContainer.StartAlign{
+    align-items: flex-start
+}
+
+.BubbleContainer.EndAlign{
+    align-items: flex-end
+}

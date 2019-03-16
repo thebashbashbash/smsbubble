@@ -4,8 +4,13 @@ import Bubble from '../bubble/bubble';
 
 import classes from './bubbleContainer.module.css';
 
-const bubbleContainer = ({ color, children }) => (
-  <div className={classes.bubbleGroup}>
+const bubbleContainer = ({ color, align, children }) => (
+  <div
+    className={[
+      classes.BubbleContainer,
+      align === 'start' ? classes.StartAlign : classes.EndAlign,
+    ].join(' ')}
+  >
     {React.Children.map(children, (child, index) => React.cloneElement(child, {
       color,
       tail: children.length - 1 === index,
@@ -15,6 +20,7 @@ const bubbleContainer = ({ color, children }) => (
 
 bubbleContainer.propTypes = {
   color: PropTypes.oneOf(['gray', 'blue']).isRequired,
+  align: PropTypes.oneOf(['start', 'end']).isRequired,
   children: PropTypes.element,
 };
 
