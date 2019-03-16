@@ -3,24 +3,21 @@ import PropTypes from 'prop-types';
 
 import classes from './bubble.module.css';
 
-const bubble = ({ gray, last, content }) => (
-  <div className={gray ? classes.gray : classes.blue}>
-    <div className={[classes.bubble, last ? classes.last : []].join(' ')}>
-      {content}
-    </div>
+const bubble = ({ color, tail, children }) => (
+  <div className={color === 'blue' ? classes.Blue : classes.Gray}>
+    <div className={[classes.Bubble, tail ? classes.Tail : []].join(' ')}>{children}</div>
   </div>
 );
 
 bubble.propTypes = {
-  gray: PropTypes.bool,
-  last: PropTypes.bool,
-  content: PropTypes.string,
+  color: PropTypes.oneOf(['gray', 'blue']).isRequired,
+  tail: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 bubble.defaultProps = {
-  gray: false,
-  last: false,
-  content: '',
+  tail: false,
+  children: <div />,
 };
 
 export default bubble;

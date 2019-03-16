@@ -6,7 +6,9 @@ const IMessage = () => (
     <div className={[Classes.yours, Classes.messages].join(' ')}>
       <div className={Classes.message}>
         Godmorgon habibi
-        <span role="img" aria-label="Kiss">😘</span>
+        <span role="img" aria-label="Kiss">
+          😘
+        </span>
         , har du sovit gott? Jag ligger fortfarande i sängen och tänker på dig!
       </div>
       <div className={Classes.message}>
@@ -17,9 +19,7 @@ const IMessage = () => (
       </div>
     </div>
     <div className={[Classes.mine, Classes.messages].join(' ')}>
-      <div className={Classes.message}>
-        Habibi, du är så flink!!!
-      </div>
+      <div className={Classes.message}>Habibi, du är så flink!!!</div>
       <div className={[Classes.message, Classes.last].join(' ')}>
         Jag älskar dig mer än allt annat, du är det finaste jag har
       </div>

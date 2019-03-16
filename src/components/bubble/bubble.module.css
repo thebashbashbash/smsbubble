@@ -1,10 +1,4 @@
-.messages {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-}
-
-.bubble {
+.Bubble {
   min-width: 1rem;
   min-height: 1rem;
   border-radius: 15px;
@@ -14,17 +8,17 @@
   display: inline-block;
 }
 
-.gray {
+.Gray {
   align-items: flex-start;
 }
 
-.gray .bubble {
+.Gray .Bubble {
   margin-right: 25%;
   background-color: #eee;
   position: relative;
 }
 
-.gray .bubble.last:before {
+.Gray .Bubble.Tail:before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -35,7 +29,7 @@
   background: #eee;
   border-bottom-right-radius: 15px;
 }
-.gray .bubble.last:after {
+.Gray .Bubble.Tail:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -47,11 +41,11 @@
   border-bottom-right-radius: 10px;
 }
 
-.blue {
+.Blue {
   align-items: flex-end;
 }
 
-.blue .bubble {
+.Blue .Bubble {
   color: white;
   margin-left: 25%;
   background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
@@ -59,7 +53,7 @@
   position: relative;
 }
 
-.blue .bubble.last:before {
+.Blue .Bubble.Tail:before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -72,7 +66,7 @@
   border-bottom-left-radius: 15px;
 }
 
-.blue .bubble.last:after {
+.Blue .Bubble.Tail:after {
   content: "";
   position: absolute;
   z-index: 1;
