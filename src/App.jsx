@@ -13,10 +13,6 @@ class App extends Component {
           <Bubble>Godmorgon!</Bubble>
           <Bubble>Har du sovit gott?</Bubble>
         </BubbleContainer>
-        <BubbleContainer align="start" color="gray">
-          <Bubble>Godmorgon! Ja jag har sovit gott tack, har du?</Bubble>
-          <Bubble>Nu ska jag strax till jobbet!</Bubble>
-        </BubbleContainer>
       </div>
     );
   }

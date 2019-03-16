@@ -21,7 +21,7 @@ const bubbleContainer = ({ color, align, children }) => (
 bubbleContainer.propTypes = {
   color: PropTypes.oneOf(['gray', 'blue']).isRequired,
   align: PropTypes.oneOf(['start', 'end']).isRequired,
-  children: PropTypes.element,
+  children: PropTypes.arrayOf(PropTypes.element),
 };
 
 bubbleContainer.defaultProps = {
