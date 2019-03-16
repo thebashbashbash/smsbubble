@@ -10,12 +10,12 @@ class App extends Component {
     return (
       <div className={classes.Conversation}>
         <BubbleContainer align="end" color="blue">
-          <Bubble />
-          <Bubble />
+          <Bubble>Godmorgon!</Bubble>
+          <Bubble>Har du sovit gott?</Bubble>
         </BubbleContainer>
         <BubbleContainer align="start" color="gray">
-          <Bubble />
-          <Bubble />
+          <Bubble>Godmorgon! Ja jag har sovit gott tack, har du?</Bubble>
+          <Bubble>Nu ska jag strax till jobbet!</Bubble>
         </BubbleContainer>
       </div>
     );
