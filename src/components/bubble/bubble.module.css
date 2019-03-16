@@ -1,79 +1,86 @@
-  .bubble {
-    border-radius: 15px;
-    padding: 8px 15px;
-    margin-top: 0px;
-    margin-bottom: 2px;
-    display: inline-block;
-  }
-  
-  .your {
-    align-items: flex-start;
-  }
-  
-  .your .bubble {
-    margin-right: 25%;
-    background-color: #eee;
-    position: relative;
-  }
-  
-  .your .bubble.last:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-    left: -7px;
-    height: 20px;
-    width: 20px;
-    background: #eee;
-    border-bottom-right-radius: 15px;
-  }
-  .your .bubble.last:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: -10px;
-    width: 10px;
-    height: 20px;
-    background: white;
-    border-bottom-right-radius: 10px;
-  }
-  
-  .me {
-    align-items: flex-end;
-  }
-  
-  .me .bubble {
-    color: white;
-    margin-left: 25%;
-    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
-    background-attachment: fixed;
-    position: relative;
-  }
-  
-  .me .bubble.last:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-    right: -8px;
-    height: 20px;
-    width: 20px;
-    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
-    background-attachment: fixed;
-    border-bottom-left-radius: 15px;
-  }
-  
-  .me .bubble.last:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    right: -10px;
-    width: 10px;
-    height: 20px;
-    background: white;
-    border-bottom-left-radius: 10px;
-  }
-  
-  
+.messages {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bubble {
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 15px;
+  padding: 8px 15px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+.gray {
+  align-items: flex-start;
+}
+
+.gray .bubble {
+  margin-right: 25%;
+  background-color: #eee;
+  position: relative;
+}
+
+.gray .bubble.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -7px;
+  height: 20px;
+  width: 20px;
+  background: #eee;
+  border-bottom-right-radius: 15px;
+}
+.gray .bubble.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-right-radius: 10px;
+}
+
+.blue {
+  align-items: flex-end;
+}
+
+.blue .bubble {
+  color: white;
+  margin-left: 25%;
+  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+.blue .bubble.last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -8px;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background-attachment: fixed;
+  border-bottom-left-radius: 15px;
+}
+
+.blue .bubble.last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-left-radius: 10px;
+}
+

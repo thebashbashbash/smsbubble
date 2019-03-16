@@ -3,18 +3,6 @@ import Classes from './imessage.module.css';
 
 const IMessage = () => (
   <div className={Classes.chat}>
-    <div className={Classes.mine}>
-      <div className={Classes.messages}>
-        <div className={Classes.message}>
-          <div className={Classes.last}>
-            Godmorgon habibi!
-            <span role="img" aria-label="Heart">
-                    ❤️
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
     <div className={[Classes.yours, Classes.messages].join(' ')}>
       <div className={Classes.message}>
         Godmorgon habibi

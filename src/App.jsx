@@ -1,16 +1,21 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.module.css';
 
-import IMessage from './components/imessage';
+import Bubble from './components/bubble/bubble';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <IMessage />
-        </header>
+      <div className={classes.chat}>
+        <div className={classes.messages}>
+          <Bubble />
+          <Bubble last />
+        </div>
+        <div className={classes.messages}>
+          <Bubble gray />
+          <Bubble gray last />
+        </div>
       </div>
     );
   }

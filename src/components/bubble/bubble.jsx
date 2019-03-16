@@ -1,22 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// eslint-disable-next-line no-unused-vars
 import classes from './bubble.module.css';
 
-const bubble = (props) => {
-  // const { subject, isLast } = props;
-
-  return (
-    <div className={classes.Me}>
-      bashar
+const bubble = ({ gray, last, content }) => (
+  <div className={gray ? classes.gray : classes.blue}>
+    <div className={[classes.bubble, last ? classes.last : []].join(' ')}>
+      {content}
     </div>
-  );
+  </div>
+);
+
+bubble.propTypes = {
+  gray: PropTypes.bool,
+  last: PropTypes.bool,
+  content: PropTypes.string,
 };
 
-// bubble.propTypes = {
-//   subject: PropTypes.string.isRequired,
-//   isLast: PropTypes.bool.isRequired,
-// };
+bubble.defaultProps = {
+  gray: false,
+  last: false,
+  content: '',
+};
 
 export default bubble;
