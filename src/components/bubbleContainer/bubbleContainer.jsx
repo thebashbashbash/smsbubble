@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Bubble from '../bubble/bubble';
 
-import classesBubbleGroup from './bubbleGroup.module.css';
+import classes from './bubbleContainer.module.css';
 
-const bubbleGroup = ({ color, children }) => (
-  <div className={classesBubbleGroup.bubbleGroup}>
+const bubbleContainer = ({ color, children }) => (
+  <div className={classes.bubbleGroup}>
     {React.Children.map(children, (child, index) => React.cloneElement(child, {
       color,
       tail: children.length - 1 === index,
@@ -13,13 +13,13 @@ const bubbleGroup = ({ color, children }) => (
   </div>
 );
 
-bubbleGroup.propTypes = {
+bubbleContainer.propTypes = {
   color: PropTypes.oneOf(['gray', 'blue']).isRequired,
   children: PropTypes.element,
 };
 
-bubbleGroup.defaultProps = {
+bubbleContainer.defaultProps = {
   children: PropTypes.instanceOf(Bubble),
 };
 
-export default bubbleGroup;
+export default bubbleContainer;
