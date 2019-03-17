@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import CombineClasses from '../../helpers/helpers';
 import { ColorTypes } from '../bubble/bubble';
 
 import classes from './loadingIndicator.module.css';
@@ -8,25 +9,25 @@ import classes from './loadingIndicator.module.css';
 const loadingIndicator = ({ color }) => (
   <div className={classes.Loading}>
     <div
-      className={[
+      className={CombineClasses(
         color === ColorTypes.Blue ? classes.Blue : classes.Gray,
         classes.Dot,
         classes.One,
-      ].join(' ')}
+      )}
     />
     <div
-      className={[
+      className={CombineClasses(
         color === ColorTypes.Blue ? classes.Blue : classes.Gray,
         classes.Dot,
         classes.Two,
-      ].join(' ')}
+      )}
     />
     <div
-      className={[
+      className={CombineClasses(
         color === ColorTypes.Blue ? classes.Blue : classes.Gray,
         classes.Dot,
         classes.Three,
-      ].join(' ')}
+      )}
     />
   </div>
 );

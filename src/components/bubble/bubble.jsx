@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import CombineClasses from '../../helpers/helpers';
 import classes from './bubble.module.css';
 
 export const TailTypes = {
@@ -19,14 +20,14 @@ export const ColorTypes = {
 const bubble = ({ color, tail, children }) => (
   <div className={color === ColorTypes.Blue ? classes.Blue : classes.Gray}>
     <div
-      className={[
+      className={CombineClasses(
         classes.Bubble,
         tail === TailTypes.None
           ? []
           : tail === TailTypes.PointerTail
             ? classes.PointerTail
             : classes.TrailTail,
-      ].join(' ')}
+      )}
     >
       {children}
     </div>

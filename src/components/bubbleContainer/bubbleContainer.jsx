@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import CombineClasses from '../../helpers/helpers';
 import { TailTypes, ColorTypes } from '../bubble/bubble';
 import { SubjectTypes } from '../message/message';
 
@@ -16,10 +17,10 @@ const bubbleContainer = ({
   color, subject, align, children,
 }) => (
   <div
-    className={[
+    className={CombineClasses(
       classes.BubbleContainer,
       align === AlignTypes.Start ? classes.StartAlign : classes.EndAlign,
-    ].join(' ')}
+    )}
   >
     {React.Children.map(children, (child, index) => React.cloneElement(child, {
       color,

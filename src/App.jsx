@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className={classes.Conversation}>
-        <MessageContainer subject={SubjectTypes.You}>
+        <MessageContainer subject={SubjectTypes.Me}>
           <Message>Bashar</Message>
           <Message>Bashar</Message>
         </MessageContainer>
