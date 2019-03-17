@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Message, { SubjectTypes } from '../message/message';
+import { SubjectTypes } from '../message/message';
 import BubbleContainer, { AlignType } from '../bubbleContainer/bubbleContainer';
 
 // import classes from './message.module.css';

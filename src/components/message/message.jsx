@@ -34,9 +34,7 @@ class Message extends React.Component {
         color={subject === SubjectTypes.Me ? ColorType.Blue : ColorType.Gray}
       >
         {loading ? (
-          <LoadingIndicator
-            color={subject === SubjectTypes.Me ? ColorType.Blue : ColorType.Gray}
-          />
+          <LoadingIndicator color={subject === SubjectTypes.Me ? ColorType.Blue : ColorType.Gray} />
         ) : (
           content
         )}
