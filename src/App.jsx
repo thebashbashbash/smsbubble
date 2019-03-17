@@ -10,9 +10,12 @@ class App extends Component {
   render() {
     return (
       <div className={classes.Conversation}>
-        <MessageContainer subject={SubjectTypes.Me}>
-          <Message>Bashar</Message>
-          <Message>Bashar</Message>
+        {/* <MessageContainer subject={SubjectTypes.Me}>
+          <Message>Hej!</Message>
+          <Message>Vad heter du?</Message>
+        </MessageContainer> */}
+        <MessageContainer subject={SubjectTypes.You}>
+          <Message>Vad heter du?</Message>
         </MessageContainer>
       </div>
     );

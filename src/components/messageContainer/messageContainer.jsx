@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { SubjectTypes } from '../message/message';
-import BubbleContainer, { AlignTypes } from '../bubbleContainer/bubbleContainer';
+import Message, { SubjectTypes } from '../message/message';
+import BubbleContainer, { AlignType } from '../bubbleContainer/bubbleContainer';
 
 // import classes from './message.module.css';
 
@@ -22,7 +22,7 @@ class MessageContainer extends React.Component {
     return (
       <BubbleContainer
         subject={subject}
-        align={subject === SubjectTypes.Me ? AlignTypes.End : AlignTypes.Start}
+        align={subject === SubjectTypes.Me ? AlignType.End : AlignType.Start}
       >
         {children}
       </BubbleContainer>
@@ -32,7 +32,8 @@ class MessageContainer extends React.Component {
 
 MessageContainer.propTypes = {
   subject: PropTypes.oneOf([SubjectTypes.Me, SubjectTypes.You]).isRequired,
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
+    .isRequired,
 };
 
 export default MessageContainer;

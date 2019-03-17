@@ -5,26 +5,26 @@ import PropTypes from 'prop-types';
 import CombineClasses from '../../helpers/helpers';
 import classes from './bubble.module.css';
 
-export const TailTypes = {
+export const TailType = {
   PointerTail: 'pointerTail',
   TrailTail: 'trailTail',
   None: '',
 };
 
-export const ColorTypes = {
+export const ColorType = {
   Blue: 'blue',
   Gray: 'gray',
   None: '',
 };
 
 const bubble = ({ color, tail, children }) => (
-  <div className={color === ColorTypes.Blue ? classes.Blue : classes.Gray}>
+  <div className={color === ColorType.Blue ? classes.Blue : classes.Gray}>
     <div
       className={CombineClasses(
         classes.Bubble,
-        tail === TailTypes.None
+        tail === TailType.None
           ? []
-          : tail === TailTypes.PointerTail
+          : tail === TailType.PointerTail
             ? classes.PointerTail
             : classes.TrailTail,
       )}
@@ -35,14 +35,14 @@ const bubble = ({ color, tail, children }) => (
 );
 
 bubble.propTypes = {
-  color: PropTypes.oneOf([ColorTypes.Gray, ColorTypes.Blue]),
-  tail: PropTypes.oneOf([TailTypes.PointerTail, TailTypes.TrailTail, TailTypes.None]),
+  color: PropTypes.oneOf([ColorType.Gray, ColorType.Blue]),
+  tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 bubble.defaultProps = {
-  color: ColorTypes.Blue,
-  tail: TailTypes.None,
+  color: ColorType.Blue,
+  tail: TailType.None,
   children: <div />,
 };
 

@@ -3,12 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import CombineClasses from '../../helpers/helpers';
-import { TailTypes, ColorTypes } from '../bubble/bubble';
+import { TailType, ColorType } from '../bubble/bubble';
 import { SubjectTypes } from '../message/message';
 
 import classes from './bubbleContainer.module.css';
 
-export const AlignTypes = {
+export const AlignType = {
   Start: 'start',
   End: 'end',
 };
@@ -19,31 +19,32 @@ const bubbleContainer = ({
   <div
     className={CombineClasses(
       classes.BubbleContainer,
-      align === AlignTypes.Start ? classes.StartAlign : classes.EndAlign,
+      align === AlignType.Start ? classes.StartAlign : classes.EndAlign,
     )}
   >
     {React.Children.map(children, (child, index) => React.cloneElement(child, {
       color,
       subject,
       tail:
-          child.props.tail !== TailTypes.None
+          child.props.tail !== TailType.None
             ? child.props.tail
             : children.length - 1 === index || !Array.isArray(children)
-              ? TailTypes.PointerTail
-              : TailTypes.None,
+              ? TailType.PointerTail
+              : TailType.None,
     }))}
   </div>
 );
 
 bubbleContainer.propTypes = {
-  color: PropTypes.oneOf([ColorTypes.Gray, ColorTypes.Blue]),
-  align: PropTypes.oneOf([AlignTypes.Start, AlignTypes.End]).isRequired,
+  color: PropTypes.oneOf([ColorType.Gray, ColorType.Blue]),
+  align: PropTypes.oneOf([AlignType.Start, AlignType.End]).isRequired,
   subject: PropTypes.oneOf([SubjectTypes.Me, SubjectTypes.You]),
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
+    .isRequired,
 };
 
 bubbleContainer.defaultProps = {
-  color: ColorTypes.Blue,
+  color: ColorType.Blue,
   subject: SubjectTypes.Me,
 };
 
