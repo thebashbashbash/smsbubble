@@ -1,0 +1,77 @@
+.Loading {
+  display: flexbox;
+  z-index: 0;
+  flex-direction: row;
+}
+
+.Loading .Dot {
+  height: 9px;
+  width: 9px;
+  z-index: 1;
+  border-radius: 50%;
+  background: #c1c1c1;
+  display: inline-block;
+  margin: 0 0 0 6px;
+}
+
+.Loading .Dot:first-child {
+  margin: 0;
+}
+
+.Loading .Dot.One {
+  -webkit-animation: CycleOne 1s ease-in-out infinite;
+  -webkit-animation-direction: normal;
+}
+
+.Loading .Dot.Two {
+  -webkit-animation: CycleTwo 1s ease-in-out infinite;
+  -webkit-animation-direction: normal;
+}
+
+.Loading .Dot.Three {
+  -webkit-animation: CycleThree 1s ease-in-out infinite;
+  -webkit-animation-direction: normal;
+}
+
+@-webkit-keyframes CycleOne {
+  0% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  33.333% {
+    background: #969696;
+  }
+  66.6667% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  100% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+}
+@-webkit-keyframes CycleTwo {
+  0% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  33.333% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  66.6667% {
+    background: #969696;
+  }
+  100% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+}
+@-webkit-keyframes CycleThree {
+  0% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  33.333% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  66.6667% {
+    background: rgba(150, 150, 150, 0.4);
+  }
+  100% {
+    background: #969696;
+  }
+}

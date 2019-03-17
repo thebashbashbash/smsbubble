@@ -10,8 +10,9 @@ class App extends Component {
   render() {
     return (
       <div className={classes.Conversation}>
-        <BubbleContainer align="start" color="blue">
-          <Bubble trail="trailTail">
+        <BubbleContainer align="end" color="blue">
+          <Bubble />
+          <Bubble tail="trailTail">
             <LoadingIndicator />
           </Bubble>
         </BubbleContainer>
