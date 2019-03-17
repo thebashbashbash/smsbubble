@@ -1,37 +1,49 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Bubble from '../bubble/bubble';
+
+import { TailTypes, ColorTypes } from '../bubble/bubble';
+import { SubjectTypes } from '../message/message';
 
 import classes from './bubbleContainer.module.css';
 
-const bubbleContainer = ({ color, align, children }) => (
+export const AlignTypes = {
+  Start: 'start',
+  End: 'end',
+};
+
+const bubbleContainer = ({
+  color, subject, align, children,
+}) => (
   <div
     className={[
       classes.BubbleContainer,
-      align === 'start' ? classes.StartAlign : classes.EndAlign,
+      align === AlignTypes.Start ? classes.StartAlign : classes.EndAlign,
     ].join(' ')}
   >
     {React.Children.map(children, (child, index) => React.cloneElement(child, {
       color,
+      subject,
       tail:
-          child.props.tail !== ''
+          child.props.tail !== TailTypes.None
             ? child.props.tail
             : children.length - 1 === index || !Array.isArray(children)
-              ? 'pointerTail'
-              : '',
+              ? TailTypes.PointerTail
+              : TailTypes.None,
     }))}
   </div>
 );
 
 bubbleContainer.propTypes = {
-  color: PropTypes.oneOf(['gray', 'blue']).isRequired,
-  align: PropTypes.oneOf(['start', 'end']).isRequired,
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
+  color: PropTypes.oneOf([ColorTypes.Gray, ColorTypes.Blue]),
+  align: PropTypes.oneOf([AlignTypes.Start, AlignTypes.End]).isRequired,
+  subject: PropTypes.oneOf([SubjectTypes.Me, SubjectTypes.You]),
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
 bubbleContainer.defaultProps = {
-  children: PropTypes.instanceOf(Bubble),
+  color: ColorTypes.Blue,
+  subject: SubjectTypes.Me,
 };
 
 export default bubbleContainer;

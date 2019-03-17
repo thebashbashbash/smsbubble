@@ -2,20 +2,18 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
 
-import Bubble from './components/bubble/bubble';
-import BubbleContainer from './components/bubbleContainer/bubbleContainer';
-import LoadingIndicator from './components/loadingIndicator/loadingIndicator';
+import { TailTypes } from './components/bubble/bubble';
+import Message, { SubjectTypes } from './components/message/message';
+import MessageContainer from './components/messageContainer/messageContainer';
 
 class App extends Component {
   render() {
     return (
       <div className={classes.Conversation}>
-        <BubbleContainer align="end" color="blue">
-          <Bubble />
-          <Bubble tail="trailTail">
-            <LoadingIndicator />
-          </Bubble>
-        </BubbleContainer>
+        <MessageContainer subject={SubjectTypes.You}>
+          <Message>Bashar</Message>
+          <Message>Bashar</Message>
+        </MessageContainer>
       </div>
     );
   }

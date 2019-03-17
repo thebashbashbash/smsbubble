@@ -4,12 +4,28 @@ import PropTypes from 'prop-types';
 
 import classes from './bubble.module.css';
 
+export const TailTypes = {
+  PointerTail: 'pointerTail',
+  TrailTail: 'trailTail',
+  None: '',
+};
+
+export const ColorTypes = {
+  Blue: 'blue',
+  Gray: 'gray',
+  None: '',
+};
+
 const bubble = ({ color, tail, children }) => (
-  <div className={color === 'blue' ? classes.Blue : classes.Gray}>
+  <div className={color === ColorTypes.Blue ? classes.Blue : classes.Gray}>
     <div
       className={[
         classes.Bubble,
-        tail === '' ? [] : tail === 'pointerTail' ? classes.PointerTail : classes.TrailTail,
+        tail === TailTypes.None
+          ? []
+          : tail === TailTypes.PointerTail
+            ? classes.PointerTail
+            : classes.TrailTail,
       ].join(' ')}
     >
       {children}
@@ -18,14 +34,14 @@ const bubble = ({ color, tail, children }) => (
 );
 
 bubble.propTypes = {
-  color: PropTypes.oneOf(['gray', 'blue']),
-  tail: PropTypes.oneOf(['pointerTail', 'trailTail', '']),
+  color: PropTypes.oneOf([ColorTypes.Gray, ColorTypes.Blue]),
+  tail: PropTypes.oneOf([TailTypes.PointerTail, TailTypes.TrailTail, TailTypes.None]),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 bubble.defaultProps = {
-  color: 'blue',
-  tail: '',
+  color: ColorTypes.Blue,
+  tail: TailTypes.None,
   children: <div />,
 };
 
