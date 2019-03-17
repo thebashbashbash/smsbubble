@@ -13,7 +13,7 @@ const bubbleContainer = ({ color, align, children }) => (
   >
     {React.Children.map(children, (child, index) => React.cloneElement(child, {
       color,
-      tail: children.length - 1 === index,
+      tail: children.length - 1 === index || !Array.isArray(children),
     }))}
   </div>
 );
@@ -21,7 +21,7 @@ const bubbleContainer = ({ color, align, children }) => (
 bubbleContainer.propTypes = {
   color: PropTypes.oneOf(['gray', 'blue']).isRequired,
   align: PropTypes.oneOf(['start', 'end']).isRequired,
-  children: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
 };
 
 bubbleContainer.defaultProps = {
