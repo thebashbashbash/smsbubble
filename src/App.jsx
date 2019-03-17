@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import classes from './App.module.css';
 
-import { TailTypes } from './components/bubble/bubble';
+// import { TailTypes } from './components/bubble/bubble';
 import Message, { SubjectTypes } from './components/message/message';
 import MessageContainer from './components/messageContainer/messageContainer';
 
