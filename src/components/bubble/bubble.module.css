@@ -10,6 +10,7 @@
 
 .Gray {
   align-items: flex-start;
+  color: black;
 }
 
 .Gray .Bubble {
@@ -65,6 +66,7 @@
 
 .Blue {
   align-items: flex-end;
+  color: white;
 }
 
 .Blue .Bubble {
