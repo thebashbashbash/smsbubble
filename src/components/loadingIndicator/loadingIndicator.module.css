@@ -1,7 +1,20 @@
+:root {
+  --loading-color: #505050cc;
+ }
+
+ .Blue{
+  --loading-color: #505050cc
+ }
+
+ .Gray{
+  --loading-color: #969696
+ }
+
 .Loading {
   display: flexbox;
   z-index: 0;
   flex-direction: row;
+  
 }
 
 .Loading .Dot {
@@ -9,7 +22,7 @@
   width: 9px;
   z-index: 1;
   border-radius: 50%;
-  background: #c1c1c1;
+  background: var(--loading-color);
   display: inline-block;
   margin: 0 0 0 6px;
 }
@@ -38,7 +51,7 @@
     background: rgba(150, 150, 150, 0.4);
   }
   33.333% {
-    background: #969696;
+    background: var(--loading-color);
   }
   66.6667% {
     background: rgba(150, 150, 150, 0.4);
@@ -55,7 +68,7 @@
     background: rgba(150, 150, 150, 0.4);
   }
   66.6667% {
-    background: #969696;
+    background: var(--loading-color);;
   }
   100% {
     background: rgba(150, 150, 150, 0.4);
@@ -72,6 +85,6 @@
     background: rgba(150, 150, 150, 0.4);
   }
   100% {
-    background: #969696;
+    background: var(--loading-color);;
   }
 }
