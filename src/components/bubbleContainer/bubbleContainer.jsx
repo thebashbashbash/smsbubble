@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import CombineClasses from '../../helpers/helpers';
 import { TailType, ColorType } from '../bubble/bubble';
-import { SubjectTypes } from '../message/message';
+import { SubjectType } from '../message/message';
 
 import classes from './bubbleContainer.module.css';
 
@@ -38,14 +38,14 @@ const bubbleContainer = ({
 bubbleContainer.propTypes = {
   color: PropTypes.oneOf([ColorType.Gray, ColorType.Blue]),
   align: PropTypes.oneOf([AlignType.Start, AlignType.End]).isRequired,
-  subject: PropTypes.oneOf([SubjectTypes.Me, SubjectTypes.You]),
+  subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]),
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
 };
 
 bubbleContainer.defaultProps = {
   color: ColorType.Blue,
-  subject: SubjectTypes.Me,
+  subject: SubjectType.Me,
 };
 
 export default bubbleContainer;

@@ -6,7 +6,7 @@ import LoadingIndicator from '../loadingIndicator/loadingIndicator';
 
 // import classes from './message.module.css';
 
-export const SubjectTypes = {
+export const SubjectType = {
   Me: 'me',
   You: 'you',
 };
@@ -15,13 +15,25 @@ class Message extends React.Component {
   constructor(props) {
     super(props);
 
-    const { subject, tail, children } = this.props;
+    const {
+      shouldLoad, subject, tail, children,
+    } = this.props;
     this.state = {
-      loading: true,
+      loading: subject === SubjectType.Me ? false : shouldLoad,
       subject,
       tail,
       content: children,
     };
+  }
+
+  componentDidMount() {
+    const { content } = this.state;
+    const wordsPerMinute = 90;
+    const wordsPerSecond = wordsPerMinute / 60;
+
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1000 * parseInt(content.split(' ').length / wordsPerSecond, 10));
   }
 
   render() {
@@ -31,10 +43,10 @@ class Message extends React.Component {
     return (
       <Bubble
         tail={loading ? TailType.TrailTail : tail}
-        color={subject === SubjectTypes.Me ? ColorType.Blue : ColorType.Gray}
+        color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
       >
         {loading ? (
-          <LoadingIndicator color={subject === SubjectTypes.Me ? ColorType.Blue : ColorType.Gray} />
+          <LoadingIndicator color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray} />
         ) : (
           content
         )}
@@ -44,15 +56,17 @@ class Message extends React.Component {
 }
 
 Message.propTypes = {
-  subject: PropTypes.oneOf([SubjectTypes.Me, SubjectTypes.You]),
+  subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]),
   tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
+  shouldLoad: PropTypes.bool,
   children: PropTypes.string,
 };
 
 Message.defaultProps = {
-  subject: SubjectTypes.Me,
-  children: <div />,
+  shouldLoad: true,
+  subject: SubjectType.Me,
   tail: TailType.None,
+  children: <div />,
 };
 
 export default Message;
