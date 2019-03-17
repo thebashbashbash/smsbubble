@@ -1,11 +1,19 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classesBubble from './bubble.module.css';
+import LoadingIndicator from '../loadingIndicator/loadingIndicator';
+
+import classes from './bubble.module.css';
 
 const bubble = ({ color, tail, children }) => (
-  <div className={color === 'blue' ? classesBubble.Blue : classesBubble.Gray}>
-    <div className={[classesBubble.Bubble, tail ? classesBubble.Trail : []].join(' ')}>
+  <div className={color === 'blue' ? classes.Blue : classes.Gray}>
+    <div
+      className={[
+        classes.Bubble,
+        tail === '' ? [] : tail === 'pointerTail' ? classes.PointerTail : classes.TrailTail,
+      ].join(' ')}
+    >
       {children}
     </div>
   </div>
@@ -13,15 +21,13 @@ const bubble = ({ color, tail, children }) => (
 
 bubble.propTypes = {
   color: PropTypes.oneOf(['gray', 'blue']),
-  tail: PropTypes.bool,
-  // loading: PropTypes.bool,
+  tail: PropTypes.oneOf(['pointerTail', 'trailTail', '']),
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 bubble.defaultProps = {
   color: 'blue',
-  tail: false,
-  // loading: false,
+  tail: '',
   children: <div />,
 };
 

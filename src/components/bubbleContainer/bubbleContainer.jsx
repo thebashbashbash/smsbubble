@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Bubble from '../bubble/bubble';
@@ -13,7 +14,12 @@ const bubbleContainer = ({ color, align, children }) => (
   >
     {React.Children.map(children, (child, index) => React.cloneElement(child, {
       color,
-      tail: children.length - 1 === index || !Array.isArray(children),
+      tail:
+          child.props.tail !== ''
+            ? child.props.tail
+            : children.length - 1 === index || !Array.isArray(children)
+              ? 'pointerTail'
+              : '',
     }))}
   </div>
 );

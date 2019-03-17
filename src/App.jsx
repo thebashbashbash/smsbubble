@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className={classes.Conversation}>
         <BubbleContainer align="start" color="gray">
-          <Bubble>Godmorgon!</Bubble>
-          {/* <Bubble>Har du sovit gott?</Bubble> */}
+          <Bubble tail="trailTail">Godmorgon!</Bubble>
+          <Bubble tail="pointerTail">Har du sovit gott?</Bubble>
         </BubbleContainer>
       </div>
     );
