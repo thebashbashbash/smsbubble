@@ -9,9 +9,9 @@ class App extends Component {
   render() {
     return (
       <div className={classes.Conversation}>
-        <BubbleContainer align="start" color="gray">
-          <Bubble tail="trailTail">Godmorgon!</Bubble>
-          <Bubble tail="pointerTail">Har du sovit gott?</Bubble>
+        <BubbleContainer align="end" color="blue">
+          <Bubble>Godmorgon!</Bubble>
+          <Bubble>Har du sovit gott?</Bubble>
         </BubbleContainer>
       </div>
     );
