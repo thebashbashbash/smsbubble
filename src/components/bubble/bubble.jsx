@@ -2,8 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import LoadingIndicator from '../loadingIndicator/loadingIndicator';
-
 import classes from './bubble.module.css';
 
 const bubble = ({ color, tail, children }) => (
