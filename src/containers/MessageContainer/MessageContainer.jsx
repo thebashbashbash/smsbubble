@@ -22,14 +22,13 @@ class MessageContainer extends React.Component {
             previous.push((previous[index] || 0) + current + getRandomInt(600, 2000));
             return previous;
           },
-          [500],
+          [getRandomInt(300, 1000)],
         ),
     };
   }
 
   render() {
     const { subject, messages, messageSentAtCumulativeTime } = this.state;
-    console.log(messageSentAtCumulativeTime);
     return (
       <BubbleContainer
         subject={subject}

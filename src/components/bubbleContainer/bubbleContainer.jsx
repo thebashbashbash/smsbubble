@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { combineClasses } from '../../helpers/helpers';
 import { TailType, ColorType } from '../bubble/bubble';
-import { SubjectType } from '../message/message';
+import { SubjectType } from '../../containers/Message/Message';
 
 import classes from './bubbleContainer.module.css';
 
