@@ -16,10 +16,11 @@ class Message extends React.Component {
     super(props);
 
     const {
-      shouldLoad, subject, tail, children,
+      isSent, shouldLoad, subject, tail, children,
     } = this.props;
     this.state = {
       loading: subject === SubjectType.Me ? false : shouldLoad,
+      isSent,
       subject,
       tail,
       content: children,
@@ -27,13 +28,19 @@ class Message extends React.Component {
   }
 
   componentDidMount() {
-    const { content } = this.state;
-    const typingSpeed = 3;
-
-    setTimeout(() => {
-      this.setState({ loading: false });
-    }, typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10));
+    this.startLoading();
   }
+
+  startLoading = () => {
+    const { content, isSent } = this.state;
+
+    if (isSent) {
+      const typingSpeed = 3;
+      setTimeout(() => {
+        this.setState({ loading: false });
+      }, typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10));
+    }
+  };
 
   render() {
     const {
@@ -58,11 +65,13 @@ Message.propTypes = {
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]),
   tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
   shouldLoad: PropTypes.bool,
+  isSent: PropTypes.bool,
   children: PropTypes.string,
 };
 
 Message.defaultProps = {
-  shouldLoad: true,
+  shouldLoad: false,
+  isSent: false,
   subject: SubjectType.Me,
   tail: TailType.None,
   children: <div />,
