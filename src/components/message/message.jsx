@@ -28,10 +28,11 @@ class Message extends React.Component {
 
   componentDidMount() {
     const { content } = this.state;
+    const typingSpeed = 3;
 
     setTimeout(() => {
       this.setState({ loading: false });
-    }, 300 * parseInt(content.split(' ').length, 10));
+    }, typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10));
   }
 
   render() {
