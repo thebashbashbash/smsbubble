@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 
 import { computeTypingSpeed, getRandomInt } from '../../helpers/helpers';
 
-import { SubjectType } from '../message/message';
-import BubbleContainer, { AlignType } from '../bubbleContainer/bubbleContainer';
-
-// import classes from './message.module.css';
+import { SubjectType } from '../Message/Message';
+import BubbleContainer, { AlignType } from '../../components/bubbleContainer/bubbleContainer';
 
 class MessageContainer extends React.Component {
   constructor(props) {

@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 
 import { computeTypingSpeed } from '../../helpers/helpers';
 
-import Bubble, { ColorType, TailType } from '../bubble/bubble';
-import LoadingIndicator from '../loadingIndicator/loadingIndicator';
-
-// import classes from './message.module.css';
+import Bubble, { ColorType, TailType } from '../../components/bubble/bubble';
+import LoadingIndicator from '../../components/loadingIndicator/loadingIndicator';
 
 export const SubjectType = {
   Me: 'me',
@@ -34,16 +32,6 @@ class Message extends React.Component {
       content: children,
     };
   }
-
-  // componentDidMount() {
-  //   const { status, sentAtCumultiveTime } = this.state;
-
-  //   if (status === StatusType.IsTyping) {
-  //     setTimeout(() => {
-  //       this.setState({ status: StatusType.IsSent });
-  //     }, sentAtCumultiveTime);
-  //   }
-  // }
 
   render() {
     const {
