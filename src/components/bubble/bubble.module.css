@@ -8,6 +8,10 @@
   display: inline-block;
 }
 
+.Hidden {
+  display: none;
+}
+
 .Gray {
   align-items: flex-start;
   color: black;
@@ -29,6 +33,7 @@
   background: #e5e5e5;
   border-bottom-right-radius: 15px;
 }
+
 .Gray .Bubble.PointerTail:after {
   content: "";
   position: absolute;
@@ -52,6 +57,7 @@
   background: #e5e5e5;
   border-radius: 50%;
 }
+
 .Gray .Bubble.TrailTail:after {
   content: "";
   position: absolute;
@@ -60,7 +66,7 @@
   left: -12px;
   height: 8px;
   width: 8px;
-  background:#e5e5e5;
+  background: #e5e5e5;
   border-radius: 50%;
 }
 
@@ -109,10 +115,11 @@
   right: -4px;
   height: 15px;
   width: 15px;
-  background:linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-radius: 50%;
 }
+
 .Blue .Bubble.TrailTail:after {
   content: "";
   position: absolute;
@@ -121,7 +128,7 @@
   right: -12px;
   height: 8px;
   width: 8px;
-  background:linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-radius: 50%;
 }

@@ -16,6 +16,9 @@ class App extends Component {
         </MessageContainer> */}
         <MessageContainer subject={SubjectType.You}>
           <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+          <Message>Och du älskar mig, det vet jag</Message>
+          <Message>Snart ses vi! Juste, vad heter du? Det var ju min fråga hehe!</Message>
         </MessageContainer>
       </div>
     );

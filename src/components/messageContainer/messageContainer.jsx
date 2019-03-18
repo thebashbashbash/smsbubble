@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { computeTypingSpeed, getRandomInt } from '../../helpers/helpers';
+
 import { SubjectType } from '../message/message';
 import BubbleContainer, { AlignType } from '../bubbleContainer/bubbleContainer';
 
@@ -11,20 +13,33 @@ class MessageContainer extends React.Component {
     super(props);
 
     const { subject, children } = this.props;
+
     this.state = {
       subject,
-      children,
+      messages: children,
+      messageSentAtCumulativeTime: children
+        .map(child => computeTypingSpeed(child.props.children))
+        .reduce(
+          (previous, current, index) => {
+            previous.push((previous[index] || 0) + current + getRandomInt(600, 2000));
+            return previous;
+          },
+          [500],
+        ),
     };
   }
 
   render() {
-    const { subject, children } = this.state;
+    const { subject, messages, messageSentAtCumulativeTime } = this.state;
+    console.log(messageSentAtCumulativeTime);
     return (
       <BubbleContainer
         subject={subject}
         align={subject === SubjectType.Me ? AlignType.End : AlignType.Start}
       >
-        {children}
+        {React.Children.map(messages, (child, index) => React.cloneElement(child, {
+          sentAtCumultiveTime: messageSentAtCumulativeTime[index],
+        }))}
       </BubbleContainer>
     );
   }

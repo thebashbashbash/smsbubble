@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { computeTypingSpeed } from '../../helpers/helpers';
+
 import Bubble, { ColorType, TailType } from '../bubble/bubble';
 import LoadingIndicator from '../loadingIndicator/loadingIndicator';
 
@@ -11,47 +13,59 @@ export const SubjectType = {
   You: 'you',
 };
 
+export const StatusType = {
+  IsHidden: 'isHidden',
+  IsTyping: 'isTyping',
+  IsSent: 'isSent',
+};
+
 class Message extends React.Component {
   constructor(props) {
     super(props);
 
     const {
-      isSent, shouldLoad, subject, tail, children,
+      status, subject, tail, sentAtCumultiveTime, children,
     } = this.props;
     this.state = {
-      loading: subject === SubjectType.Me ? false : shouldLoad,
-      isSent,
+      status,
       subject,
       tail,
+      sentAtCumultiveTime,
       content: children,
     };
   }
 
-  componentDidMount() {
-    this.startLoading();
-  }
+  // componentDidMount() {
+  //   const { status, sentAtCumultiveTime } = this.state;
 
-  startLoading = () => {
-    const { content, isSent } = this.state;
-
-    if (isSent) {
-      const typingSpeed = 3;
-      setTimeout(() => {
-        this.setState({ loading: false });
-      }, typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10));
-    }
-  };
+  //   if (status === StatusType.IsTyping) {
+  //     setTimeout(() => {
+  //       this.setState({ status: StatusType.IsSent });
+  //     }, sentAtCumultiveTime);
+  //   }
+  // }
 
   render() {
     const {
-      loading, subject, tail, content,
+      subject, tail, status, sentAtCumultiveTime, content,
     } = this.state;
+
+    if (status === StatusType.IsHidden) {
+      setTimeout(() => {
+        this.setState({ status: StatusType.IsTyping });
+        setTimeout(() => {
+          this.setState({ status: StatusType.IsSent });
+        }, computeTypingSpeed(content));
+      }, sentAtCumultiveTime);
+    }
+
     return (
       <Bubble
-        tail={loading ? TailType.TrailTail : tail}
+        hidden={status === StatusType.IsHidden}
+        tail={status === StatusType.IsTyping ? TailType.TrailTail : tail}
         color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
       >
-        {loading ? (
+        {status === StatusType.IsTyping ? (
           <LoadingIndicator color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray} />
         ) : (
           content
@@ -64,16 +78,16 @@ class Message extends React.Component {
 Message.propTypes = {
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]),
   tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
-  shouldLoad: PropTypes.bool,
-  isSent: PropTypes.bool,
+  status: PropTypes.oneOf([StatusType.IsHidden, StatusType.IsTyping, StatusType.IsSent]),
+  sentAtCumultiveTime: PropTypes.number,
   children: PropTypes.string,
 };
 
 Message.defaultProps = {
-  shouldLoad: false,
-  isSent: false,
+  status: StatusType.IsHidden,
   subject: SubjectType.Me,
   tail: TailType.None,
+  sentAtCumultiveTime: 0,
   children: <div />,
 };
 

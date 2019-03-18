@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import CombineClasses from '../../helpers/helpers';
+import { combineClasses } from '../../helpers/helpers';
 import { TailType, ColorType } from '../bubble/bubble';
 import { SubjectType } from '../message/message';
 
@@ -17,7 +17,7 @@ const bubbleContainer = ({
   color, subject, align, children,
 }) => (
   <div
-    className={CombineClasses(
+    className={combineClasses(
       classes.BubbleContainer,
       align === AlignType.Start ? classes.StartAlign : classes.EndAlign,
     )}

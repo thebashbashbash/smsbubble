@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import CombineClasses from '../../helpers/helpers';
+import { combineClasses } from '../../helpers/helpers';
 import classes from './bubble.module.css';
 
 export const TailType = {
@@ -17,10 +17,17 @@ export const ColorType = {
   None: '',
 };
 
-const bubble = ({ color, tail, children }) => (
-  <div className={color === ColorType.Blue ? classes.Blue : classes.Gray}>
+const bubble = ({
+  color, tail, hidden, children,
+}) => (
+  <div
+    className={combineClasses(
+      hidden ? classes.Hidden : [],
+      color === ColorType.Blue ? classes.Blue : classes.Gray,
+    )}
+  >
     <div
-      className={CombineClasses(
+      className={combineClasses(
         classes.Bubble,
         tail === TailType.None
           ? []
@@ -37,6 +44,7 @@ const bubble = ({ color, tail, children }) => (
 bubble.propTypes = {
   color: PropTypes.oneOf([ColorType.Gray, ColorType.Blue]),
   tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
+  hidden: PropTypes.bool.isRequired,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
