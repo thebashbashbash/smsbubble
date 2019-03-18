@@ -28,12 +28,10 @@ class Message extends React.Component {
 
   componentDidMount() {
     const { content } = this.state;
-    const wordsPerMinute = 90;
-    const wordsPerSecond = wordsPerMinute / 60;
 
     setTimeout(() => {
       this.setState({ loading: false });
-    }, 1000 * parseInt(content.split(' ').length / wordsPerSecond, 10));
+    }, 300 * parseInt(content.split(' ').length, 10));
   }
 
   render() {
