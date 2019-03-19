@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export const combineClasses = (...args) => [...args].join(' ');
 
 export const computeTypingSpeed = (content) => {

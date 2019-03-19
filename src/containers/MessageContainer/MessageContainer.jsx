@@ -10,32 +10,40 @@ class MessageContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    const { subject, children } = this.props;
-
+    const { subject, messageContainerTimeDeley, children } = this.props;
+    // getRandomInt(600, 2000) getRandomInt(300, 1000) getRandomInt
     this.state = {
       subject,
+      messageContainerTimeDeley,
       messages: children,
       messageSentAtCumulativeTime: children
         .map(child => computeTypingSpeed(child.props.children))
         .reduce(
           (previous, current, index) => {
-            previous.push((previous[index] || 0) + current + getRandomInt(600, 2000));
+            previous.push((previous[index] || 0) + current);
             return previous;
           },
-          [getRandomInt(300, 1000)],
+          [0],
         ),
     };
+
+    // console.log(this.state.messageSentAtCumulativeTime);
   }
 
   render() {
-    const { subject, messages, messageSentAtCumulativeTime } = this.state;
+    const {
+      subject,
+      messages,
+      messageContainerTimeDeley,
+      messageSentAtCumulativeTime,
+    } = this.state;
     return (
       <BubbleContainer
         subject={subject}
         align={subject === SubjectType.Me ? AlignType.End : AlignType.Start}
       >
         {React.Children.map(messages, (child, index) => React.cloneElement(child, {
-          sentAtCumultiveTime: messageSentAtCumulativeTime[index],
+          sentAtCumultiveTime: messageContainerTimeDeley + messageSentAtCumulativeTime[index],
         }))}
       </BubbleContainer>
     );
@@ -43,9 +51,14 @@ class MessageContainer extends React.Component {
 }
 
 MessageContainer.propTypes = {
+  messageContainerTimeDeley: PropTypes.number,
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]).isRequired,
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
+};
+
+MessageContainer.defaultProps = {
+  messageContainerTimeDeley: 0,
 };
 
 export default MessageContainer;
