@@ -11,16 +11,19 @@ class MessageConversation extends React.Component {
 
     const { children } = this.props;
 
+    const messageDelayMin = 700;
+    const messageDelayMax = 2000;
+
     this.state = {
       messageContainers: children,
-      conversationStartDeley: getRandomInt(300, 1000),
+      conversationStartDeley: getRandomInt(messageDelayMin / 2, messageDelayMax / 2),
       messageDeleys:
         children instanceof Array
           ? children
             .map(child => child.props.children)
             .map(element => element.map(subElement => subElement.props.children))
-            .map(element => element.map(() => getRandomInt(300, 1000)))
-          : children.props.children.map(() => getRandomInt(300, 1000)),
+            .map(element => element.map(() => getRandomInt(messageDelayMin, messageDelayMax)))
+          : children.props.children.map(() => getRandomInt(messageDelayMin, messageDelayMax)),
       messageContainerActivedAtCumulativeTime:
         children instanceof Array
           ? children
