@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -14,7 +15,8 @@ export const SubjectType = {
 export const StatusType = {
   IsHidden: 'isHidden',
   IsTyping: 'isTyping',
-  IsSent: 'isSent',
+  IsSentWithoutTail: 'IsSentWithoutTail',
+  IsSentWithTail: 'IsSentWithTail',
 };
 
 class Message extends React.Component {
@@ -22,12 +24,18 @@ class Message extends React.Component {
     super(props);
 
     const {
-      status, subject, tail, sentAtCumultiveTime, children,
-    } = this.props;
-    this.state = {
+      isLastMessageInContainer,
       status,
       subject,
-      tail,
+      sentAtCumultiveTime,
+      children,
+      messageTailShouldShowAfterDeley,
+    } = this.props;
+    this.state = {
+      isLastMessageInContainer,
+      status,
+      messageTailShouldShowAfterDeley,
+      subject,
       sentAtCumultiveTime,
       content: children,
     };
@@ -35,14 +43,23 @@ class Message extends React.Component {
 
   render() {
     const {
-      subject, tail, status, sentAtCumultiveTime, content,
+      subject,
+      status,
+      sentAtCumultiveTime,
+      messageTailShouldShowAfterDeley,
+      isLastMessageInContainer,
+      content,
     } = this.state;
-
     if (status === StatusType.IsHidden) {
       setTimeout(() => {
         this.setState({ status: StatusType.IsTyping });
         setTimeout(() => {
-          this.setState({ status: StatusType.IsSent });
+          this.setState({ status: StatusType.IsSentWithTail });
+          if (!isLastMessageInContainer) {
+            setTimeout(() => {
+              this.setState({ status: StatusType.IsSentWithoutTail });
+            }, messageTailShouldShowAfterDeley);
+          }
         }, computeTypingSpeed(content));
       }, sentAtCumultiveTime);
     }
@@ -50,7 +67,13 @@ class Message extends React.Component {
     return (
       <Bubble
         hidden={status === StatusType.IsHidden}
-        tail={status === StatusType.IsTyping ? TailType.TrailTail : tail}
+        tail={
+          status === StatusType.IsTyping
+            ? TailType.TrailTail
+            : status === StatusType.IsSentWithTail
+              ? TailType.PointerTail
+              : TailType.None
+        }
         color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
       >
         {status === StatusType.IsTyping ? (
@@ -65,8 +88,14 @@ class Message extends React.Component {
 
 Message.propTypes = {
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]),
-  tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
-  status: PropTypes.oneOf([StatusType.IsHidden, StatusType.IsTyping, StatusType.IsSent]),
+  messageTailShouldShowAfterDeley: PropTypes.number,
+  isLastMessageInContainer: PropTypes.bool,
+  status: PropTypes.oneOf([
+    StatusType.IsHidden,
+    StatusType.IsTyping,
+    StatusType.IsSentWithoutTail,
+    StatusType.IsSentWithTail,
+  ]),
   sentAtCumultiveTime: PropTypes.number,
   children: PropTypes.string,
 };
@@ -74,8 +103,9 @@ Message.propTypes = {
 Message.defaultProps = {
   status: StatusType.IsHidden,
   subject: SubjectType.Me,
-  tail: TailType.None,
+  messageTailShouldShowAfterDeley: 0,
   sentAtCumultiveTime: 0,
+  isLastMessageInContainer: false,
   children: <div />,
 };
 

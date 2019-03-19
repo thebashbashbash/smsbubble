@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { combineClasses } from '../../helpers/helpers';
-import { TailType, ColorType } from '../bubble/bubble';
+import { ColorType } from '../bubble/bubble';
 import { SubjectType } from '../../containers/Message/Message';
 
 import classes from './bubbleContainer.module.css';
@@ -22,15 +22,10 @@ const bubbleContainer = ({
       align === AlignType.Start ? classes.StartAlign : classes.EndAlign,
     )}
   >
-    {React.Children.map(children, (child, index) => React.cloneElement(child, {
+    {React.Children.map(children, child => React.cloneElement(child, {
       color,
       subject,
-      tail:
-          child.props.tail !== TailType.None
-            ? child.props.tail
-            : children.length - 1 === index || !Array.isArray(children)
-              ? TailType.PointerTail
-              : TailType.None,
+      tail: child.props.tail,
     }))}
   </div>
 );

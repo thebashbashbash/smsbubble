@@ -17,6 +17,7 @@ class MessageContainer extends React.Component {
     this.state = {
       subject,
       messageContainerTimeDeley,
+      messageDeleys,
       messages: children,
       messageSentAtCumulativeTime: children
         .map(child => computeTypingSpeed(child.props.children))
@@ -36,7 +37,9 @@ class MessageContainer extends React.Component {
       messages,
       messageContainerTimeDeley,
       messageSentAtCumulativeTime,
+      messageDeleys,
     } = this.state;
+
     return (
       <BubbleContainer
         subject={subject}
@@ -44,6 +47,8 @@ class MessageContainer extends React.Component {
       >
         {React.Children.map(messages, (child, index) => React.cloneElement(child, {
           sentAtCumultiveTime: messageContainerTimeDeley + messageSentAtCumulativeTime[index],
+          messageTailShouldShowAfterDeley: messageDeleys[index],
+          isLastMessageInContainer: index === messages.length - 1,
         }))}
       </BubbleContainer>
     );
