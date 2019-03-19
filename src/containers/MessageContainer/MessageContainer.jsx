@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { computeTypingSpeed, getRandomInt } from '../../helpers/helpers';
+import { computeTypingSpeed } from '../../helpers/helpers';
 
 import { SubjectType } from '../Message/Message';
 import BubbleContainer, { AlignType } from '../../components/bubbleContainer/bubbleContainer';
@@ -10,8 +10,10 @@ class MessageContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    const { subject, messageContainerTimeDeley, children } = this.props;
-    // getRandomInt(600, 2000) getRandomInt(300, 1000) getRandomInt
+    const {
+      subject, messageContainerTimeDeley, messageDeleys, children,
+    } = this.props;
+
     this.state = {
       subject,
       messageContainerTimeDeley,
@@ -20,14 +22,12 @@ class MessageContainer extends React.Component {
         .map(child => computeTypingSpeed(child.props.children))
         .reduce(
           (previous, current, index) => {
-            previous.push((previous[index] || 0) + current);
+            previous.push((previous[index] || 0) + current + messageDeleys[index]);
             return previous;
           },
           [0],
         ),
     };
-
-    // console.log(this.state.messageSentAtCumulativeTime);
   }
 
   render() {
@@ -52,6 +52,7 @@ class MessageContainer extends React.Component {
 
 MessageContainer.propTypes = {
   messageContainerTimeDeley: PropTypes.number,
+  messageDeleys: PropTypes.arrayOf(PropTypes.number),
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]).isRequired,
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
@@ -59,6 +60,7 @@ MessageContainer.propTypes = {
 
 MessageContainer.defaultProps = {
   messageContainerTimeDeley: 0,
+  messageDeleys: [],
 };
 
 export default MessageContainer;
