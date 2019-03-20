@@ -31,6 +31,14 @@ class MessageConversation extends React.Component {
             .map(element => element.map(subElement => subElement.props.children))
             .map(element => element.map(subElement => computeTypingSpeed(subElement)))
             .map(element => element.reduce((a, b) => a + b, 0))
+            .reduce(
+              (previous, current, index) => {
+                previous.push((previous[index] || 0) + current);
+                return previous;
+              },
+              [0],
+            )
+            .slice(0, -1)
           : [0],
     };
   }
@@ -51,8 +59,16 @@ class MessageConversation extends React.Component {
               index === 0
                 ? conversationStartDeley
                 : conversationStartDeley
-                  + messageDeleys[index - 1].reduce((a, b) => a + b, 0)
-                  + messageContainerActivedAtCumulativeTime[index - 1],
+                  + messageDeleys
+                    .map(element => element.reduce((a, b) => a + b, 0))
+                    .reduce(
+                      (previous, current, subIndex) => {
+                        previous.push((previous[subIndex] || 0) + current);
+                        return previous;
+                      },
+                      [0],
+                    )[index]
+                  + messageContainerActivedAtCumulativeTime[index],
         }))}
       </div>
     );

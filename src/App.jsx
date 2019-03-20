@@ -13,14 +13,25 @@ class App extends Component {
         <MessageContainer subject={SubjectType.Me}>
           <Message>Vad heter du? Jag heter Bashar!</Message>
           <Message>Förresten, jag älskar dig!</Message>
-          <Message>Och du älskar mig, det vet jag</Message>
-          <Message>Snart ses vi! Juste, vad heter du? Det var ju min fråga hehe!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
         </MessageContainer>
         <MessageContainer subject={SubjectType.You}>
           <Message>Vad heter du? Jag heter Bashar!</Message>
           <Message>Förresten, jag älskar dig!</Message>
-          <Message>Och du älskar mig, det vet jag</Message>
-          <Message>Snart ses vi! Juste, vad heter du? Det var ju min fråga hehe!</Message>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+        </MessageContainer>
+        <MessageContainer subject={SubjectType.Me}>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+        </MessageContainer>
+        <MessageContainer subject={SubjectType.You}>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
         </MessageContainer>
       </MessageConversation>
     );

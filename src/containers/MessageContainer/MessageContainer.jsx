@@ -40,6 +40,8 @@ class MessageContainer extends React.Component {
       messageDeleys,
     } = this.state;
 
+    // console.log(subject, messageContainerTimeDeley);
+
     return (
       <BubbleContainer
         subject={subject}
