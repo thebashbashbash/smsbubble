@@ -1,20 +1,19 @@
 :root {
   --loading-color: #505050cc;
- }
+}
 
- .Blue{
+.Blue {
   --loading-color: #505050cc
- }
+}
 
- .Gray{
+.Gray {
   --loading-color: #969696
- }
+}
 
 .Loading {
   display: flexbox;
   z-index: 0;
   flex-direction: row;
-  
 }
 
 .Loading .Dot {
@@ -60,6 +59,7 @@
     background: rgba(150, 150, 150, 0.4);
   }
 }
+
 @-webkit-keyframes CycleTwo {
   0% {
     background: rgba(150, 150, 150, 0.4);
@@ -68,12 +68,14 @@
     background: rgba(150, 150, 150, 0.4);
   }
   66.6667% {
-    background: var(--loading-color);;
+    background: var(--loading-color);
+    ;
   }
   100% {
     background: rgba(150, 150, 150, 0.4);
   }
 }
+
 @-webkit-keyframes CycleThree {
   0% {
     background: rgba(150, 150, 150, 0.4);
@@ -85,6 +87,7 @@
     background: rgba(150, 150, 150, 0.4);
   }
   100% {
-    background: var(--loading-color);;
+    background: var(--loading-color);
+    ;
   }
 }

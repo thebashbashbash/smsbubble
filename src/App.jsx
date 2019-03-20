@@ -33,6 +33,22 @@ class App extends Component {
           <Message>Vad heter du? Jag heter Bashar!</Message>
           <Message>Förresten, jag älskar dig!</Message>
         </MessageContainer>
+        <MessageContainer subject={SubjectType.Me}>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+          <Message>Vad heter du? Jag heter Bashar!Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+          <Message>Vad heter du? Jag heter Bashar!Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!Vad heter du? Jag heter Bashar!</Message>
+        </MessageContainer>
+        <MessageContainer subject={SubjectType.Me}>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+          <Message>Vad heter du? Jag heter Bashar!</Message>
+          <Message>Förresten, jag älskar dig!</Message>
+        </MessageContainer>
       </MessageConversation>
     );
   }
