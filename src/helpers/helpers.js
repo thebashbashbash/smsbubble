@@ -2,7 +2,7 @@
 export const combineClasses = (...args) => [...args].join(' ');
 
 export const computeTypingSpeed = (content) => {
-  const typingSpeed = 4;
+  const typingSpeed = 3;
   return Math.round(typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10));
 };
 
