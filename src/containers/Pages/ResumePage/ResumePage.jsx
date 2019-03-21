@@ -15,7 +15,7 @@ const resumePage = () => (
     <MessageContainer subject={SubjectType.You}>
       <Message>Yeah, that's me! My friends call me Bash 😀!</Message>
       <Message>
-        I'm not done with this page yet, so please check back leter or send me a message at
+        I'm not done with this page yet, so please check back later or send me a message at
         mengana@kth.se 📬️!
       </Message>
     </MessageContainer>
