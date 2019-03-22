@@ -10,76 +10,68 @@ const Ole = SubjectType.Me;
 
 const oleBirthdayPageDay1 = () => (
   <MessageConversation>
-    <MessageContainer subject={SubjectType.You}>
+    <MessageContainer subject={Bashar}>
       <Message>Hej Habibi❤️!</Message>
-      <Message>Nu undrar du säkert vad det här är? Inte sant?🤠</Message>
-      <Message>Jo! Detta är en del av min födelsedagsgåva till dig!🎁🥮🥳</Message>
-      <Message>Stort grattis i förskott! Din födelsedag är om några dagar!</Message>
+      <Message>Bra jobbat med gårdagens quiz🏅! Bara två fel!!</Message>
     </MessageContainer>
 
     <MessageContainer subject={Ole}>
-      <Message>HAJ HABIBI!😀</Message>
-      <Message>Åhhh, såå fint! Vad jag har saknat dig så! 🙈</Message>
-      <Message>Hur länge har du planerat det här?</Message>
-      <Message>miiiip</Message>
+      <Message>HAJ IGEN HABIBI!</Message>
+      <Message>Taaaaack 😅!</Message>
+      <Message>Egentligen hade jag bara ett fel, men men 🤓</Message>
+      <Message>Blir det fler frågor idag?🤠</Message>
+      <Message>miiiip!</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
       <Message>
-        Ett litet tag ... 😇 Jag har jobbat dag och natt för att hinna med detta ... men nu är det
-        näästan klart!😀
+        Jaaa men det är så klart habibi! Det blir fler frågor, MEN, med en twist! 🎢
       </Message>
-      <Message>Nu börjar din skattjakt som ska leda till din födelsedsgåva! 🤩</Message>
+      <Message>
+        Du kan redan nu få din gåva OM du lyckas gissa rätt på var den finns🎁 ... MEN, du får en
+        chans att gissa och jag säger till om svaret är rätt! 🔮
+      </Message>
     </MessageContainer>
 
     <MessageContainer subject={Ole}>
       <Message>😍😍😍</Message>
-      <Message>Sa du skattjakt?! 🏝☠️</Message>
       <Message>EEEEEK!</Message>
-      <Message>JAG ÄLSKAR SKATTJAKTER!</Message>
+      <Message>Menar du att jag kan få min gåva redan idag?! 🤩</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Så bra!!😅Idag börjar vi ganska enkelt!</Message>
-      <Message>
-        För att klara av dagens etapp av skattjakten måste du svara rätt på följande frågor! 🤓
-      </Message>
+      <Message>Jaa, riktig! 🇳🇴</Message>
+      <Message>Om du gissar rätt är din present din, redan idag!</Message>
+      <Message>Redo??!</Message>
     </MessageContainer>
 
     <MessageContainer subject={Ole}>
       <Message>EEEEEK!</Message>
-      <Message>😍😍😍</Message>
+      <Message>JAAA!</Message>
+      <Message>Jag är reda! Give it to me, låt skattjakten börja!🏝☠️</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>1️⃣: Vilket datum började vi snacka?</Message>
-      <Message>2️⃣: Vem skrev först?</Message>
-      <Message>3️⃣: Vem Woofa först?</Message>
-      <Message>4️⃣: Ungefär hur många timmar varade vårt första telefonsamtal?</Message>
-      <Message>
-        5️⃣: Hur många dagar efter att vi började snacka bokade du din blogg biljett?
-      </Message>
-      <Message>
-        6️⃣: Hur många dagar tog det innan du fick "cold feet" (alltså, hur många dagar efter att vi
-        började prata)?
-      </Message>
-      <Message>
-        7️⃣: På väg hem från tågstationen till min lägenhet, vad var det som hände? Vem stoppade oss
-        och vad ville dom?
-      </Message>
-      <Message>8️⃣: Vilken var vår första måltid ihop?</Message>
-      <Message>9️⃣: Vilken var vår första serie ihop?</Message>
-      <Message>🔟: Du höll utkik vid ett tillfälle när vi var utomhus... Varför?</Message>
+      <Message>1️⃣: Du tittar ut genom den franska balkongen i mörkret, på snön!</Message>
+      <Message>2️⃣: Du tittar stolt mot mig med din kreation!</Message>
+      <Message>3️⃣: En vision som påminner dig om en kärlek som blommar!</Message>
+      <Message>4️⃣: Du fångar mig på språng!</Message>
     </MessageContainer>
 
     <MessageContainer subject={Ole}>
-      <Message>EEEEEK! FYFAN VAD KUL! Hur svarar jag?</Message>
-      <Message>😍😍😍</Message>
+      <Message>MEN VA? Vad svårt!🤓</Message>
+      <Message>😓</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Haha! Enkelt, vänd dig mot Bashar och säg svaren så rättar han! 😅</Message>
-      <Message>Jag älskar dig! Vi hörs imorgon igen!</Message>
+      <Message>
+        HAHA!🤪 Det finns inga svar på varje enskild fråga, men tillsammans är dom en ledtråd som
+        talar om var gåvan finns!🏝
+      </Message>
+      <Message>
+        Jag älskar dig, men du får bara en chans att gissa på vara gåvan finns 😅... om du inte
+        lyckas får du vänta till imorgon!🔮
+      </Message>
       <Message>❤️</Message>
     </MessageContainer>
   </MessageConversation>
