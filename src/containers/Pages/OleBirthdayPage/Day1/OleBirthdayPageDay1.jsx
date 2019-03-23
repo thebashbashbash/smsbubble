@@ -21,7 +21,9 @@ const oleBirthdayPageDay1 = () => (
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Du får en chans till idag ... leta där du dricker mig varje dag!🏝☠️</Message>
+      <Message>
+        Du får en chans till idag (men bara en!🤠) ... leta där du dricker mig varje dag!🏝☠️
+      </Message>
       <Message>❤️</Message>
     </MessageContainer>
   </MessageConversation>
