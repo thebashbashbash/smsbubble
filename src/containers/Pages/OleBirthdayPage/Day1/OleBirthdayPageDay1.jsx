@@ -12,29 +12,32 @@ const oleBirthdayPageDay1 = () => (
   <MessageConversation>
     <MessageContainer subject={Bashar}>
       <Message>Hej Habibi❤️!</Message>
-      <Message>Du var sååå duktig som lyckades klura ut agave 🍯!</Message>
-      <Message>Eftersom du var så duktig vill jag gärna ge dig en till ledtråd!🙂</Message>
+      <Message>Nu är det dags att du letar i Oles katakomber! ☠️</Message>
+      <Message>Börja vid vår bibel och gå så djupt som du kan gå!</Message>
     </MessageContainer>
 
     <MessageContainer subject={Ole}>
-      <Message>AHHH!</Message>
-      <Message>EEEEEEK!🤠</Message>
-      <Message>vad vad vad?!</Message>
+      <Message>Hej, hej!</Message>
+      <Message>Vad menar du? Ska jag gräva ett hål i min lägenhet?!🏔</Message>
+      <Message>😲</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>https://youtu.be/83PpryYHHeY</Message>
+      <Message>Ja men ungefär!😀</Message>
+      <Message>Var kreativ! Vänd upp och ner på allt!</Message>
       <Message>☠️</Message>
     </MessageContainer>
 
     <MessageContainer subject={Ole}>
-      <Message>men nei nei nei nei</Message>
-      <Message>detta är ingen ledtrdå, är du gal?!?!👹</Message>
+      <Message>Okej!!! Jag ska försöka 🤠</Message>
+      <Message>Jag älskar dig habibi!</Message>
+      <Message>❤️</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>...</Message>
-      <Message>🙃</Message>
+      <Message>Jag älskar dig habibi!</Message>
+      <Message>❤️</Message>
+      <Message>Lycka till!!</Message>
     </MessageContainer>
   </MessageConversation>
 );
