@@ -54,7 +54,8 @@ class MessageConversation extends React.Component {
     return (
       <div className={classes.MessageConversation}>
         {React.Children.map(messageContainers, (child, index) => React.cloneElement(child, {
-          messageDeleys: messageDeleys[index],
+          messageDeleys:
+              messageContainers instanceof Array ? messageDeleys[index] : messageDeleys,
           messageContainerTimeDeley:
               index === 0
                 ? conversationStartDeley

@@ -40,8 +40,6 @@ class MessageContainer extends React.Component {
       messageDeleys,
     } = this.state;
 
-    // console.log(subject, messageContainerTimeDeley);
-
     return (
       <BubbleContainer
         subject={subject}
@@ -59,7 +57,7 @@ class MessageContainer extends React.Component {
 
 MessageContainer.propTypes = {
   messageContainerTimeDeley: PropTypes.number,
-  messageDeleys: PropTypes.arrayOf(PropTypes.number),
+  messageDeleys: PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]).isRequired,
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
