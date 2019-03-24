@@ -19,15 +19,18 @@ class MessageContainer extends React.Component {
       messageContainerTimeDeley,
       messageDeleys,
       messages: children,
-      messageSentAtCumulativeTime: children
-        .map(child => computeTypingSpeed(child.props.children))
-        .reduce(
-          (previous, current, index) => {
-            previous.push((previous[index] || 0) + current + messageDeleys[index]);
-            return previous;
-          },
-          [0],
-        ),
+      messageSentAtCumulativeTime:
+        children instanceof Array
+          ? children
+            .map(child => computeTypingSpeed(child.props.children))
+            .reduce(
+              (previous, current, index) => {
+                previous.push((previous[index] || 0) + current + messageDeleys[index]);
+                return previous;
+              },
+              [0],
+            )
+          : computeTypingSpeed(children.props.children),
     };
   }
 

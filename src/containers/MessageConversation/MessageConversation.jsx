@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -23,7 +24,9 @@ class MessageConversation extends React.Component {
             .map(child => child.props.children)
             .map(element => element.map(subElement => subElement.props.children))
             .map(element => element.map(() => getRandomInt(messageDelayMin, messageDelayMax)))
-          : children.props.children.map(() => getRandomInt(messageDelayMin, messageDelayMax)),
+          : children.props.children instanceof Array
+            ? children.props.children.map(() => getRandomInt(messageDelayMin, messageDelayMax))
+            : getRandomInt(messageDelayMin, messageDelayMax),
       messageContainerActivedAtCumulativeTime:
         children instanceof Array
           ? children
