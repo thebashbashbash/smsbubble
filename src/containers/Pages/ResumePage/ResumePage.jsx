@@ -2,24 +2,32 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
 
-// import Message, { SubjectType } from '../../Message/Message';
-// import MessageContainer from '../../MessageContainer/MessageContainer';
-// import MessageConversation from '../../MessageConversation/MessageConversation';
+import Message, { SubjectType } from '../../Message/Message';
+import MessageContainer from '../../MessageContainer/MessageContainer';
+import MessageConversation from '../../MessageConversation/MessageConversation';
+
+const Bashar = SubjectType.You;
+const vistor = SubjectType.Me;
 
 const resumePage = () => (
-  <div />
-  // <MessageConversation>
-  //   <MessageContainer subject={SubjectType.Me}>
-  //     <Message>Hello!</Message>
-  //     <Message>You're Bashar Mengana right? 🤠</Message>
-  //   </MessageContainer>
-  //   <MessageContainer subject={SubjectType.You}>
-  //     <Message>Yeah, that's me! My friends call me Bash though 😀!</Message>
-  //     <Message>
-  //       I'm not done with this page yet, so please check back later or send me a message at
-  //       mengana@kth.se 📬️!
-  //     </Message>
-  //   </MessageContainer>
-  // </MessageConversation>
+  <MessageConversation>
+    <MessageContainer subject={vistor}>
+      <Message>Hello!</Message>
+      <Message>You're Bashar Mengana right? 🤠</Message>
+    </MessageContainer>
+
+    <MessageContainer subject={Bashar}>
+      <Message>Yeah, that's me! My friends call me Bash though 😀</Message>
+      <Message>
+        I'm not done with this page yet, so please check back later or send me a message at
+        mengana@kth.se 📬️
+      </Message>
+    </MessageContainer>
+
+    <MessageContainer subject={vistor}>
+      <Message>Nice!</Message>
+      <Message>Alright Bash, see you soon 🙂</Message>
+    </MessageContainer>
+  </MessageConversation>
 );
 export default resumePage;
