@@ -6,6 +6,7 @@ import {
   computeMessageDeley,
   computeConversationStartDeley,
   computeMessageContainerTimeDeley,
+  computeAccumulatedMessageDeley,
 } from './helpers';
 
 import classes from './MessageConversation.module.css';
@@ -40,15 +41,7 @@ class MessageConversation extends React.Component {
               index === 0
                 ? conversationStartDeley
                 : conversationStartDeley
-                  + messageDelay
-                    .map(element => element.reduce((a, b) => a + b, 0))
-                    .reduce(
-                      (previous, current, subIndex) => {
-                        previous.push((previous[subIndex] || 0) + current);
-                        return previous;
-                      },
-                      [0],
-                    )[index]
+                  + computeAccumulatedMessageDeley(messageDelay, index)
                   + messageContainerTimeDeley[index],
         }))}
       </div>

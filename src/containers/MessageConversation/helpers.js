@@ -37,3 +37,13 @@ export const computeMessageContainerTimeDeley = children => (children instanceof
     )
     .slice(0, -1)
   : [0]);
+
+export const computeAccumulatedMessageDeley = (messageDelay, index) => messageDelay
+  .map(element => element.reduce((a, b) => a + b, 0))
+  .reduce(
+    (previous, current, subIndex) => {
+      previous.push((previous[subIndex] || 0) + current);
+      return previous;
+    },
+    [0],
+  )[index];
