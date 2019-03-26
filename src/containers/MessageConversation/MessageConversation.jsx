@@ -6,27 +6,37 @@ import classes from './MessageConversation.module.css';
 
 import { computeTypingSpeed, getRandomInt } from '../../helpers/helpers';
 
+const messageDelayMinDefault = 700;
+const messageDelayMaxDefault = 2000;
+
+const computeMessageDeley = (
+  children,
+  messageDelayMin = messageDelayMinDefault,
+  messageDelayMax = messageDelayMaxDefault,
+) => (children instanceof Array
+  ? children
+    .map(child => child.props.children)
+    .map(element => element.map(subElement => subElement.props.children))
+    .map(element => element.map(() => getRandomInt(messageDelayMin, messageDelayMax)))
+  : children.props.children instanceof Array
+    ? children.props.children.map(() => getRandomInt(messageDelayMin, messageDelayMax))
+    : getRandomInt(messageDelayMin, messageDelayMax));
+
+const computeConversationStartDeley = (
+  messageDelayMin = messageDelayMinDefault / 2,
+  messageDelayMax = messageDelayMaxDefault / 2,
+) => getRandomInt(messageDelayMin / 2, messageDelayMax / 2);
+
 class MessageConversation extends React.Component {
   constructor(props) {
     super(props);
 
     const { children } = this.props;
 
-    const messageDelayMin = 700;
-    const messageDelayMax = 2000;
-
     this.state = {
       messageContainers: children,
-      conversationStartDeley: getRandomInt(messageDelayMin / 2, messageDelayMax / 2),
-      messageDelay:
-        children instanceof Array
-          ? children
-            .map(child => child.props.children)
-            .map(element => element.map(subElement => subElement.props.children))
-            .map(element => element.map(() => getRandomInt(messageDelayMin, messageDelayMax)))
-          : children.props.children instanceof Array
-            ? children.props.children.map(() => getRandomInt(messageDelayMin, messageDelayMax))
-            : getRandomInt(messageDelayMin, messageDelayMax),
+      conversationStartDeley: computeConversationStartDeley(),
+      messageDelay: computeMessageDeley(children),
       messageContainerActivedAtCumulativeTime:
         children instanceof Array
           ? children
@@ -57,8 +67,7 @@ class MessageConversation extends React.Component {
     return (
       <div className={classes.MessageConversation}>
         {React.Children.map(messageContainers, (child, index) => React.cloneElement(child, {
-          messageDelay:
-              messageContainers instanceof Array ? messageDelay[index] : messageDelay,
+          messageDelay: messageContainers instanceof Array ? messageDelay[index] : messageDelay,
           messageContainerTimeDeley:
               index === 0
                 ? conversationStartDeley
