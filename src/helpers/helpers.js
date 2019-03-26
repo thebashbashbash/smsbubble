@@ -3,7 +3,11 @@ export const combineClasses = (...args) => [...args].join(' ');
 
 export const computeTypingSpeed = (content) => {
   const typingSpeed = 3;
-  return Math.round(typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10));
+  const minSpeed = 800;
+
+  const speed = Math.round(typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10));
+
+  return speed > minSpeed ? speed : minSpeed;
 };
 
 // eslint-disable-next-line max-len
