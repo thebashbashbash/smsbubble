@@ -25,8 +25,8 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Nice!</Message>
-      <Message>Alright Bash, see you soon 🙂</Message>
+      <Message>Nice, sounds good Bash!</Message>
+      <Message>See you later then 🙂</Message>
     </MessageContainer>
   </MessageConversation>
 );
