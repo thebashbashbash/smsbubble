@@ -11,13 +11,13 @@ class MessageContainer extends React.Component {
     super(props);
 
     const {
-      subject, messageContainerTimeDeley, messageDeleys, children,
+      subject, messageContainerTimeDeley, messageDelay, children,
     } = this.props;
 
     this.state = {
       subject,
       messageContainerTimeDeley,
-      messageDeleys,
+      messageDelay,
       messages: children,
       messageSentAtCumulativeTime:
         children instanceof Array
@@ -25,7 +25,7 @@ class MessageContainer extends React.Component {
             .map(child => computeTypingSpeed(child.props.children))
             .reduce(
               (previous, current, index) => {
-                previous.push((previous[index] || 0) + current + messageDeleys[index]);
+                previous.push((previous[index] || 0) + current + messageDelay[index]);
                 return previous;
               },
               [0],
@@ -40,7 +40,7 @@ class MessageContainer extends React.Component {
       messages,
       messageContainerTimeDeley,
       messageSentAtCumulativeTime,
-      messageDeleys,
+      messageDelay,
     } = this.state;
 
     return (
@@ -50,8 +50,8 @@ class MessageContainer extends React.Component {
       >
         {React.Children.map(messages, (child, index) => React.cloneElement(child, {
           sentAtCumultiveTime: messageContainerTimeDeley + messageSentAtCumulativeTime[index],
-          messageTailShouldShowAfterDeley: messageDeleys[index],
-          isLastMessageInContainer: index === messages.length - 1,
+          messageDelay: messageDelay[index],
+          lastInContainer: index === messages.length - 1,
         }))}
       </BubbleContainer>
     );
@@ -60,7 +60,7 @@ class MessageContainer extends React.Component {
 
 MessageContainer.propTypes = {
   messageContainerTimeDeley: PropTypes.number,
-  messageDeleys: PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+  messageDelay: PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]).isRequired,
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
@@ -68,7 +68,7 @@ MessageContainer.propTypes = {
 
 MessageContainer.defaultProps = {
   messageContainerTimeDeley: 0,
-  messageDeleys: [],
+  messageDelay: [],
 };
 
 export default MessageContainer;

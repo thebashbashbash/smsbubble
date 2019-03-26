@@ -18,7 +18,7 @@ class MessageConversation extends React.Component {
     this.state = {
       messageContainers: children,
       conversationStartDeley: getRandomInt(messageDelayMin / 2, messageDelayMax / 2),
-      messageDeleys:
+      messageDelay:
         children instanceof Array
           ? children
             .map(child => child.props.children)
@@ -50,20 +50,20 @@ class MessageConversation extends React.Component {
     const {
       messageContainers,
       conversationStartDeley,
-      messageDeleys,
+      messageDelay,
       messageContainerActivedAtCumulativeTime,
     } = this.state;
 
     return (
       <div className={classes.MessageConversation}>
         {React.Children.map(messageContainers, (child, index) => React.cloneElement(child, {
-          messageDeleys:
-              messageContainers instanceof Array ? messageDeleys[index] : messageDeleys,
+          messageDelay:
+              messageContainers instanceof Array ? messageDelay[index] : messageDelay,
           messageContainerTimeDeley:
               index === 0
                 ? conversationStartDeley
                 : conversationStartDeley
-                  + messageDeleys
+                  + messageDelay
                     .map(element => element.reduce((a, b) => a + b, 0))
                     .reduce(
                       (previous, current, subIndex) => {

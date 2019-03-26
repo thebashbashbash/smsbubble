@@ -24,17 +24,17 @@ class Message extends React.Component {
     super(props);
 
     const {
-      isLastMessageInContainer,
+      lastInContainer,
       status,
       subject,
       sentAtCumultiveTime,
       children,
-      messageTailShouldShowAfterDeley,
+      messageDelay,
     } = this.props;
     this.state = {
-      isLastMessageInContainer,
+      lastInContainer,
       status,
-      messageTailShouldShowAfterDeley,
+      messageDelay,
       subject,
       sentAtCumultiveTime,
       content: children,
@@ -46,8 +46,8 @@ class Message extends React.Component {
       subject,
       status,
       sentAtCumultiveTime,
-      messageTailShouldShowAfterDeley,
-      isLastMessageInContainer,
+      messageDelay,
+      lastInContainer,
       content,
     } = this.state;
     if (status === StatusType.IsHidden) {
@@ -55,10 +55,10 @@ class Message extends React.Component {
         this.setState({ status: StatusType.IsTyping });
         setTimeout(() => {
           this.setState({ status: StatusType.IsSentWithTail });
-          if (!isLastMessageInContainer) {
+          if (!lastInContainer) {
             setTimeout(() => {
               this.setState({ status: StatusType.IsSentWithoutTail });
-            }, messageTailShouldShowAfterDeley);
+            }, messageDelay);
           }
         }, computeTypingSpeed(content));
       }, sentAtCumultiveTime);
@@ -88,8 +88,8 @@ class Message extends React.Component {
 
 Message.propTypes = {
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]),
-  messageTailShouldShowAfterDeley: PropTypes.number,
-  isLastMessageInContainer: PropTypes.bool,
+  messageDelay: PropTypes.number,
+  lastInContainer: PropTypes.bool,
   status: PropTypes.oneOf([
     StatusType.IsHidden,
     StatusType.IsTyping,
@@ -103,9 +103,9 @@ Message.propTypes = {
 Message.defaultProps = {
   status: StatusType.IsHidden,
   subject: SubjectType.Me,
-  messageTailShouldShowAfterDeley: 0,
+  messageDelay: 0,
   sentAtCumultiveTime: 0,
-  isLastMessageInContainer: false,
+  lastInContainer: false,
   children: <div />,
 };
 
