@@ -21,8 +21,8 @@
 }
 
 .Loading .Dot {
-  height: 0.9rem;
-  width: 0.9rem;
+  height: 0.8rem;
+  width: 0.8rem;
   z-index: 1;
   border-radius: 50%;
   background: var(--loading-color);
