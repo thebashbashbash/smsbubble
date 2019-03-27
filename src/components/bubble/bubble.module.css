@@ -1,11 +1,19 @@
 .Bubble {
   height: auto;
   width: auto;
+  max-width: 16rem;
   border-radius: 15px;
   padding: 8px 15px;
   margin-top: 0px;
   margin-bottom: 2px;
-  display: inline-block;
+  display: flex;
+  text-align: start;
+}
+
+@media (min-width:800px) {
+  .Bubble {
+    max-width: none;
+  }
 }
 
 .Hidden {

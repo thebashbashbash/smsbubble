@@ -41,7 +41,7 @@ class MessageContainer extends React.Component {
               messageContainerTimeDeley
               + (messages instanceof Array ? messageSentAtCumulativeTime[index] : 0),
           messageDelay: messages instanceof Array ? messageDelay[index] : messageDelay,
-          lastInContainer: index === messages.length - 1,
+          lastInContainer: messages instanceof Array ? index === messages.length - 1 : true,
         }))}
       </BubbleContainer>
     );

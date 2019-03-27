@@ -13,7 +13,7 @@ const resumePage = () => (
   <MessageConversation>
     <MessageContainer subject={vistor}>
       <Message>Hello!</Message>
-      <Message>You're Bashar Mengana right? 🤠</Message>
+      <Message>Bashar Mengana, right? 🤠</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
