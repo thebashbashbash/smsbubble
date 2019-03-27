@@ -49,8 +49,10 @@ class MessageContainer extends React.Component {
         align={subject === SubjectType.Me ? AlignType.End : AlignType.Start}
       >
         {React.Children.map(messages, (child, index) => React.cloneElement(child, {
-          sentAtCumultiveTime: messageContainerTimeDeley + messageSentAtCumulativeTime[index],
-          messageDelay: messageDelay[index],
+          sentAtCumultiveTime:
+              messageContainerTimeDeley
+              + (messages instanceof Array ? messageSentAtCumulativeTime[index] : 0),
+          messageDelay: messages instanceof Array ? messageDelay[index] : messageDelay,
           lastInContainer: index === messages.length - 1,
         }))}
       </BubbleContainer>
