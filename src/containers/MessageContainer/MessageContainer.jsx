@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { computeTypingSpeed } from '../../helpers/helpers';
-
 import { SubjectType } from '../Message/Message';
 import BubbleContainer, { AlignType } from '../../components/bubbleContainer/bubbleContainer';
+import computeMessageSentAtCumulativeTime from './helper';
 
 class MessageContainer extends React.Component {
   constructor(props) {
@@ -19,18 +18,7 @@ class MessageContainer extends React.Component {
       messageContainerTimeDeley,
       messageDelay,
       messages: children,
-      messageSentAtCumulativeTime:
-        children instanceof Array
-          ? children
-            .map(child => computeTypingSpeed(child.props.children))
-            .reduce(
-              (previous, current, index) => {
-                previous.push((previous[index] || 0) + current + messageDelay[index]);
-                return previous;
-              },
-              [0],
-            )
-          : computeTypingSpeed(children.props.children),
+      messageSentAtCumulativeTime: computeMessageSentAtCumulativeTime(children, messageDelay),
     };
   }
 

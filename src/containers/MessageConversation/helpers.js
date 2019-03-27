@@ -1,6 +1,6 @@
+/* eslint-disable no-nested-ternary */
 import { computeTypingSpeed, getRandomInt } from '../../helpers/helpers';
 
-/* eslint-disable no-nested-ternary */
 export const messageDelayMinDefault = 700;
 export const messageDelayMaxDefault = 2000;
 
