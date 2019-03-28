@@ -16,10 +16,6 @@
   }
 }
 
-.Hidden {
-  display: none;
-}
-
 .Gray {
   align-items: flex-start;
   color: black;
@@ -68,6 +64,7 @@
   -webkit-animation: pulsateBig 1.5s infinite alternate;
   -moz-animation: pulsateBig 1.5s infinite alternate;
   -animation: pulsateBig 1.5s infinite alternate;
+  animation: pulsateBig 1.5s infinite alternate;
 }
 
 .Gray .Bubble.TrailTail:after {
@@ -83,6 +80,7 @@
   -webkit-animation: pulsateSmall 1s infinite alternate;
   -moz-animation: pulsateSmall 1s infinite alternate;
   -animation: pulsateSmall 1s infinite alternate;
+  animation: pulsateSmall 1s infinite alternate;
 }
 
 .Blue {
@@ -137,6 +135,7 @@
   -webkit-animation: pulsateBig 1.5s infinite alternate;
   -moz-animation: pulsateBig 1.5s infinite alternate;
   -animation: pulsateBig 1.5s infinite alternate;
+  animation: pulsateBig 1.5s infinite alternate;
 }
 
 .Blue .Bubble.TrailTail:after {
@@ -153,6 +152,7 @@
   -webkit-animation: pulsateSmall 1s infinite alternate;
   -moz-animation: pulsateSmall 1s infinite alternate;
   -animation: pulsateSmall 1s infinite alternate;
+  animation: pulsateSmall 1s infinite alternate;
 }
 
 @-webkit-keyframes pulsateBig {

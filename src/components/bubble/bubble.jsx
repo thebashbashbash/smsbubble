@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Linkify from 'react-linkify';
+import posed from 'react-pose';
 
 import { combineClasses } from '../../helpers/helpers';
 import classes from './bubble.module.css';
@@ -19,28 +20,43 @@ export const ColorType = {
   None: '',
 };
 
+const Bubble = posed.div({
+  hidden: {
+    opacity: 0,
+    y: 10,
+    scale: 0.8,
+  },
+  shown: {
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'tween',
+      stiffness: 500,
+      duration: 200,
+    },
+  },
+});
+
 const bubble = ({
   color, tail, hidden, children,
 }) => (
-  <div
-    className={combineClasses(
-      hidden ? classes.Hidden : [],
-      color === ColorType.Blue ? classes.Blue : classes.Gray,
-    )}
-  >
-    <div
-      className={combineClasses(
-        classes.Bubble,
-        tail === TailType.None
-          ? []
-          : tail === TailType.PointerTail
-            ? classes.PointerTail
-            : classes.TrailTail,
-      )}
-    >
-      <Linkify>{children}</Linkify>
+  <Bubble className="bubble" pose={hidden ? 'hidden' : 'shown'}>
+    <div className={combineClasses(color === ColorType.Blue ? classes.Blue : classes.Gray)}>
+      <div
+        className={combineClasses(
+          classes.Bubble,
+          tail === TailType.None
+            ? []
+            : tail === TailType.PointerTail
+              ? classes.PointerTail
+              : classes.TrailTail,
+        )}
+      >
+        <Linkify>{children}</Linkify>
+      </div>
     </div>
-  </div>
+  </Bubble>
 );
 
 bubble.propTypes = {
