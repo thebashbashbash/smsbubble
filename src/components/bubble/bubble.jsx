@@ -21,18 +21,25 @@ export const ColorType = {
 };
 
 const Bubble = posed.div({
-  hidden: {
+  hiddenBlue: {
     opacity: 0,
     y: 10,
+    x: 15,
+    scale: 0.8,
+  },
+  hiddenGray: {
+    opacity: 0,
+    y: 10,
+    x: -15,
     scale: 0.8,
   },
   shown: {
     scale: 1,
     opacity: 1,
     y: 0,
+    x: 0,
     transition: {
       type: 'tween',
-      stiffness: 500,
       duration: 200,
     },
   },
@@ -41,7 +48,10 @@ const Bubble = posed.div({
 const bubble = ({
   color, tail, hidden, children,
 }) => (
-  <Bubble className="bubble" pose={hidden ? 'hidden' : 'shown'}>
+  <Bubble
+    className="bubble"
+    pose={hidden ? (color === ColorType.Blue ? 'hiddenBlue' : 'hiddenGray') : 'shown'}
+  >
     <div className={combineClasses(color === ColorType.Blue ? classes.Blue : classes.Gray)}>
       <div
         className={combineClasses(
