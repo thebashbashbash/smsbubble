@@ -2,8 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { computeTypingSpeed } from '../../helpers/helpers';
+import posed from 'react-pose';
 
+import { computeTypingSpeed } from '../../helpers/helpers';
 import Bubble, { ColorType, TailType } from '../../components/bubble/bubble';
 import LoadingIndicator from '../../components/loadingIndicator/loadingIndicator';
 
@@ -18,6 +19,22 @@ export const StatusType = {
   IsSentWithoutTail: 'IsSentWithoutTail',
   IsSentWithTail: 'IsSentWithTail',
 };
+
+const MessageBubble = posed.div({
+  loading: {
+    scale: 1,
+    transition: () => ({
+      type: 'keyframes',
+      values: [1, 1.025],
+      duration: 500,
+      yoyo: Infinity,
+    }),
+    delay: 500,
+  },
+  notLoading: {
+    scale: 1,
+  },
+});
 
 class Message extends React.Component {
   constructor(props) {
@@ -65,23 +82,27 @@ class Message extends React.Component {
     }
 
     return (
-      <Bubble
-        hidden={status === StatusType.IsHidden}
-        tail={
-          status === StatusType.IsTyping
-            ? TailType.TrailTail
-            : status === StatusType.IsSentWithTail
-              ? TailType.PointerTail
-              : TailType.None
-        }
-        color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
-      >
-        {status === StatusType.IsTyping ? (
-          <LoadingIndicator color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray} />
-        ) : (
-          content
-        )}
-      </Bubble>
+      <MessageBubble pose={status === StatusType.IsTyping ? 'loading' : 'notLoading'}>
+        <Bubble
+          hidden={status === StatusType.IsHidden}
+          tail={
+            status === StatusType.IsTyping
+              ? TailType.TrailTail
+              : status === StatusType.IsSentWithTail
+                ? TailType.PointerTail
+                : TailType.None
+          }
+          color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
+        >
+          {status === StatusType.IsTyping ? (
+            <LoadingIndicator
+              color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
+            />
+          ) : (
+            content
+          )}
+        </Bubble>
+      </MessageBubble>
     );
   }
 }

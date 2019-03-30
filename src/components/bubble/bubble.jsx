@@ -33,7 +33,7 @@ const Bubble = posed.div({
     x: -15,
     scale: 0.8,
   },
-  shown: {
+  notHidden: {
     scale: 1,
     opacity: 1,
     y: 0,
@@ -50,7 +50,7 @@ const bubble = ({
 }) => (
   <Bubble
     className="bubble"
-    pose={hidden ? (color === ColorType.Blue ? 'hiddenBlue' : 'hiddenGray') : 'shown'}
+    pose={hidden ? (color === ColorType.Blue ? 'hiddenBlue' : 'hiddenGray') : 'notHidden'}
   >
     <div className={combineClasses(color === ColorType.Blue ? classes.Blue : classes.Gray)}>
       <div
