@@ -36,7 +36,9 @@
   width: 20px;
   background: #e5e5e5;
   border-bottom-right-radius: 15px;
-  transition: all linear 0.2s;
+  -webkit-animation: PointerTail 0.5s;
+  -moz-animation: PointerTail 0.5s;
+  animation: PointerTail 0.5s;
 }
 
 .Gray .Bubble.PointerTail:after {
@@ -76,9 +78,9 @@
   width: 7px;
   background: #e5e5e5;
   border-radius: 50%;
-  -webkit-animation: pulsateFirstBubble 1.5s infinite alternate;
-  -moz-animation: pulsateFirstBubble 1.5s infinite alternate;
-  animation: pulsateFirstBubble 1.5s infinite alternate;
+  -webkit-animation: pulsateFirstBubble 2s infinite alternate;
+  -moz-animation: pulsateFirstBubble 2s infinite alternate;
+  animation: pulsateFirstBubble 2s infinite alternate;
 }
 
 .Blue {
@@ -104,7 +106,22 @@
   background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-bottom-left-radius: 15px;
-  transition: all linear 0.2s;
+  -webkit-animation: PointerTail 0.5s;
+  -moz-animation: PointerTail 0.5s;
+  animation: PointerTail 0.5s;
+}
+
+@keyframes PointerTail {
+  0% {
+    transform: scale(0.2);
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+  }
 }
 
 .Blue .Bubble.PointerTail:after {
@@ -146,9 +163,9 @@
   background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-radius: 50%;
-  -webkit-animation: pulsateFirstBubble 1.5s infinite alternate;
-  -moz-animation: pulsateFirstBubble 1.5s infinite alternate;
-  animation: pulsateFirstBubble 1.5s infinite alternate;
+  -webkit-animation: pulsateFirstBubble 2s infinite alternate;
+  -moz-animation: pulsateFirstBubble 2s infinite alternate;
+  animation: pulsateFirstBubble 2s infinite alternate;
 }
 
 @keyframes pulsateFirstBubble {
