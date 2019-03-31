@@ -1,13 +1,15 @@
 /* eslint-disable max-len */
 export const combineClasses = (...args) => [...args].join(' ');
 
-export const computeTypingSpeed = (content) => {
+export const computeTypingDuration = (content) => {
   const typingSpeed = 2;
-  const minSpeed = 600;
+  const minTypingDuration = 1000;
 
-  const speed = Math.round(typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10));
+  const computedTypingDuration = Math.round(
+    typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10),
+  );
 
-  return speed > minSpeed ? speed : minSpeed;
+  return computedTypingDuration > minTypingDuration ? computedTypingDuration : minTypingDuration;
 };
 
 // eslint-disable-next-line max-len

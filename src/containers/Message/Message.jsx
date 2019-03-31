@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import posed from 'react-pose';
 
-import { computeTypingSpeed } from '../../helpers/helpers';
+import { computeTypingDuration } from '../../helpers/helpers';
 import Bubble, { ColorType, TailType } from '../../components/bubble/bubble';
 import LoadingIndicator from '../../components/loadingIndicator/loadingIndicator';
 
@@ -77,7 +77,7 @@ class Message extends React.Component {
               this.setState({ status: StatusType.IsSentWithoutTail });
             }, messageDelay);
           }
-        }, computeTypingSpeed(content));
+        }, computeTypingDuration(content));
       }, sentAtCumultiveTime);
     }
 

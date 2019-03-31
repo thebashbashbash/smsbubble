@@ -61,10 +61,9 @@
   width: 14px;
   background: #e5e5e5;
   border-radius: 50%;
-  -webkit-animation: pulsateBig 1.5s infinite alternate;
-  -moz-animation: pulsateBig 1.5s infinite alternate;
-  -animation: pulsateBig 1.5s infinite alternate;
-  animation: pulsateBig 1.5s infinite alternate;
+  -webkit-animation: pulsateSecondBubble 2s infinite alternate;
+  -moz-animation: pulsateSecondBubble 2s infinite alternate;
+  animation: pulsateSecondBubble 2s infinite alternate;
 }
 
 .Gray .Bubble.TrailTail:after {
@@ -77,10 +76,9 @@
   width: 7px;
   background: #e5e5e5;
   border-radius: 50%;
-  -webkit-animation: pulsateSmall 1s infinite alternate;
-  -moz-animation: pulsateSmall 1s infinite alternate;
-  -animation: pulsateSmall 1s infinite alternate;
-  animation: pulsateSmall 1s infinite alternate;
+  -webkit-animation: pulsateFirstBubble 1.5s infinite alternate;
+  -moz-animation: pulsateFirstBubble 1.5s infinite alternate;
+  animation: pulsateFirstBubble 1.5s infinite alternate;
 }
 
 .Blue {
@@ -132,10 +130,9 @@
   background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-radius: 50%;
-  -webkit-animation: pulsateBig 1.5s infinite alternate;
-  -moz-animation: pulsateBig 1.5s infinite alternate;
-  -animation: pulsateBig 1.5s infinite alternate;
-  animation: pulsateBig 1.5s infinite alternate;
+  -webkit-animation: pulsateSecondBubble 2 infinite alternate;
+  -moz-animation: pulsateSecondBubble 2s infinite alternate;
+  animation: pulsateSecondBubble 2s infinite alternate;
 }
 
 .Blue .Bubble.TrailTail:after {
@@ -149,74 +146,33 @@
   background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-radius: 50%;
-  -webkit-animation: pulsateSmall 1s infinite alternate;
-  -moz-animation: pulsateSmall 1s infinite alternate;
-  -animation: pulsateSmall 1s infinite alternate;
-  animation: pulsateSmall 1s infinite alternate;
+  -webkit-animation: pulsateFirstBubble 1.5s infinite alternate;
+  -moz-animation: pulsateFirstBubble 1.5s infinite alternate;
+  animation: pulsateFirstBubble 1.5s infinite alternate;
 }
 
-@-webkit-keyframes pulsateBig {
-  from {
-    height: 14px;
-    width: 14px;
+@keyframes pulsateFirstBubble {
+  0% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
   }
-  to {
-    height: 17px;
-    width: 17px;
-  }
-}
-
-@-moz-keyframes pulsateBig {
-  from {
-    height: 14px;
-    width: 14px;
-  }
-  to {
-    height: 17px;
-    width: 17px;
+  100% {
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
   }
 }
 
-@keyframes pulsateBig {
-  from {
-    height: 14px;
-    width: 14px;
+@keyframes pulsateSecondBubble {
+  0% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
   }
-  to {
-    height: 17px;
-    width: 17px;
-  }
-}
-
-@-webkit-keyframes pulsateSmall {
-  from {
-    height: 7px;
-    width: 7px;
-  }
-  to {
-    height: 9px;
-    width: 9px;
-  }
-}
-
-@-moz-keyframes pulsateSmall {
-  from {
-    height: 7px;
-    width: 7px;
-  }
-  to {
-    height: 9px;
-    width: 9px;
-  }
-}
-
-@keyframes pulsateSmall {
-  from {
-    height: 7px;
-    width: 7px;
-  }
-  to {
-    height: 9px;
-    width: 9px;
+  100% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
   }
 }

@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import { computeTypingSpeed, getRandomInt } from '../../helpers/helpers';
+import { computeTypingDuration, getRandomInt } from '../../helpers/helpers';
 
 export const messageDelayMinDefault = 700;
 export const messageDelayMaxDefault = 2000;
@@ -32,8 +32,8 @@ export const computeMessageContainerTimeDeley = children => (children instanceof
       ? element.map(subElement => subElement.props.children)
       : element.props.children))
     .map(element => (element instanceof Array
-      ? element.map(subElement => computeTypingSpeed(subElement))
-      : computeTypingSpeed(element)))
+      ? element.map(subElement => computeTypingDuration(subElement))
+      : computeTypingDuration(element)))
     .map(element => (element instanceof Array ? element.reduce((a, b) => a + b, 0) : element))
     .reduce(
       (previous, current, index) => {
