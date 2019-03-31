@@ -34,21 +34,33 @@
 }
 
 .Loading .Dot.One {
+  animation: CycleOne 1s ease-in-out infinite;
+  -moz-animation: CycleOne 1s ease-in-out infinite;
   -webkit-animation: CycleOne 1s ease-in-out infinite;
+  animation-direction: normal;
+  -moz-animation-direction: normal;
   -webkit-animation-direction: normal;
 }
 
 .Loading .Dot.Two {
+  animation: CycleTwo 1s ease-in-out infinite;
+  -moz-animation: CycleTwo 1s ease-in-out infinite;
   -webkit-animation: CycleTwo 1s ease-in-out infinite;
+  animation-direction: normal;
+  -moz-animation-direction: normal;
   -webkit-animation-direction: normal;
 }
 
 .Loading .Dot.Three {
+  animation: CycleThree 1s ease-in-out infinite;
+  -moz-animation: CycleThree 1s ease-in-out infinite;
   -webkit-animation: CycleThree 1s ease-in-out infinite;
+  animation-direction: normal;
+  -moz-webkit-animation-direction: normal;
   -webkit-animation-direction: normal;
 }
 
-@-webkit-keyframes CycleOne {
+@keyframes CycleOne {
   0% {
     background: rgba(150, 150, 150, 0.4);
   }
@@ -63,7 +75,7 @@
   }
 }
 
-@-webkit-keyframes CycleTwo {
+@keyframes CycleTwo {
   0% {
     background: rgba(150, 150, 150, 0.4);
   }
@@ -79,7 +91,7 @@
   }
 }
 
-@-webkit-keyframes CycleThree {
+@keyframes CycleThree {
   0% {
     background: rgba(150, 150, 150, 0.4);
   }
