@@ -40,7 +40,8 @@ const Bubble = posed.div({
     x: 0,
     transition: {
       type: 'tween',
-      duration: 200,
+      duration: 250,
+      ease: 'backOut',
     },
   },
 });
