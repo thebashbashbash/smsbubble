@@ -12,20 +12,56 @@ const vistor = SubjectType.Me;
 const resumePage = () => (
   <MessageConversation>
     <MessageContainer subject={vistor}>
-      <Message>Hello!</Message>
+      <Message>Hi!</Message>
       <Message>Bashar Mengana, right? 🤠</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Yeah, that's me! My friends call me Bash though 😀</Message>
+      <Message>yeah, that's me! my friends call me Bash though 😀</Message>
+      <Message>what would you like to know about me? ask me anything!</Message>
+    </MessageContainer>
+
+    <MessageContainer subject={vistor}>
+      <Message>Tell us some more about yourself 🙂. What do you like coding, for instance?</Message>
+    </MessageContainer>
+
+    <MessageContainer subject={Bashar}>
+      <Message>I ❤️ web development, and to bo honest, I enjoy both front- and back end!</Message>
       <Message>
-        I'm not done with this page yet, so please check back later or send me a message at
-        mengana@kth.se 📬️
+        additionally, recent year, I've ventured into the real of a devops engineer 👨🏻‍🔧 and ...
       </Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Nice, sounds good! See you later then Bash 🙂</Message>
+      <Message>and?</Message>
+    </MessageContainer>
+
+    <MessageContainer subject={Bashar}>
+      <Message>
+        well, and honestly, writing infrastructure code is actually fun, and it helps me understand
+        the entire cycle of a CI/CD pipeline 🛠👷🏻‍
+      </Message>
+    </MessageContainer>
+
+    <MessageContainer subject={vistor}>
+      <Message>So, you're a full stack web developer? 😀</Message>
+    </MessageContainer>
+
+    <MessageContainer subject={Bashar}>
+      <Message>yup 🤩</Message>
+      <Message>that's what I wanna be! </Message>
+    </MessageContainer>
+
+    <MessageContainer subject={vistor}>
+      <Message>That's great!</Message>
+      <Message>That's what we are looking for. 😉</Message>
+      <Message>Tell us more about the tech stack you're currenrlty working with!</Message>
+      <Message>Please be specific!</Message>
+    </MessageContainer>
+
+    <MessageContainer subject={Bashar}>
+      <Message>sure!</Message>
+      <Message>I ... bla bla bla </Message>
     </MessageContainer>
   </MessageConversation>
 );

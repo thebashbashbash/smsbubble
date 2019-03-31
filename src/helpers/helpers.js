@@ -2,7 +2,7 @@
 export const combineClasses = (...args) => [...args].join(' ');
 
 export const computeTypingDuration = (content) => {
-  const typingSpeed = 2;
+  const typingSpeed = 2.5;
   const minTypingDuration = 1500;
 
   const computedTypingDuration = Math.round(

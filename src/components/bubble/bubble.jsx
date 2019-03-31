@@ -50,7 +50,7 @@ const bubble = ({
   color, tail, hidden, children,
 }) => (
   <Bubble
-    className="bubble"
+    className={hidden ? classes.Hidden : []}
     pose={hidden ? (color === ColorType.Blue ? 'hiddenBlue' : 'hiddenGray') : 'notHidden'}
   >
     <div className={combineClasses(color === ColorType.Blue ? classes.Blue : classes.Gray)}>
