@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import posed from 'react-pose';
+import { animateScroll as scroll } from 'react-scroll';
 
 import { computeTypingDuration } from '../../helpers/helpers';
 import Bubble, { ColorType, TailType } from '../../components/bubble/bubble';
@@ -36,6 +37,12 @@ const MessageBubble = posed.div({
   },
 });
 
+const scrollToBottomAnimationOptions = {
+  duration: 2500,
+  delay: 0,
+  smooth: 'easeOutQuad',
+};
+
 class Message extends React.Component {
   constructor(props) {
     super(props);
@@ -47,8 +54,10 @@ class Message extends React.Component {
       sentAtCumultiveTime,
       children,
       messageDelay,
+      autoscroll,
     } = this.props;
     this.state = {
+      autoscroll,
       lastInContainer,
       status,
       messageDelay,
@@ -65,12 +74,20 @@ class Message extends React.Component {
       sentAtCumultiveTime,
       messageDelay,
       lastInContainer,
+      autoscroll,
       content,
     } = this.state;
+
     if (status === StatusType.IsHidden) {
       setTimeout(() => {
+        if (autoscroll) {
+          scroll.scrollToBottom(scrollToBottomAnimationOptions);
+        }
         this.setState({ status: StatusType.IsTyping });
         setTimeout(() => {
+          if (autoscroll) {
+            scroll.scrollToBottom(scrollToBottomAnimationOptions);
+          }
           this.setState({ status: StatusType.IsSentWithTail });
           if (!lastInContainer) {
             setTimeout(() => {
@@ -119,6 +136,7 @@ Message.propTypes = {
   ]),
   sentAtCumultiveTime: PropTypes.number,
   children: PropTypes.string,
+  autoscroll: PropTypes.bool,
 };
 
 Message.defaultProps = {
@@ -127,6 +145,7 @@ Message.defaultProps = {
   messageDelay: 0,
   sentAtCumultiveTime: 0,
   lastInContainer: false,
+  autoscroll: true,
   children: <div />,
 };
 

@@ -10,13 +10,13 @@ class MessageContainer extends React.Component {
     super(props);
 
     const {
-      subject, messageContainerTimeDeley, messageDelay, children,
+      subject, messageContainerTimeDeley, messageDelay, autoscroll, children,
     } = this.props;
-
     this.state = {
       subject,
       messageContainerTimeDeley,
       messageDelay,
+      autoscroll,
       messages: children,
       messageSentAtCumulativeTime: computeMessageSentAtCumulativeTime(children, messageDelay),
     };
@@ -29,6 +29,7 @@ class MessageContainer extends React.Component {
       messageContainerTimeDeley,
       messageSentAtCumulativeTime,
       messageDelay,
+      autoscroll,
     } = this.state;
 
     return (
@@ -42,6 +43,7 @@ class MessageContainer extends React.Component {
               + (messages instanceof Array ? messageSentAtCumulativeTime[index] : 0),
           messageDelay: messages instanceof Array ? messageDelay[index] : messageDelay,
           lastInContainer: messages instanceof Array ? index === messages.length - 1 : true,
+          autoscroll,
         }))}
       </BubbleContainer>
     );
@@ -54,11 +56,13 @@ MessageContainer.propTypes = {
   subject: PropTypes.oneOf([SubjectType.Me, SubjectType.You]).isRequired,
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
+  autoscroll: PropTypes.bool,
 };
 
 MessageContainer.defaultProps = {
   messageContainerTimeDeley: 0,
   messageDelay: [],
+  autoscroll: true,
 };
 
 export default MessageContainer;

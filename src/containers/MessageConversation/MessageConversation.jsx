@@ -21,6 +21,7 @@ class MessageConversation extends React.Component {
       conversationStartDeley: computeConversationStartDeley(),
       messageDelay: computeMessageDeley(children),
       messageContainerTimeDeley: computeMessageContainerTimeDeley(children),
+      autoscroll: true,
     };
   }
 
@@ -30,6 +31,7 @@ class MessageConversation extends React.Component {
       conversationStartDeley,
       messageDelay,
       messageContainerTimeDeley,
+      autoscroll,
     } = this.state;
 
     return (
@@ -42,6 +44,7 @@ class MessageConversation extends React.Component {
                 : conversationStartDeley
                   + computeAccumulatedMessageDeley(messageDelay, index)
                   + messageContainerTimeDeley[index],
+          autoscroll,
         }))}
       </div>
     );
