@@ -38,9 +38,9 @@ const MessageBubble = posed.div({
 });
 
 const scrollToBottomAnimationOptions = {
-  duration: 2500,
+  duration: 200,
   delay: 0,
-  smooth: 'easeOutQuad',
+  smooth: 'easeInQuad',
 };
 
 class Message extends React.Component {
@@ -81,12 +81,12 @@ class Message extends React.Component {
     if (status === StatusType.IsHidden) {
       setTimeout(() => {
         if (autoscroll) {
-          scroll.scrollToBottom(scrollToBottomAnimationOptions);
+          scroll.scrollMore(30, scrollToBottomAnimationOptions);
         }
         this.setState({ status: StatusType.IsTyping });
         setTimeout(() => {
           if (autoscroll) {
-            scroll.scrollToBottom(scrollToBottomAnimationOptions);
+            scroll.scrollMore(50, scrollToBottomAnimationOptions);
           }
           this.setState({ status: StatusType.IsSentWithTail });
           if (!lastInContainer) {
