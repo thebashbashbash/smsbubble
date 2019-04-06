@@ -30,13 +30,13 @@ const MessageBubble = posed.div({
       duration: 500,
       yoyo: Infinity,
     }),
-    delay: 500,
+    delay: 200,
   },
   notLoading: {
     scale: 1,
     transition: () => ({
       type: 'keyframes',
-      values: [1, 1.03, 1.02, 1.005, 1],
+      values: [1, 1.035, 1.025, 1.01, 1],
       duration: 300,
     }),
   },
