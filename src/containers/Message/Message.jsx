@@ -81,12 +81,12 @@ class Message extends React.Component {
     if (status === StatusType.IsHidden) {
       setTimeout(() => {
         if (autoscroll) {
-          scroll.scrollMore(30, scrollToBottomAnimationOptions);
+          scroll.scrollMore(50, scrollToBottomAnimationOptions);
         }
         this.setState({ status: StatusType.IsTyping });
         setTimeout(() => {
           if (autoscroll) {
-            scroll.scrollMore(50, scrollToBottomAnimationOptions);
+            scroll.scrollMore(70, scrollToBottomAnimationOptions);
           }
           this.setState({ status: StatusType.IsSentWithTail });
           if (!lastInContainer) {
