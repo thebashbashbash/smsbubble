@@ -67,9 +67,9 @@
   width: 14px;
   background: #e5e5e5;
   border-radius: 50%;
-  -webkit-animation: pulsateSecondBubble 2s infinite alternate;
-  -moz-animation: pulsateSecondBubble 2s infinite alternate;
-  animation: pulsateSecondBubble 2s infinite alternate;
+  -webkit-animation: pulsateSecondBubble 1.5s infinite alternate;
+  -moz-animation: pulsateSecondBubble 1.5s infinite alternate;
+  animation: pulsateSecondBubble 1.5s infinite alternate;
 }
 
 .Gray .Bubble.TrailTail:after {
@@ -82,9 +82,9 @@
   width: 7px;
   background: #e5e5e5;
   border-radius: 50%;
-  -webkit-animation: pulsateFirstBubble 2s infinite alternate;
-  -moz-animation: pulsateFirstBubble 2s infinite alternate;
-  animation: pulsateFirstBubble 2s infinite alternate;
+  -webkit-animation: pulsateFirstBubble 1.5s infinite alternate;
+  -moz-animation: pulsateFirstBubble 1.5s infinite alternate;
+  animation: pulsateFirstBubble 1.5s infinite alternate;
 }
 
 .Blue {
@@ -138,9 +138,9 @@
   background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-radius: 50%;
-  -webkit-animation: pulsateSecondBubble 2s infinite alternate;
-  -moz-animation: pulsateSecondBubble 2s infinite alternate;
-  animation: pulsateSecondBubble 2s infinite alternate;
+  -webkit-animation: pulsateSecondBubble 1.5s infinite alternate;
+  -moz-animation: pulsateSecondBubble 1.5s infinite alternate;
+  animation: pulsateSecondBubble 1.5s infinite alternate;
 }
 
 .Blue .Bubble.TrailTail:after {
@@ -154,9 +154,9 @@
   background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-radius: 50%;
-  -webkit-animation: pulsateFirstBubble 2s infinite alternate;
-  -moz-animation: pulsateFirstBubble 2s infinite alternate;
-  animation: pulsateFirstBubble 2s infinite alternate;
+  -webkit-animation: pulsateFirstBubble 1.5s infinite alternate;
+  -moz-animation: pulsateFirstBubble 1.5s infinite alternate;
+  animation: pulsateFirstBubble 1.5s infinite alternate;
 }
 
 @keyframes pulsateFirstBubble {
