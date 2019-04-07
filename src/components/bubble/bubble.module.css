@@ -82,9 +82,9 @@
   width: 7px;
   background: #e5e5e5;
   border-radius: 50%;
-  -webkit-animation: pulsateFirstBubble 1.5s infinite alternate;
-  -moz-animation: pulsateFirstBubble 1.5s infinite alternate;
-  animation: pulsateFirstBubble 1.5s infinite alternate;
+  -webkit-animation: pulsateFirstBubble 1s infinite alternate;
+  -moz-animation: pulsateFirstBubble 1s infinite alternate;
+  animation: pulsateFirstBubble 1s infinite alternate;
 }
 
 .Blue {
@@ -154,9 +154,9 @@
   background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
   background-attachment: fixed;
   border-radius: 50%;
-  -webkit-animation: pulsateFirstBubble 1.5s infinite alternate;
-  -moz-animation: pulsateFirstBubble 1.5s infinite alternate;
-  animation: pulsateFirstBubble 1.5s infinite alternate;
+  -webkit-animation: pulsateFirstBubble 1s infinite alternate;
+  -moz-animation: pulsateFirstBubble 1s infinite alternate;
+  animation: pulsateFirstBubble 1s infinite alternate;
 }
 
 @keyframes pulsateFirstBubble {

@@ -26,8 +26,8 @@ const MessageBubble = posed.div({
     scale: 1,
     transition: () => ({
       type: 'keyframes',
-      values: [1, 1.025],
-      duration: 500,
+      values: [1, 1.026, 1.025],
+      duration: 550,
       yoyo: Infinity,
     }),
     delay: 200,
@@ -36,14 +36,14 @@ const MessageBubble = posed.div({
     scale: 1,
     transition: () => ({
       type: 'keyframes',
-      values: [1, 1.035, 1.025, 1.01, 1],
+      values: [1, 1.03, 1.025, 1],
       duration: 300,
     }),
   },
 });
 
 const scrollToBottomAnimationOptions = {
-  duration: 200,
+  duration: 350,
   delay: 0,
   smooth: 'easeInQuad',
 };
