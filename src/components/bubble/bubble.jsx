@@ -46,24 +46,35 @@ const Bubble = posed.div({
 });
 
 const bubble = ({
-  color, tail, hidden, children,
+  color, tail, hidden, image, children,
 }) => (
   <Bubble
     className={hidden ? classes.Hidden : []}
     pose={hidden ? (color === ColorType.Blue ? 'hiddenBlue' : 'hiddenGray') : 'notHidden'}
   >
-    <div className={combineClasses(color === ColorType.Blue ? classes.Blue : classes.Gray)}>
+    <div
+      className={combineClasses(
+        color !== ColorType.None
+          ? color === ColorType.Blue
+            ? classes.Blue
+            : classes.Gray
+          : classes.Bubble,
+      )}
+    >
       <div
+        style={{ padding: image ? 0 : [], overflow: image ? 'hidden' : [] }}
         className={combineClasses(
           classes.Bubble,
-          tail === TailType.None
+          image
             ? []
-            : tail === TailType.PointerTail
-              ? classes.PointerTail
-              : classes.TrailTail,
+            : tail === TailType.None
+              ? []
+              : tail === TailType.PointerTail
+                ? classes.PointerTail
+                : classes.TrailTail,
         )}
       >
-        {children}
+        {image === false ? children : <img src={children} alt="" />}
       </div>
     </div>
   </Bubble>
@@ -73,12 +84,14 @@ bubble.propTypes = {
   color: PropTypes.oneOf([ColorType.Gray, ColorType.Blue]),
   tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
   hidden: PropTypes.bool.isRequired,
+  image: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 bubble.defaultProps = {
   color: ColorType.Blue,
   tail: TailType.None,
+  image: false,
   children: <div />,
 };
 

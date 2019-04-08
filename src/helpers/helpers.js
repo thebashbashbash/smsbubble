@@ -2,6 +2,10 @@
 export const combineClasses = (...args) => [...args].join(' ');
 
 export const computeTypingDuration = (content) => {
+  if (content.includes('/static/media/')) {
+    return 0;
+  }
+
   const typingSpeed = 2.5;
   const minTypingDuration = 1700;
 

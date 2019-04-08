@@ -6,38 +6,19 @@ import Message, { SubjectType } from '../../Message/Message';
 import MessageContainer from '../../MessageContainer/MessageContainer';
 import MessageConversation from '../../MessageConversation/MessageConversation';
 
+import Image1 from '../../../assets/BasharPic.jpg';
+
 const Bashar = SubjectType.You;
 const vistor = SubjectType.Me;
 
 const resumePage = () => (
   <MessageConversation>
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={Bashar}>
       <Message>Hey!</Message>
-      <Message>Bashar Mengana, right? 🤠</Message>
-    </MessageContainer>
-
-    <MessageContainer subject={vistor}>
       <Message>
         yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
       </Message>
-    </MessageContainer>
-
-    <MessageContainer subject={Bashar}>
-      <Message>
-        yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
-      </Message>
-    </MessageContainer>
-
-    <MessageContainer subject={Bashar}>
-      <Message>
-        yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
-      </Message>
-    </MessageContainer>
-
-    <MessageContainer subject={vistor}>
-      <Message>
-        yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
-      </Message>
+      <Message>{Image1}</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>

@@ -26,7 +26,7 @@ const MessageBubble = posed.div({
     scale: 1,
     transition: () => ({
       type: 'keyframes',
-      values: [1, 1.026, 1.025],
+      values: [1, 1.0255, 1.025],
       duration: 500,
       yoyo: Infinity,
     }),
@@ -36,7 +36,7 @@ const MessageBubble = posed.div({
     scale: 1,
     transition: () => ({
       type: 'keyframes',
-      values: [1, 1.03, 1.025, 1],
+      values: [1, 1.028, 1.025, 1],
       duration: 300,
     }),
   },
@@ -114,6 +114,7 @@ class Message extends React.Component {
                 ? TailType.PointerTail
                 : TailType.None
           }
+          image={content.includes('/static/media/')}
           color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
         >
           {status === StatusType.IsTyping ? (
