@@ -99,7 +99,7 @@ class Message extends React.Component {
               this.setState({ status: StatusType.IsSentWithoutTail });
             }, messageDelay);
           }
-        }, computeTypingDuration(content.props.children));
+        }, computeTypingDuration(content));
       }, sentAtCumultiveTime);
     }
 

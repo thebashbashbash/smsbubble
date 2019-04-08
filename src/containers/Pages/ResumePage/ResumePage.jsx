@@ -6,54 +6,40 @@ import Message, { SubjectType } from '../../Message/Message';
 import MessageContainer from '../../MessageContainer/MessageContainer';
 import MessageConversation from '../../MessageConversation/MessageConversation';
 
-import TextMessage from '../../../components/messageTypes/textMessage/textMessage';
-
-import Image1 from '../../../assets/rJ2H57m.jpg';
-
 const Bashar = SubjectType.You;
 const vistor = SubjectType.Me;
 
 const resumePage = () => (
   <MessageConversation>
-    {/* <MessageContainer subject={vistor}>
+    <MessageContainer subject={vistor}>
       <Message>Hey!</Message>
       <Message>Bashar Mengana, right? 🤠</Message>
-    </MessageContainer> */}
-
-    <MessageContainer subject={vistor}>
-      {/* <Message>
-        yeah, that's me! my friends call me Bash though 😀! This is a
-        picture of me by the way!
-      </Message> */}
-      <TextMessage>Hejsan</TextMessage>
-      <TextMessage>Hur har du det?</TextMessage>
-    </MessageContainer>
-
-    <MessageContainer subject={Bashar}>
-      {/* <Message>
-        yeah, that's me! my friends call me Bash though 😀! This is a
-        picture of me by the way!
-      </Message> */}
-      <TextMessage>Hur har du det?</TextMessage>
-    </MessageContainer>
-
-    <MessageContainer subject={Bashar}>
-      {/* <Message>
-        yeah, that's me! my friends call me Bash though 😀! This is a
-        picture of me by the way!
-      </Message> */}
-      <TextMessage>Hur har du det?</TextMessage>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      {/* <Message>
-        yeah, that's me! my friends call me Bash though 😀! This is a
-        picture of me by the way!
-      </Message> */}
-      <TextMessage>Hejsan</TextMessage>
-      <TextMessage>Hur har du det?</TextMessage>
+      <Message>
+        yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
+      </Message>
     </MessageContainer>
-    {/*
+
+    <MessageContainer subject={Bashar}>
+      <Message>
+        yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
+      </Message>
+    </MessageContainer>
+
+    <MessageContainer subject={Bashar}>
+      <Message>
+        yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
+      </Message>
+    </MessageContainer>
+
+    <MessageContainer subject={vistor}>
+      <Message>
+        yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
+      </Message>
+    </MessageContainer>
+
     <MessageContainer subject={vistor}>
       <Message>Tell us some more about yourself 🙂. What do you like coding, for instance?</Message>
     </MessageContainer>
@@ -95,7 +81,7 @@ const resumePage = () => (
     <MessageContainer subject={Bashar}>
       <Message>sure!</Message>
       <Message>I ... bla bla bla </Message>
-    </MessageContainer> */}
+    </MessageContainer>
   </MessageConversation>
 );
 export default resumePage;
