@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Linkify from 'react-linkify';
 import posed from 'react-pose';
 
 import { combineClasses } from '../../helpers/helpers';
@@ -64,7 +63,7 @@ const bubble = ({
               : classes.TrailTail,
         )}
       >
-        <Linkify>{children}</Linkify>
+        {children}
       </div>
     </div>
   </Bubble>

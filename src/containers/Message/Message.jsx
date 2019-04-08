@@ -27,10 +27,10 @@ const MessageBubble = posed.div({
     transition: () => ({
       type: 'keyframes',
       values: [1, 1.026, 1.025],
-      duration: 550,
+      duration: 500,
       yoyo: Infinity,
     }),
-    delay: 200,
+    delay: 100,
   },
   notLoading: {
     scale: 1,
@@ -99,7 +99,7 @@ class Message extends React.Component {
               this.setState({ status: StatusType.IsSentWithoutTail });
             }, messageDelay);
           }
-        }, computeTypingDuration(content));
+        }, computeTypingDuration(content.props.children));
       }, sentAtCumultiveTime);
     }
 
@@ -140,7 +140,7 @@ Message.propTypes = {
     StatusType.IsSentWithTail,
   ]),
   sentAtCumultiveTime: PropTypes.number,
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   autoscroll: PropTypes.bool,
 };
 
