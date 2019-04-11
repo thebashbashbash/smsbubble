@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 export const combineClasses = (...args) => [...args].join(' ');
 
-export const isStringImage = urlString => urlString.includes('/static/media/');
+export const isStringImage = urlString => /\/static\/media\/.+\.(gif|jpg|jpeg|tiff|png)$/.test(urlString);
 
 export const isStringEmoji = (string) => {
   const ranges = [
