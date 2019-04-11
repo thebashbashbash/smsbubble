@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import posed from 'react-pose';
+import Img from 'react-image';
 
 import { combineClasses } from '../../helpers/helpers';
 import classes from './bubble.module.css';
@@ -78,7 +79,7 @@ const bubble = ({
                 : classes.TrailTail,
         )}
       >
-        {image === false ? children : <img src={children} alt="" />}
+        {image === false ? children : <Img src={children} />}
       </div>
     </div>
   </Bubble>
