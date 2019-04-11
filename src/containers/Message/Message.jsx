@@ -32,11 +32,19 @@ const MessageBubble = posed.div({
     }),
     delay: 100,
   },
-  notLoading: {
+  notLoadingNonImage: {
     scale: 1,
     transition: () => ({
       type: 'keyframes',
       values: [1, 1.028, 1.025, 1],
+      duration: 300,
+    }),
+  },
+  notLoadingImage: {
+    scale: 1,
+    transition: () => ({
+      type: 'keyframes',
+      values: [1, 1.005, 1],
       duration: 300,
     }),
   },
@@ -104,7 +112,15 @@ class Message extends React.Component {
     }
 
     return (
-      <MessageBubble pose={status === StatusType.IsTyping ? 'loading' : 'notLoading'}>
+      <MessageBubble
+        pose={
+          status === StatusType.IsTyping
+            ? 'loading'
+            : isStringImage(content)
+              ? 'notLoadingImage'
+              : 'notLoadingNonImage'
+        }
+      >
         <Bubble
           hidden={status === StatusType.IsHidden}
           tail={

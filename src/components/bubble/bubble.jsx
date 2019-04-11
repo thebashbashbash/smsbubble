@@ -33,7 +33,7 @@ const Bubble = posed.div({
     x: -15,
     scale: 0.8,
   },
-  notHidden: {
+  notHiddenNonImage: {
     scale: 1,
     opacity: 1,
     y: 0,
@@ -44,6 +44,16 @@ const Bubble = posed.div({
       ease: 'backOut',
     },
   },
+  notHiddenImage: {
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    x: 0,
+    transition: {
+      type: 'tween',
+      duration: 250,
+    },
+  },
 });
 
 const bubble = ({
@@ -51,7 +61,15 @@ const bubble = ({
 }) => (
   <Bubble
     className={hidden ? classes.Hidden : []}
-    pose={hidden ? (color === ColorType.Blue ? 'hiddenBlue' : 'hiddenGray') : 'notHidden'}
+    pose={
+      hidden
+        ? color === ColorType.Blue
+          ? 'hiddenBlue'
+          : 'hiddenGray'
+        : image
+          ? 'notHiddenImage'
+          : 'notHiddenNonImage'
+    }
   >
     <div
       className={combineClasses(
