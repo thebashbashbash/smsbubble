@@ -46,7 +46,7 @@ const Bubble = posed.div({
 });
 
 const bubble = ({
-  color, tail, hidden, image, children,
+  color, tail, hidden, image, emoji, children,
 }) => (
   <Bubble
     className={hidden ? classes.Hidden : []}
@@ -54,7 +54,7 @@ const bubble = ({
   >
     <div
       className={combineClasses(
-        color !== ColorType.None
+        color !== ColorType.None && !emoji
           ? color === ColorType.Blue
             ? classes.Blue
             : classes.Gray
@@ -62,7 +62,11 @@ const bubble = ({
       )}
     >
       <div
-        style={{ padding: image ? 0 : [], overflow: image ? 'hidden' : [] }}
+        style={{
+          padding: image || emoji ? 0 : [],
+          overflow: image ? 'hidden' : [],
+          fontSize: emoji ? '3.5rem' : 'inherit',
+        }}
         className={combineClasses(
           classes.Bubble,
           image
@@ -85,6 +89,7 @@ bubble.propTypes = {
   tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
   hidden: PropTypes.bool.isRequired,
   image: PropTypes.bool,
+  emoji: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
@@ -92,6 +97,7 @@ bubble.defaultProps = {
   color: ColorType.Blue,
   tail: TailType.None,
   image: false,
+  emoji: false,
   children: <div />,
 };
 

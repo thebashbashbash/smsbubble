@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import posed from 'react-pose';
 import { animateScroll as scroll } from 'react-scroll';
 
-import { computeTypingDuration } from '../../helpers/helpers';
+import { computeTypingDuration, isStringImage, isStringEmoji } from '../../helpers/helpers';
 import Bubble, { ColorType, TailType } from '../../components/bubble/bubble';
 import LoadingIndicator from '../../components/loadingIndicator/loadingIndicator';
 
@@ -114,7 +114,8 @@ class Message extends React.Component {
                 ? TailType.PointerTail
                 : TailType.None
           }
-          image={content.includes('/static/media/')}
+          emoji={isStringEmoji(content)}
+          image={isStringImage(content)}
           color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
         >
           {status === StatusType.IsTyping ? (

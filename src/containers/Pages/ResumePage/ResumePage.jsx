@@ -15,9 +15,7 @@ const resumePage = () => (
   <MessageConversation>
     <MessageContainer subject={Bashar}>
       <Message>Hey!</Message>
-      <Message>
-        yeah, that's me! my friends call me Bash though 😀! This is a picture of me by the way!
-      </Message>
+      <Message>😀</Message>
       <Message>{Image1}</Message>
     </MessageContainer>
 
