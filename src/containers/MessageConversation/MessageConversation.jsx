@@ -14,7 +14,7 @@ class MessageConversation extends React.Component {
   constructor(props) {
     super(props);
 
-    const { children } = this.props;
+    const { interactive, children } = this.props;
 
     this.state = {
       messageContainers: children,
@@ -22,6 +22,7 @@ class MessageConversation extends React.Component {
       messageDelay: computeMessageDeley(children),
       messageContainerTimeDeley: computeMessageContainerTimeDeley(children),
       autoscroll: true,
+      interactive,
     };
   }
 
@@ -32,6 +33,7 @@ class MessageConversation extends React.Component {
       messageDelay,
       messageContainerTimeDeley,
       autoscroll,
+      interactive,
     } = this.state;
 
     return (
@@ -45,6 +47,7 @@ class MessageConversation extends React.Component {
                   + computeAccumulatedMessageDeley(messageDelay, index)
                   + messageContainerTimeDeley[index],
           autoscroll,
+          interactive,
         }))}
       </div>
     );
@@ -54,6 +57,7 @@ class MessageConversation extends React.Component {
 MessageConversation.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
+  interactive: PropTypes.bool.isRequired,
 };
 
 export default MessageConversation;

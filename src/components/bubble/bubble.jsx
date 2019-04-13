@@ -57,23 +57,25 @@ const Bubble = posed.div({
 });
 
 const bubble = ({
-  color, tail, hidden, image, emoji, children,
+  color, tail, hidden, imageContent, emojiContent, children, animate,
 }) => (
   <Bubble
     className={hidden ? classes.Hidden : []}
     pose={
-      hidden
-        ? color === ColorType.Blue
-          ? 'hiddenBlue'
-          : 'hiddenGray'
-        : image
-          ? 'notHiddenImage'
-          : 'notHiddenNonImage'
+      animate
+        ? hidden
+          ? color === ColorType.Blue
+            ? 'hiddenBlue'
+            : 'hiddenGray'
+          : imageContent
+            ? 'notHiddenImage'
+            : 'notHiddenNonImage'
+        : 'notHiddenNonImage'
     }
   >
     <div
       className={combineClasses(
-        color !== ColorType.None && !emoji
+        color !== ColorType.None && !emojiContent
           ? color === ColorType.Blue
             ? classes.Blue
             : classes.Gray
@@ -82,13 +84,13 @@ const bubble = ({
     >
       <div
         style={{
-          padding: image || emoji ? 0 : [],
-          overflow: image ? 'hidden' : [],
-          fontSize: emoji ? '3.5rem' : 'inherit',
+          padding: imageContent || emojiContent ? 0 : [],
+          overflow: imageContent ? 'hidden' : [],
+          fontSize: emojiContent ? '3.5rem' : 'inherit',
         }}
         className={combineClasses(
           classes.Bubble,
-          image
+          imageContent
             ? []
             : tail === TailType.None
               ? []
@@ -97,7 +99,7 @@ const bubble = ({
                 : classes.TrailTail,
         )}
       >
-        {image === false ? children : <Img src={children} />}
+        {imageContent === false ? children : <Img src={children} />}
       </div>
     </div>
   </Bubble>
@@ -107,16 +109,18 @@ bubble.propTypes = {
   color: PropTypes.oneOf([ColorType.Gray, ColorType.Blue]),
   tail: PropTypes.oneOf([TailType.PointerTail, TailType.TrailTail, TailType.None]),
   hidden: PropTypes.bool.isRequired,
-  image: PropTypes.bool,
-  emoji: PropTypes.bool,
+  imageContent: PropTypes.bool,
+  emojiContent: PropTypes.bool,
+  animate: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 bubble.defaultProps = {
   color: ColorType.Blue,
   tail: TailType.None,
-  image: false,
-  emoji: false,
+  imageContent: false,
+  emojiContent: false,
+  animate: true,
   children: <div />,
 };
 

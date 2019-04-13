@@ -26,8 +26,8 @@ const MessageBubble = posed.div({
     scale: 1,
     transition: () => ({
       type: 'keyframes',
-      values: [1, 1.0254, 1.025],
-      duration: 500,
+      values: [1, 1.0253, 1.025],
+      duration: 520,
       yoyo: Infinity,
     }),
     delay: 100,
@@ -68,6 +68,7 @@ class Message extends React.Component {
       children,
       messageDelay,
       autoscroll,
+      interactive,
     } = this.props;
     this.state = {
       autoscroll,
@@ -76,6 +77,7 @@ class Message extends React.Component {
       messageDelay,
       subject,
       sentAtCumultiveTime,
+      interactive,
       content: children,
     };
   }
@@ -88,41 +90,46 @@ class Message extends React.Component {
       messageDelay,
       lastInContainer,
       autoscroll,
+      interactive,
       content,
     } = this.state;
 
-    if (status === StatusType.IsHidden) {
-      setTimeout(() => {
-        if (autoscroll) {
-          scroll.scrollMore(50, scrollToBottomAnimationOptions);
-        }
-        this.setState({ status: StatusType.IsTyping });
+    if (interactive) {
+      if (status === StatusType.IsHidden) {
         setTimeout(() => {
           if (autoscroll) {
-            scroll.scrollMore(70, scrollToBottomAnimationOptions);
+            scroll.scrollMore(50, scrollToBottomAnimationOptions);
           }
-          this.setState({ status: StatusType.IsSentWithTail });
-          if (!lastInContainer) {
-            setTimeout(() => {
-              this.setState({ status: StatusType.IsSentWithoutTail });
-            }, messageDelay);
-          }
-        }, computeTypingDuration(content));
-      }, sentAtCumultiveTime);
+          this.setState({ status: StatusType.IsTyping });
+          setTimeout(() => {
+            if (autoscroll) {
+              scroll.scrollMore(70, scrollToBottomAnimationOptions);
+            }
+            this.setState({ status: StatusType.IsSentWithTail });
+            if (!lastInContainer) {
+              setTimeout(() => {
+                this.setState({ status: StatusType.IsSentWithoutTail });
+              }, messageDelay);
+            }
+          }, computeTypingDuration(content));
+        }, sentAtCumultiveTime);
+      }
     }
 
     return (
       <MessageBubble
         pose={
-          status === StatusType.IsTyping
-            ? 'loading'
-            : isStringImage(content)
-              ? 'notLoadingImage'
-              : 'notLoadingNonImage'
+          interactive
+            ? status === StatusType.IsTyping
+              ? 'loading'
+              : isStringImage(content)
+                ? 'notLoadingImage'
+                : 'notLoadingNonImage'
+            : 'notLoadingImage'
         }
       >
         <Bubble
-          hidden={status === StatusType.IsHidden}
+          hidden={status === StatusType.IsHidden && interactive}
           tail={
             status === StatusType.IsTyping
               ? TailType.TrailTail
@@ -130,9 +137,10 @@ class Message extends React.Component {
                 ? TailType.PointerTail
                 : TailType.None
           }
-          emoji={isStringEmoji(content)}
-          image={isStringImage(content)}
+          emojiContent={isStringEmoji(content)}
+          imageContent={isStringImage(content)}
           color={subject === SubjectType.Me ? ColorType.Blue : ColorType.Gray}
+          animate={interactive}
         >
           {status === StatusType.IsTyping ? (
             <LoadingIndicator
@@ -158,8 +166,9 @@ Message.propTypes = {
     StatusType.IsSentWithTail,
   ]),
   sentAtCumultiveTime: PropTypes.number,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  interactive: PropTypes.bool,
   autoscroll: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 Message.defaultProps = {
@@ -169,6 +178,7 @@ Message.defaultProps = {
   sentAtCumultiveTime: 0,
   lastInContainer: false,
   autoscroll: true,
+  interactive: false,
   children: <div />,
 };
 

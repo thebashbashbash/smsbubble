@@ -6,34 +6,41 @@ import Message, { SubjectType } from '../../Message/Message';
 import MessageContainer from '../../MessageContainer/MessageContainer';
 import MessageConversation from '../../MessageConversation/MessageConversation';
 
-import Image1 from '../../../assets/BasharPic.jpg';
+import BasharPic from '../../../assets/BasharPic.jpg';
 
 const Bashar = SubjectType.You;
 const vistor = SubjectType.Me;
+const interactive = true;
 
 const resumePage = () => (
-  <MessageConversation>
-    <MessageContainer subject={Bashar}>
+  <MessageConversation interactive={interactive}>
+    <MessageContainer subject={vistor}>
       <Message>Hey!</Message>
-      <Message>😀</Message>
-      <Message>{Image1}</Message>
+      <Message>Bashar Mengana, right? 🤠</Message>
+    </MessageContainer>
+
+    <MessageContainer subject={Bashar}>
+      <Message>Hey! Yeah, thats me, but friends call me Bash! </Message>
+      <Message>{BasharPic}</Message>
+      <Message> ... and thats a recent picture of me!</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Tell us some more about yourself 🙂. What do you like coding, for instance?</Message>
+      <Message>Nice to meet you Bash! Tell us about yourself? 🙂</Message>
+      <Message>🎤</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>I ❤️ web development, and to bo honest, I enjoy both front- and back end!</Message>
       <Message>
-        additionally, recent year, I've ventured into the real of a devops engineer 👨🏻‍🔧 and ...
+        There's alot to say, but my main interest are software development 🤓, creating artwork and
+        social acitivites 🦸🏻‍♂️!
       </Message>
     </MessageContainer>
 
-    <MessageContainer subject={vistor}>
-      <Message>and?</Message>
+    <MessageContainer subject={Bashar}>
+      <Message>To be continued ...</Message>
     </MessageContainer>
-
+    {/*
     <MessageContainer subject={Bashar}>
       <Message>
         well, and honestly, writing infrastructure code is actually fun, and it helps me understand
@@ -60,7 +67,7 @@ const resumePage = () => (
     <MessageContainer subject={Bashar}>
       <Message>sure!</Message>
       <Message>I ... bla bla bla </Message>
-    </MessageContainer>
+    </MessageContainer> */}
   </MessageConversation>
 );
 export default resumePage;
