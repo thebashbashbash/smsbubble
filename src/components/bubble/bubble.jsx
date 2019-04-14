@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import posed from 'react-pose';
 import Img from 'react-image';
+import Linkify from 'react-linkify';
 
 import { combineClasses } from '../../helpers/helpers';
 import classes from './bubble.module.css';
@@ -99,7 +100,7 @@ const bubble = ({
                 : classes.TrailTail,
         )}
       >
-        {imageContent === false ? children : <Img src={children} />}
+        {imageContent === false ? <Linkify>{children}</Linkify> : <Img src={children} />}
       </div>
     </div>
   </Bubble>

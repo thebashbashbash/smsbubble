@@ -131,9 +131,13 @@ class Message extends React.Component {
         <Bubble
           hidden={status === StatusType.IsHidden && interactive}
           tail={
-            status === StatusType.IsTyping
-              ? TailType.TrailTail
-              : status === StatusType.IsSentWithTail
+            interactive
+              ? status === StatusType.IsTyping
+                ? TailType.TrailTail
+                : status === StatusType.IsSentWithTail
+                  ? TailType.PointerTail
+                  : TailType.None
+              : lastInContainer
                 ? TailType.PointerTail
                 : TailType.None
           }
@@ -179,7 +183,7 @@ Message.defaultProps = {
   lastInContainer: false,
   autoscroll: true,
   interactive: false,
-  children: <div />,
+  children: '',
 };
 
 export default Message;

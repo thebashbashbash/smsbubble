@@ -20,20 +20,22 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Hey! Yeah, thats me, but friends call me Bash! </Message>
+      <Message>Hey there!</Message>
+      <Message>Yeah, that's me! My friends call me Bash though 😊</Message>
       <Message>{BasharPic}</Message>
-      <Message> ... and thats a recent picture of me!</Message>
+      <Message> ... and here's a recent photo of me from a trip to Berlin last summer! ☀️</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Nice to meet you Bash! Tell us about yourself? 🙂</Message>
-      <Message>🎤</Message>
+      <Message>Nice to meet you Bash! Tell us a bit about yourself?</Message>
+      <Message>🙂🎤</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
       <Message>
-        There's alot to say, but my main interest are software development 🤓, creating artwork and
-        social acitivites 🦸🏻‍♂️!
+        There's alot to say, but my three main interests are software development 🤓, all kind of
+        social acitivites and building stuff (check out www.basharmengana.se/stuff if you're
+        curious)!
       </Message>
     </MessageContainer>
 
