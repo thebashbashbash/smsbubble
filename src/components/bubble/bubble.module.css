@@ -16,7 +16,7 @@
 
 @media (min-width:600px) {
   .Bubble {
-    max-width: none;
+    max-width: 70rem;
   }
 }
 
