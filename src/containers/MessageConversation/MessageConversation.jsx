@@ -14,7 +14,7 @@ class MessageConversation extends React.Component {
   constructor(props) {
     super(props);
 
-    const { interactive, children } = this.props;
+    const { children } = this.props;
 
     this.state = {
       messageContainers: children,
@@ -22,7 +22,7 @@ class MessageConversation extends React.Component {
       messageDelay: computeMessageDeley(children),
       messageContainerTimeDeley: computeMessageContainerTimeDeley(children),
       autoscroll: true,
-      interactive,
+      interactive: false,
     };
   }
 
@@ -37,18 +37,20 @@ class MessageConversation extends React.Component {
     } = this.state;
 
     return (
-      <div className={classes.MessageConversation}>
-        {React.Children.map(messageContainers, (child, index) => React.cloneElement(child, {
-          messageDelay: messageContainers instanceof Array ? messageDelay[index] : messageDelay,
-          messageContainerTimeDeley:
-              index === 0
-                ? conversationStartDeley
-                : conversationStartDeley
-                  + computeAccumulatedMessageDeley(messageDelay, index)
-                  + messageContainerTimeDeley[index],
-          autoscroll,
-          interactive,
-        }))}
+      <div>
+        <div className={classes.MessageConversation}>
+          {React.Children.map(messageContainers, (child, index) => React.cloneElement(child, {
+            messageDelay: messageContainers instanceof Array ? messageDelay[index] : messageDelay,
+            messageContainerTimeDeley:
+                index === 0
+                  ? conversationStartDeley
+                  : conversationStartDeley
+                    + computeAccumulatedMessageDeley(messageDelay, index)
+                    + messageContainerTimeDeley[index],
+            autoscroll,
+            interactive,
+          }))}
+        </div>
       </div>
     );
   }
@@ -57,7 +59,6 @@ class MessageConversation extends React.Component {
 MessageConversation.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
-  interactive: PropTypes.bool.isRequired,
 };
 
 export default MessageConversation;
