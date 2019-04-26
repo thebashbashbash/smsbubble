@@ -13,7 +13,7 @@ import SofaTable from '../../../assets/sofatable.jpg';
 
 const Bashar = SubjectType.You;
 const vistor = SubjectType.Me;
-const interactive = false;
+const interactive = true;
 
 const resumePage = () => (
   <MessageConversation interactive={interactive}>
