@@ -22,8 +22,8 @@ export const computeTypingDuration = (content) => {
     return 0;
   }
 
-  const typingSpeed = 2.5;
-  const minTypingDuration = 1700;
+  const typingSpeed = 2;
+  const minTypingDuration = 500;
 
   const computedTypingDuration = Math.round(
     typingSpeed * (1 / 10) * 1000 * parseInt(content.split(' ').length, 10),

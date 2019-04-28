@@ -7,8 +7,6 @@ import MessageContainer from '../../MessageContainer/MessageContainer';
 import MessageConversation from '../../MessageConversation/MessageConversation';
 
 import BasharPic from '../../../assets/BasharPic.jpg';
-import Barrel from '../../../assets/barrel.jpg';
-import Lamp from '../../../assets/lamp.jpg';
 import SofaTable from '../../../assets/sofatable.jpg';
 
 const Bashar = SubjectType.You;
@@ -47,7 +45,6 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Absolutely! 😊</Message>
       <Message>
         I'm experienced with modern JavaScript/CSS/HTML coding (React), testing, debugging and
         automation techniques (Gitlab CI + Serverless or AWS Codepipeline).
@@ -59,7 +56,6 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Yes!</Message>
       <Message>
         For back end I've used Python and Node.JS and AWS services such as DynamoDB, Lambda,
         Streams, SNS, SQS.
@@ -80,7 +76,6 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Alright!</Message>
       <Message>
         I'm most comfortable working in an agile team environment, and like to challange both myself
         and the team to improve our way of working!🏆
@@ -100,22 +95,18 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Great Bash!</Message>
-      <Message>It was nice talking to you! 🤗 </Message>
-      <Message>... oh and by the way, you mentioned you liked building stuff? </Message>
+      <Message>Great Bash! It was nice talking to you! 🤗</Message>
+      <Message>... oh and by the way, you mentioned building stuff? </Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Yeah! I've built a couple of things, here are some of them!</Message>
-      <Message>{Barrel}</Message>
-      <Message>{Lamp}</Message>
+      <Message>Yeah! Here's a plant sofa table 👷🏻‍♂️</Message>
       <Message>{SofaTable}</Message>
       <Message>Please get in touch if you wanna talk some more! My email is mengana@kth.se</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Will do! Nice talking to you Bash!</Message>
-      <Message>✌🏼</Message>
+      <Message>Sweet! Nice talking to you Bash!</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>

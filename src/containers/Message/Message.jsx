@@ -103,7 +103,7 @@ class Message extends React.Component {
           this.setState({ status: StatusType.IsTyping });
           setTimeout(() => {
             if (autoscroll) {
-              scroll.scrollMore(70, scrollToBottomAnimationOptions);
+              scroll.scrollMore(isStringImage(content) ? 340 : 100, scrollToBottomAnimationOptions);
             }
             this.setState({ status: StatusType.IsSentWithTail });
             if (!lastInContainer) {

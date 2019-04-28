@@ -2,7 +2,7 @@
 import { computeTypingDuration, getRandomInt } from '../../helpers/helpers';
 
 export const messageDelayMinDefault = 700;
-export const messageDelayMaxDefault = 2000;
+export const messageDelayMaxDefault = 1000;
 
 export const computeMessageDeley = (
   children,
