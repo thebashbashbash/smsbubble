@@ -46,8 +46,8 @@ const resumePage = () => (
 
     <MessageContainer subject={Bashar}>
       <Message>
-        I'm experienced with modern JavaScript/CSS/HTML coding (React), testing, debugging and
-        automation techniques (Gitlab CI + Serverless or AWS Codepipeline).
+        I'm experienced with modern JavaScript/CSS/HTML coding (React) and automation techniques
+        (Gitlab CI + Serverless or AWS Codepipeline).
       </Message>
     </MessageContainer>
 
@@ -57,18 +57,18 @@ const resumePage = () => (
 
     <MessageContainer subject={Bashar}>
       <Message>
-        For back end I've used Python and Node.JS and AWS services such as DynamoDB, Lambda,
-        Streams, SNS, SQS.
+        Yes! For back end I've used Python and Node.JS and AWS services such as DynamoDB, Lambda,
+        Streams, SNS and SQS.
       </Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
       <Message>Sounds great Bash!</Message>
-      <Message>Are you willing to learn new techs?🙂</Message>
+      <Message>Are you willing to learn new technologies? 🙂</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Absolutely! I'm not afraid of trying and learning new technologies 💪🏼</Message>
+      <Message>Absolutely! I'm not afraid of trying and learning new things 💪🏼</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
@@ -91,11 +91,11 @@ const resumePage = () => (
 
     <MessageContainer subject={Bashar}>
       <Message>Yeah, I have!</Message>
-      <Message> bla bla bla </Message>
+      <Message>I'm a big fan of hypothesisdriven product development! 🧪👨🏻‍🔬</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Great Bash! It was nice talking to you! 🤗</Message>
+      <Message>Great Bash! Nice talking to you! 🤗</Message>
       <Message>... oh and by the way, you mentioned building stuff? </Message>
     </MessageContainer>
 
@@ -106,7 +106,7 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Sweet! Nice talking to you Bash!</Message>
+      <Message>Sweet! Nice talking to you Bash! ✌🏼</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
