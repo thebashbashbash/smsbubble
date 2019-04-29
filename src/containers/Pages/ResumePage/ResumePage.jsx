@@ -94,7 +94,7 @@ const resumePage = () => (
       <Message>{SofaTable}</Message>
       <Message>Please get in touch if you want to talk some more!</Message>
       <Message>mengana@kth.se</Message>
-      <Message>linkedin.com/in/basharmengana</Message>
+      <Message>linkedin.com/in/bashar-m</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
