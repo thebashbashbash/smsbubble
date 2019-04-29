@@ -56,8 +56,7 @@ const resumePage = () => (
 
     <MessageContainer subject={Bashar}>
       <Message>
-        I do! For back end I've used Python and Java with AWS services such as DynamoDB, Lambda,
-        Streams, SNS and SQS.
+        I do! For back end I've used Python and Java with AWS services such as DynamoDB and Lambda.
       </Message>
     </MessageContainer>
 
