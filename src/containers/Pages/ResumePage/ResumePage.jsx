@@ -21,21 +21,20 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Hey there!</Message>
-      <Message>Yeah, that's me! My friends call me Bash though 😊</Message>
+      <Message>Hey there! Yeah, that's me! </Message>
       <Message>{BasharPic}</Message>
-      <Message> that's a recent photo of me from last summer! ☀️</Message>
+      <Message>My friends call me Bash, though 😊</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Nice to meet you Bash! Tell us a bit about yourself?</Message>
+      <Message>Nice to meet you, Bash! Tell us a bit about yourself?</Message>
       <Message>🙂🎤</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
       <Message>
-        There's alot to say here, but my three main interests are software development 🤓, all kind
-        of social acitivites and building stuff!
+        There's a lot to say here, but my three main interests are software development 🤓, all
+        kinds of social activities and building stuff!
       </Message>
     </MessageContainer>
 
@@ -57,13 +56,13 @@ const resumePage = () => (
 
     <MessageContainer subject={Bashar}>
       <Message>
-        Yes! For back end I've used Python and Node.JS and AWS services such as DynamoDB, Lambda,
-        Streams, SNS and SQS.
+        I do! For back end I've used Python and Javascript with AWS services such as DynamoDB,
+        Lambda, Streams, SNS and SQS.
       </Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Sounds great Bash!</Message>
+      <Message>Sounds great, Bash!</Message>
       <Message>Are you willing to learn new technologies? 🙂</Message>
     </MessageContainer>
 
@@ -72,41 +71,34 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Great!😀Tell us a bit about how you like to work.</Message>
+      <Message>Great! 😜 Tell us a bit about how you like to work.</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
       <Message>
-        I'm most comfortable working in an agile team environment, and like to challange both myself
-        and the team to improve our way of working!🏆
+        I'm most comfortable working in an team environment with the customer in the loop, and, I
+        like to challenge both myself and the team to improve! 🏆
       </Message>
-      <Message>It's all about sucessfull teams!</Message>
       <Message>👩🏻‍🔬👨🏻‍🔧👨🏼‍🚀👩🏽‍🎨</Message>
+      <Message>Successful teams are vital!</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>That music to our ears! 🎻</Message>
-      <Message>Have you heard of the build-measure-learn loop?</Message>
+      <Message>That's music to our ears! 🎻</Message>
+      <Message>Great, Bash! It was really nice talking to you! 🤗</Message>
+      <Message> ... oh, and by the way, you mentioned building stuff? </Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
-      <Message>Yeah, I have!</Message>
-      <Message>I'm a big fan of hypothesisdriven product development! 🧪👨🏻‍🔬</Message>
-    </MessageContainer>
-
-    <MessageContainer subject={vistor}>
-      <Message>Great Bash! Nice talking to you! 🤗</Message>
-      <Message>... oh and by the way, you mentioned building stuff? </Message>
-    </MessageContainer>
-
-    <MessageContainer subject={Bashar}>
-      <Message>Yeah! Here's a plant sofa table 👷🏻‍♂️</Message>
+      <Message>Yeah! Here's my "plant stand" 👷🏻‍♂️</Message>
       <Message>{SofaTable}</Message>
-      <Message>Please get in touch if you wanna talk some more! My email is mengana@kth.se</Message>
+      <Message>
+        Please get in touch if you want to talk some more! My email is mengana@kth.se
+      </Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Sweet! Nice talking to you Bash! ✌🏼</Message>
+      <Message>Awesome! Nice talking to you, Bash! ✌🏼</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
