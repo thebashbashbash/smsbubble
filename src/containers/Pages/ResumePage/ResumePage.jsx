@@ -46,7 +46,7 @@ const resumePage = () => (
     <MessageContainer subject={Bashar}>
       <Message>
         I'm experienced with modern JavaScript/CSS/HTML coding (React) and automation techniques
-        (Gitlab CI + Serverless or AWS Codepipeline).
+        (Gitlab CI + Serverless or AWS CodePipeline).
       </Message>
     </MessageContainer>
 
@@ -56,8 +56,8 @@ const resumePage = () => (
 
     <MessageContainer subject={Bashar}>
       <Message>
-        I do! For back end I've used Python and Javascript with AWS services such as DynamoDB,
-        Lambda, Streams, SNS and SQS.
+        I do! For back end I've used Python and Java with AWS services such as DynamoDB, Lambda,
+        Streams, SNS and SQS.
       </Message>
     </MessageContainer>
 
@@ -92,9 +92,9 @@ const resumePage = () => (
     <MessageContainer subject={Bashar}>
       <Message>Yeah! Here's my "plant stand" 👷🏻‍♂️</Message>
       <Message>{SofaTable}</Message>
-      <Message>
-        Please get in touch if you want to talk some more! My email is mengana@kth.se
-      </Message>
+      <Message>Please get in touch if you want to talk some more!</Message>
+      <Message>mengana@kth.se</Message>
+      <Message>linkedin.com/in/basharmengana</Message>
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
