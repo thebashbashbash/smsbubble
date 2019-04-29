@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import posed from 'react-pose';
-// import Img from 'react-image';
 import Linkify from 'react-linkify';
 
 import { combineClasses } from '../../helpers/helpers';
