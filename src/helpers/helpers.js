@@ -22,7 +22,7 @@ export const computeTypingDuration = (content) => {
     return 0;
   }
 
-  const typingSpeed = 1.8; // lower quicker, higher slower
+  const typingSpeed = 1.7; // lower quicker, higher slower
   const minTypingDuration = 600;
 
   const computedTypingDuration = Math.round(

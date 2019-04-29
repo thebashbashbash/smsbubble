@@ -71,7 +71,7 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Great! 😜 Tell us a bit about how you like to work.</Message>
+      <Message>Great! 😜 And lastly, tell us a bit about how you like to work.</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
@@ -85,6 +85,7 @@ const resumePage = () => (
 
     <MessageContainer subject={vistor}>
       <Message>That's music to our ears! 🎻</Message>
+      <Message>Great, Bash! Nice talking to you! 🤗</Message>
       <Message> ... oh, and by the way, you mentioned building stuff? </Message>
     </MessageContainer>
 
@@ -97,7 +98,7 @@ const resumePage = () => (
     </MessageContainer>
 
     <MessageContainer subject={vistor}>
-      <Message>Awesome! Nice talking to you, Bash! ✌🏼</Message>
+      <Message>Awesome! Talk to you soon, Bash! ✌🏼</Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
