@@ -92,7 +92,7 @@ const resumePage = () => (
       </MessageContainer>
 
       <MessageContainer subject={Bashar}>
-        <Message>Yeah! Here's my "plant stand" 👷🏻‍♂️</Message>
+        <Message>Yeah! Here's my "plant stand" that I've built 👷🏻‍♂️</Message>
         <Message>{SofaTable}</Message>
         <Message>Please get in touch if you want to talk some more!</Message>
         <Message>mengana@kth.se</Message>
