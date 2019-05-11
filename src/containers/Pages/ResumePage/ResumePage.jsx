@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
+import ReactGA from 'react-ga';
 
 import Message, { SubjectType } from '../../Message/Message';
 import MessageContainer from '../../MessageContainer/MessageContainer';
@@ -12,6 +13,9 @@ import SofaTable from '../../../assets/sofatable.jpg';
 const Bashar = SubjectType.You;
 const vistor = SubjectType.Me;
 const interactive = true;
+
+ReactGA.initialize('UA-139986234-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const resumePage = () => (
   <MessageConversation interactive={interactive}>
@@ -93,7 +97,7 @@ const resumePage = () => (
       <Message>{SofaTable}</Message>
       <Message>... and here's an e-book http://tiny.cc/theoddfables that I've authored </Message>
       <Message>Please get in touch if you want to talk some more!</Message>
-      <Message>mengana@kth.se</Message>
+      <Message>contact@basharmengana.com</Message>
       <Message>linkedin.com/in/bashar-m</Message>
     </MessageContainer>
 
