@@ -89,7 +89,7 @@ const resumePage = () => (
     <MessageContainer subject={vistor}>
       <Message>That's music to our ears! 🎻</Message>
       <Message>Great, Bash! Nice talking to you! 🤗</Message>
-      <Message> ... oh, and by the way, you mentioned being creative? </Message>
+      <Message> ... oh, and you said you like being creative? </Message>
     </MessageContainer>
 
     <MessageContainer subject={Bashar}>
