@@ -3,11 +3,13 @@ import ReactGA from 'react-ga';
 
 import ReactJson from 'react-json-view';
 
+import { elapsedYearsBetweenTwoDates, splitDateRangeToArray } from './helper';
+
 ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const JSONresume = {
-  Me: {
+  me: {
     fullName: 'Bashar Mengana',
     age: Number(31),
     email: 'contact@basharmengana.com',
@@ -15,41 +17,57 @@ const JSONresume = {
     address: 'Ringvägen 151A, 11631 Stockholm, Sweden',
     hasDrivingLicense: true,
     birtday: Number('19880126'),
-    spokenLanguages: ['swedish', 'english', 'arabic', 'german'],
+    totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+      ...splitDateRangeToArray('2013/07 - Now'),
+    ),
+    spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
   education: {
-    school_eng: 'Royal Institute of Technology',
-    school_swe: 'Kungliga Tekniska Högskolan',
-    degree_eng: 'Master of science',
-    degree_swe: 'Civilingenjör',
+    school: {
+      englishName: 'Royal Institute of Technology',
+      swedishName: 'Kungliga Tekniska Högskolan',
+    },
+    degree: { englishName: 'Master of science', swedishName: 'Civilingenjör' },
     city: 'Stockholm',
-    durationInYears: Number(5),
-    completed: true,
+    isEducationCompleted: true,
+    totalDurationInYears: 5,
   },
   workExperience: {
     fullStackDeveloper: {
-      employer: 'Scania',
-      title: 'Full stack developer',
-      fromTo: '2017/10 - Now',
-      details: 'bla bla bla',
+      company: 'Scania',
+      position: 'Full stack developer',
+      timePeriod: '2017/06 - Now',
+      totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+        ...splitDateRangeToArray('2017/06/01 - Now'),
+      ),
+      description: 'bla bla bla',
     },
     serviceDesigner: {
-      employer: 'Scania',
-      title: 'Service designer',
-      fromTo: '2016/11 - 2017/07',
-      details: 'bla bla bla',
+      company: 'Scania',
+      position: 'Service designer',
+      timePeriod: '2016/08 - 2017/06',
+      totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+        ...splitDateRangeToArray('2016/08 - 2017/06'),
+      ),
+      description: 'bla bla bla',
     },
     productOwner: {
-      employer: 'Scania',
-      title: 'Product owner',
-      fromTo: '2015/01 - 2016/11',
-      details: 'bla bla bla',
+      empcompanyloyer: 'Scania',
+      position: 'Product owner',
+      timePeriod: '2014/12 - 2016/08',
+      totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+        ...splitDateRangeToArray('2014/12 - 2016/08'),
+      ),
+      description: 'bla bla bla',
     },
     trainee: {
-      employer: 'Scania',
-      title: 'Trainee',
-      fromTo: '2013/08 - 2014/12',
-      details: 'bla bla bla',
+      company: 'Scania',
+      position: 'Trainee',
+      timePeriod: '2013/07 - 2014/11',
+      totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+        ...splitDateRangeToArray('2013/07 - 2014/11'),
+      ),
+      description: 'bla bla bla',
     },
   },
 
