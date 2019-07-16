@@ -27,10 +27,13 @@ const JSONresume = {
       englishName: 'Royal Institute of Technology',
       swedishName: 'Kungliga Tekniska Högskolan',
     },
-    degree: { englishName: 'Master of science', swedishName: 'Civilingenjör' },
+    degree: { englishName: 'Master of Science', swedishName: 'Civilingenjör' },
     city: 'Stockholm',
     isEducationCompleted: true,
-    totalDurationInYears: 5,
+    timePeriod: '2008/07 - 2013/07',
+    totalEducationInYears: elapsedYearsBetweenTwoDates(
+      ...splitDateRangeToArray('2008/07 - 2013/07'),
+    ),
   },
   workExperience: {
     fullStackDeveloper: {
@@ -38,9 +41,36 @@ const JSONresume = {
       position: 'Full stack developer',
       timePeriod: '2017/06 - Now',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
-        ...splitDateRangeToArray('2017/06/01 - Now'),
+        ...splitDateRangeToArray('2017/06 - Now'),
       ),
-      description: 'bla bla bla',
+      description:
+        'Lead developer designing both front and back end in a team of 5 (2 developers).'
+        + ' The team designs a service that aims to improve driving behavior of drivers'
+        + ' and wear and tear of vehicles by encouraging drivers in improving their driving style'
+        + ' through gamification. The team utilizes methods from the lean startup theory'
+        + ' (e.g. build measure learn, MVP, hypothesis driven development).',
+      keywords: {
+        frontEnd: ['react.js', 'react-flow', 'react-redux', 'javascript/html', 'CSS/SASS'],
+        backEnd: [
+          'python',
+          'java',
+          'aws lambda, step functions',
+          'aws dyanmodb, sqs, kms',
+          'aws sns',
+          'aws secret store',
+          'aws s3',
+          'aws cloudfront',
+          'aws cloudlog',
+          'monitoring',
+        ],
+        automation: ['gitlab-ci', 'serverless framework', 'aws cloudformation'],
+        wayOfWorking: [
+          'mvp (minimum viable product) development process',
+          'lean startup / build-measure-learn loop',
+          'hypothesis/risk driven development',
+          'jira/trello',
+        ],
+      },
     },
     serviceDesigner: {
       company: 'Scania',
