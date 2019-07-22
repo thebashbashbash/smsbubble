@@ -83,7 +83,7 @@ const JSONresume = {
       description: 'bla bla bla',
     },
     productOwner: {
-      empcompanyloyer: 'Scania',
+      company: 'Scania',
       position: 'Product owner',
       timePeriod: '2014/12 - 2016/08',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
@@ -106,20 +106,29 @@ const JSONresume = {
   interests: '',
 };
 
-const traditionalResumePage = () => (
-  <div>
-    <div>
-      `{Object.keys(JSONresume.me)[0]} {JSONresume.me.fullName}`
-    </div>
-    <ReactJson
-      iconStyle="triangle"
-      theme="grayscale:inverted"
-      displayDataTypes={false}
-      displayObjectSize={false}
-      collapsed={false}
-      enableClipboard={false}
-      src={JSONresume}
-    />
-  </div>
-);
-export default traditionalResumePage;
+class TraditionalResumePage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      nightMode: false,
+    };
+  }
+
+  render() {
+    const { nightMode } = this.state;
+    return (
+      <ReactJson
+        iconStyle="triangle"
+        theme={`grayscale${nightMode === false ? ':inverted' : ''}`}
+        displayDataTypes={false}
+        displayObjectSize={false}
+        collapsed={2}
+        enableClipboard={false}
+        src={JSONresume}
+      />
+    );
+  }
+}
+
+export default TraditionalResumePage;
