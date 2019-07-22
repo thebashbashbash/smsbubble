@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import ReactGA from 'react-ga';
 
@@ -107,6 +108,9 @@ const JSONresume = {
 
 const traditionalResumePage = () => (
   <div>
+    <div>
+      `{Object.keys(JSONresume.me)[0]} {JSONresume.me.fullName}`
+    </div>
     <ReactJson
       iconStyle="triangle"
       theme="grayscale:inverted"
