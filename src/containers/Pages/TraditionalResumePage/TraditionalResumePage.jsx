@@ -109,10 +109,11 @@ const traditionalResumePage = () => (
   <div>
     <ReactJson
       iconStyle="triangle"
-      theme="summerfruit:inverted"
+      theme="grayscale:inverted"
       displayDataTypes={false}
       displayObjectSize={false}
-      collapsed={2}
+      collapsed={false}
+      enableClipboard={false}
       src={JSONresume}
     />
   </div>
