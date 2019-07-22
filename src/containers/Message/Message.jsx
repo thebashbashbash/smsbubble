@@ -36,8 +36,8 @@ const MessageBubble = posed.div({
     scale: 1,
     transition: () => ({
       type: 'keyframes',
-      values: [1, 1.027, 1.025, 1],
-      duration: 300,
+      values: [1, 1.026, 1.025, 1],
+      duration: 350,
     }),
   },
   notLoadingImage: {
