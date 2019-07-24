@@ -132,7 +132,15 @@ const traditionalResumePage = () => (
       }}
       displayDataTypes={false}
       displayObjectSize={false}
-      collapsed={2}
+      shouldCollapse={(field) => {
+        if (field.name === 'root') {
+          return false;
+        }
+        if (field.name === 'me') {
+          return false;
+        }
+        return true;
+      }}
       enableClipboard={false}
       src={JSONresume}
     />
