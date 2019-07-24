@@ -107,15 +107,35 @@ const JSONresume = {
 };
 
 const traditionalResumePage = () => (
-  <ReactJson
-    iconStyle="triangle"
-    theme="grayscale:inverted"
-    displayDataTypes={false}
-    displayObjectSize={false}
-    collapsed={2}
-    enableClipboard={false}
-    src={JSONresume}
-  />
+  <div style={{ height: '100vh', backgroundColor: 'red' }}>
+    <ReactJson
+      style={{ width: '100%', height: '100%' }}
+      iconStyle="triangle"
+      theme={{
+        base00: 'rgb(240, 240, 240)', // Default Background
+        base01: '#ddd', // Lighter Background (Used for status bars)
+        base02: '#ddd', // Selection Background
+        base03: '#444', // Comments, Invisibles, Line Highlighting
+        base04: '#444', // Dark Foreground (Used for status bars)
+        base05: '#444', // Default Foreground, Caret, Delimiters, Operators
+        base06: '#444', // Light Foreground (Not often used)
+        base07: 'rgb(20,20,20)', // Light Background (Not often used)
+        base08: '#444', // Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+        base09: 'rgb(105,105,105)', // Integers, Boolean, Constants, XML Attributes, Markup Link Url
+        base0A: '#444', // Classes, Markup Bold, Search Text Background
+        base0B: 'rgb(4,165,246)', // Strings, Inherited Class, Markup Code, Diff Inserted
+        base0C: '#444', // Support, Regular Expressions, Escape Characters, Markup Quotes
+        base0D: 'rgb(120,120,120)', // Functions, Methods, Attribute IDs, Headings
+        base0E: 'rgb(150,150,150)', // Keywords, Storage, Selector, Markup Italic, Diff Changed
+        base0F: 'rgb(4,165,246)', // Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+      }}
+      displayDataTypes={false}
+      displayObjectSize={false}
+      collapsed={2}
+      enableClipboard={false}
+      src={JSONresume}
+    />
+  </div>
 );
 
 export default traditionalResumePage;
