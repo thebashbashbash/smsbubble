@@ -106,29 +106,16 @@ const JSONresume = {
   interests: '',
 };
 
-class TraditionalResumePage extends React.Component {
-  constructor(props) {
-    super(props);
+const traditionalResumePage = () => (
+  <ReactJson
+    iconStyle="triangle"
+    theme="grayscale:inverted"
+    displayDataTypes={false}
+    displayObjectSize={false}
+    collapsed={2}
+    enableClipboard={false}
+    src={JSONresume}
+  />
+);
 
-    this.state = {
-      nightMode: false,
-    };
-  }
-
-  render() {
-    const { nightMode } = this.state;
-    return (
-      <ReactJson
-        iconStyle="triangle"
-        theme={`grayscale${nightMode === false ? ':inverted' : ''}`}
-        displayDataTypes={false}
-        displayObjectSize={false}
-        collapsed={2}
-        enableClipboard={false}
-        src={JSONresume}
-      />
-    );
-  }
-}
-
-export default TraditionalResumePage;
+export default traditionalResumePage;
