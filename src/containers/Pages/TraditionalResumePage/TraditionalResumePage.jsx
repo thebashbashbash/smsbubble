@@ -6,6 +6,8 @@ import ReactJson from 'react-json-view';
 
 import { elapsedYearsBetweenTwoDates, splitDateRangeToArray } from './helper';
 
+import classes from './TraditionalResumePage.module.css';
+
 ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -107,9 +109,8 @@ const JSONresume = {
 };
 
 const traditionalResumePage = () => (
-  <div style={{ height: '100vh', backgroundColor: 'red' }}>
+  <div className={classes.Container}>
     <ReactJson
-      style={{ width: '100%', height: '100%' }}
       iconStyle="triangle"
       theme={{
         base00: 'rgb(240, 240, 240)', // Default Background
