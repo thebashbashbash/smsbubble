@@ -113,7 +113,7 @@ const traditionalResumePage = () => (
     <ReactJson
       iconStyle="triangle"
       theme={{
-        base00: 'rgb(240, 240, 240)', // Default Background
+        base00: 'rgb(245, 245, 245)', // Default Background
         base01: '#ddd', // Lighter Background (Used for status bars)
         base02: '#ddd', // Selection Background
         base03: '#444', // Comments, Invisibles, Line Highlighting
