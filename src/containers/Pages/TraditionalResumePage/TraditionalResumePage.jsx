@@ -4,6 +4,8 @@ import ReactGA from 'react-ga';
 
 import ReactJson from 'react-json-view';
 
+import TopBar from '../../../components/topBar/topBar';
+
 import { elapsedYearsBetweenTwoDates, splitDateRangeToArray } from './helper';
 
 import classes from './TraditionalResumePage.module.css';
@@ -110,6 +112,11 @@ const JSONresume = {
 
 const traditionalResumePage = () => (
   <div className={classes.Container}>
+    <TopBar>
+      What is this? This resume is written in JSON, a type of notion often used in web and app
+      development - so here{"'"}s a taste of my world. Press on a triangle below to expand the
+      subject.
+    </TopBar>
     <ReactJson
       iconStyle="triangle"
       theme={{
