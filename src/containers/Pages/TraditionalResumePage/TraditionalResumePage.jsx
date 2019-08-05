@@ -4,8 +4,6 @@ import ReactGA from 'react-ga';
 
 import ReactJson from 'react-json-view';
 
-import TopBar from '../../../components/topBar/topBar';
-
 import { elapsedYearsBetweenTwoDates, splitDateRangeToArray } from './helper';
 
 import classes from './TraditionalResumePage.module.css';
@@ -112,7 +110,6 @@ const JSONresume = {
 
 const traditionalResumePage = () => (
   <div className={classes.Container}>
-    <TopBar>What is this?</TopBar>
     <ReactJson
       iconStyle="triangle"
       theme={{
