@@ -47,11 +47,11 @@ const JSONresume = {
         ...splitDateRangeToArray('2017/06 - Now'),
       ),
       description:
-        'Lead developer designing both front and back end in a team of 5 (2 developers).'
-        + ' The team designs a service that aims to improve driving behavior of drivers'
-        + ' and wear and tear of vehicles by encouraging drivers in improving their driving style'
-        + ' through gamification. The team utilizes methods from the lean startup theory'
-        + ' (e.g. build measure learn, MVP, hypothesis driven development).',
+        'Lead developer for both front and back end in a team of 5 (2 developers).'
+        + ' We design a service that aims to 1) improve driving behavior of truck drivers,'
+        + ' 2) reduce wear and tear of vehicles, by encouraging them to improve their'
+        + ' driving style with gamification. The team uses methods from the lean startup'
+        + ' theory (e.g. build-measure-learn loop, MVP, hypothesis driven development).',
       keywords: {
         frontEnd: ['react.js', 'react-flow', 'react-redux', 'javascript/html', 'CSS/SASS'],
         backEnd: [
@@ -66,7 +66,7 @@ const JSONresume = {
           'aws cloudlog',
           'monitoring',
         ],
-        automation: ['gitlab-ci', 'serverless framework', 'aws cloudformation'],
+        automation: ['gitlab-ci', 'serverless framework', 'aws cloudformation', 'spring'],
         wayOfWorking: [
           'mvp (minimum viable product) development process',
           'lean startup / build-measure-learn loop',
@@ -82,7 +82,11 @@ const JSONresume = {
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2016/08 - 2017/06'),
       ),
-      description: 'bla bla bla',
+      description:
+        'Researched and helped improve the onboarding process of a fleet managment tool. I conduced interviews with'
+        + ' users and salesmen; created user stories, terratory maps and personas in a team of 4 service designers. The team'
+        + ' also studied how the fleet managment tool was sold in order to find pain points and oppertunities in a way that'
+        + ' would help improve sales.',
     },
     productOwner: {
       company: 'Scania',
@@ -91,7 +95,10 @@ const JSONresume = {
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2014/12 - 2016/08'),
       ),
-      description: 'bla bla bla',
+      description:
+        'Responsible for the backlog of a fleet managment iOS and Android app, and the team’s vision and mission.'
+        + ' Worked closely with other product owners to help define the future of the product echosystem. Worked with scrum master'
+        + ' to make sure team is strong and healthy – including capabilities, happiness, resilience and growth.',
     },
     trainee: {
       company: 'Scania',
@@ -100,7 +107,8 @@ const JSONresume = {
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2013/07 - 2014/11'),
       ),
-      description: 'bla bla bla',
+      description:
+        'The programme aims to give you a comprehensive understanding across our diverse organisation. ',
     },
   },
 
@@ -133,6 +141,8 @@ const traditionalResumePage = () => (
       displayDataTypes={false}
       displayObjectSize={false}
       shouldCollapse={(field) => {
+        // console.log(field);
+        // return false;
         if (field.name === 'root') {
           return false;
         }
