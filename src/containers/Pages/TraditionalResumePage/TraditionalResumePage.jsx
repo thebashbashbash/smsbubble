@@ -48,10 +48,10 @@ const JSONresume = {
       ),
       description:
         'Lead developer for both front and back end in a team of 5 (2 developers).'
-        + ' We design a service that aims to 1) improve driving behavior of truck drivers,'
-        + ' 2) reduce wear and tear of vehicles, by encouraging them to improve their'
-        + ' driving style with gamification. The team uses methods from the lean startup'
-        + ' theory (e.g. build-measure-learn loop, MVP, hypothesis driven development).',
+        + ' We design a service that aims to 1) improve the driving behavior of truck drivers,'
+        + ' 2) reduce wear and tear of vehicles, by encouraging them to improve their driving'
+        + ' style with gamification. The team uses methods from the lean startup theory'
+        + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development) as our way of working.',
       keywords: {
         frontEnd: ['react.js', 'react-flow', 'react-redux', 'javascript/html', 'CSS/SASS'],
         backEnd: [
@@ -80,40 +80,42 @@ const JSONresume = {
       position: 'Service designer',
       timePeriod: '2016/08 - 2017/06',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
-        ...splitDateRangeToArray('2016/08 - 2017/06'),
+        ...splitDateRangeToArray('2016/06 - 2017/06'),
       ),
       description:
-        'Researched and helped improve the onboarding process of a fleet managment tool. I conduced interviews with'
-        + ' users and salesmen; created user stories, terratory maps and personas in a team of 4 service designers. The team'
-        + ' also studied how the fleet managment tool was sold in order to find pain points and oppertunities in a way that'
-        + ' would help improve sales.',
+        ' Researched and helped improve the onboarding process of a fleet management tool. I conducted interviews with'
+        + ' uour users and salesmen; designed user stories, empathy maps, territory maps and personas in a team of four service designers.'
+        + ' The team also studied how the fleet management tool was sold to find pain points and opportunities - both backstage and front stage - to '
+        + " improve the sales process. The team did lightweight MVPs to evaluate concepts quickly and were not afraid to throw them in the bin if the idea didn't fly,",
     },
     productOwner: {
       company: 'Scania',
       position: 'Product owner',
       timePeriod: '2014/12 - 2016/08',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
-        ...splitDateRangeToArray('2014/12 - 2016/08'),
+        ...splitDateRangeToArray('2014/09 - 2016/06'),
       ),
       description:
-        'Responsible for the backlog of a fleet managment iOS and Android app, and the team’s vision and mission.'
-        + ' Worked closely with other product owners to help define the future of the product echosystem. Worked with scrum master'
-        + ' to make sure team is strong and healthy – including capabilities, happiness, resilience and growth.',
+        'Responsible for the product backlog of a fleet management iOS and Android app, and the team’s vision and mission. '
+        + ' I worked closely with other product owners to help define the future of our product portfolio. My scrum master and I made'
+        + ' sure the team was strong and healthy; and working with areas such as team happiness, resilience, and growth.',
     },
     trainee: {
       company: 'Scania',
       position: 'Trainee',
       timePeriod: '2013/07 - 2014/11',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
-        ...splitDateRangeToArray('2013/07 - 2014/11'),
+        ...splitDateRangeToArray('2013/07 - 2014/09'),
       ),
       description:
-        'The programme aims to give you a comprehensive understanding across our diverse organisation. ',
+        'The trainee program gave me a comprehensive helicopter view of the operations of a big corporation. During my trainee year, '
+        + "During my trainee year, I spent time in Scania's sales organization, at a distributor in Switzerland and Scania's R&D organization."
+        + 'I learned about the logistics business, heavy-duty vehicles and the future of autonomous trucks.',
     },
   },
 
-  skills: 'Coding',
-  interests: '',
+  skills: [],
+  interests: [],
 };
 
 const traditionalResumePage = () => (
