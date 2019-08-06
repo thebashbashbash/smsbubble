@@ -83,7 +83,7 @@ const JSONresume = {
         ...splitDateRangeToArray('2016/06 - 2017/06'),
       ),
       description:
-        ' Researched and helped improve the onboarding process of a fleet management tool. I conducted interviews with'
+        'Researched and helped improve the onboarding process of a fleet management tool. I conducted interviews with'
         + ' uour users and salesmen; designed user stories, empathy maps, territory maps and personas in a team of four service designers.'
         + ' The team also studied how the fleet management tool was sold to find pain points and opportunities - both backstage and front stage - to '
         + " improve the sales process. The team did lightweight MVPs to evaluate concepts quickly and were not afraid to throw them in the bin if the idea didn't fly,",
