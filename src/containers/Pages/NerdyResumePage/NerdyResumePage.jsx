@@ -137,6 +137,7 @@ const jsonResume = {
         'productOwnerForum',
         'benchmarking',
         'competitorAnalysis',
+        'GDPR',
       ],
     },
     trainee: {
@@ -169,7 +170,6 @@ const jsonResume = {
     'aws',
     'serviceDesign',
     'hypothesisDrivenDevelopment',
-    'GDPR',
     'productOwner',
     'scrumMaster',
     'graphicalDesign',
