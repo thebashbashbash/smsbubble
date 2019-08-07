@@ -11,7 +11,7 @@ import classes from './TraditionalResumePage.module.css';
 ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-const JSONresume = {
+const jsonResume = {
   me: {
     fullName: 'Bashar Mengana',
     age: Number(31),
@@ -19,7 +19,7 @@ const JSONresume = {
     phoneNumber: Number('0046703794381'),
     address: 'Ringvägen 151A, 11631 Stockholm, Sweden',
     hasDrivingLicense: true,
-    birtday: Number('19880126'),
+    birthday: Number('19880126'),
     totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
       ...splitDateRangeToArray('2013/07 - Now'),
     ),
@@ -47,10 +47,10 @@ const JSONresume = {
         ...splitDateRangeToArray('2017/06 - Now'),
       ),
       shortDescription:
-        'Lead developer for both front and back end in a team of 5 (2 developers).'
+        'Full stack developer in a team of 5 (2 developers), with a keen interest in the devops bits.'
         + ' We design a service that aims to 1) improve the driving behavior of truck drivers,'
-        + ' 2) reduce wear and tear of vehicles, by encouraging them to improve their driving'
-        + ' style with gamification. The team uses methods from the lean startup theory'
+        + ' 2) reduce wear and tear of vehicles, by encouraging drivers to engage in improving their driving'
+        + ' through gamification. The team uses methods from the lean startup theory'
         + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development) as our way of working.',
       keywords: {
         frontEnd: ['react.js', 'react-flow', 'react-redux', 'javascript/html', 'CSS/SASS'],
@@ -66,7 +66,13 @@ const JSONresume = {
           'aws cloudlog',
           'monitoring',
         ],
-        automation: ['gitlab-ci', 'serverless framework', 'aws cloudformation', 'spring'],
+        automation: [
+          'gitlab-ci',
+          'serverless framework',
+          'aws cloudformation',
+          'spring',
+          'aws cloudlog',
+        ],
         wayOfWorking: [
           'mvp (minimum viable product) development process',
           'lean startup / build-measure-learn loop',
@@ -87,6 +93,21 @@ const JSONresume = {
         + ' our users and salesmen; designed user stories, empathy maps, territory maps and personas in a team of 4 service designers.'
         + ' The team also studied how the fleet management tool was sold to find pain points and opportunities - both backstage and front stage - to'
         + " improve the sales process. The team did lightweight MVP's to evaluate concepts quickly and were not afraid to throw them in the bin if the idea didn't fly,",
+      keywords: [
+        'personas',
+        'userStories',
+        'empathyMaps',
+        'territoryMaps',
+        'doubleDiamondProcess',
+        'storytelling',
+        'businessModelCanvas(BMC)',
+        'MVP',
+        'journeyMapping',
+        'userShadowing',
+        'userDiaries/probes',
+        'serviceBlueprint',
+        'prototyping',
+      ],
     },
     productOwner: {
       company: 'Scania',
@@ -99,6 +120,24 @@ const JSONresume = {
         'Responsible for the product backlog of a fleet management iOS and Android app, and the team’s vision and mission.'
         + ' I worked closely with other product owners to help define the future of our product portfolio. My scrum master and I made'
         + ' sure the team was strong and healthy; and worked with areas such as team happiness, resilience, and growth.',
+      keywords: [
+        'productBacklog',
+        'scrum',
+        'sprints',
+        'googleSprints',
+        'retrospectives',
+        'jira',
+        'automatedTesting',
+        'featureToggling',
+        'migrationFromMonolith',
+        'sprintPlanning',
+        'certifiedProductOwner',
+        'certifiedScrum<aster',
+        'scrumOfScrum',
+        'productOwnerForum',
+        'benchmarking',
+        'competitorAnalysis',
+      ],
     },
     trainee: {
       company: 'Scania',
@@ -111,11 +150,31 @@ const JSONresume = {
         'The trainee program gave me a comprehensive helicopter view of the operations of a big corporation.'
         + " During my trainee year, I spent time in Scania's sales organization, at a distributor in Switzerland and Scania's R&D organization."
         + ' I learned about the logistics business, heavy-duty vehicles and the future of autonomous trucks.',
+      keywords: [
+        'sales',
+        'productDevelopment',
+        'autonomousVehicles',
+        'environmentallyFriendly',
+        'bioFuel',
+        'logisticsBusiness',
+        'transportOperations',
+        'truckManufacturing',
+      ],
     },
   },
-
-  skills: [],
-  interests: [],
+  skills: [
+    'frontend',
+    'backend',
+    'devops',
+    'aws',
+    'serviceDesign',
+    'hypothesisDrivenDevelopment',
+    'GDPR',
+    'productOwner',
+    'scrumMaster',
+    'graphicalDesign',
+  ],
+  interests: ['coding', 'plants', 'travelling', 'architecture', 'building', 'gym'],
 };
 
 const traditionalResumePage = () => (
@@ -154,7 +213,7 @@ const traditionalResumePage = () => (
         return true;
       }}
       enableClipboard={false}
-      src={JSONresume}
+      src={jsonResume}
     />
   </div>
 );
