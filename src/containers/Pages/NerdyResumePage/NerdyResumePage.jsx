@@ -6,7 +6,7 @@ import ReactJson from 'react-json-view';
 
 import { elapsedYearsBetweenTwoDates, splitDateRangeToArray } from './helper';
 
-import classes from './TraditionalResumePage.module.css';
+import classes from './NerdyResumePage.module.css';
 
 ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -177,7 +177,7 @@ const jsonResume = {
   interests: ['coding', 'plants', 'travelling', 'architecture', 'building', 'gym'],
 };
 
-const traditionalResumePage = () => (
+const nerdyResumePage = () => (
   <div className={classes.Container}>
     <ReactJson
       iconStyle="triangle"
@@ -185,7 +185,7 @@ const traditionalResumePage = () => (
         base00: 'rgb(245, 245, 245)', // Default Background
         base01: '#ddd', // Lighter Background (Used for status bars)
         base02: '#ddd', // Selection Background
-        base03: '#444', // Comments, Invisibles, Line Highlighting
+        base03: '#444', // Comments, Invisible, Line Highlighting
         base04: '#444', // Dark Foreground (Used for status bars)
         base05: '#444', // Default Foreground, Caret, Delimiters, Operators
         base06: '#444', // Light Foreground (Not often used)
@@ -218,4 +218,4 @@ const traditionalResumePage = () => (
   </div>
 );
 
-export default traditionalResumePage;
+export default nerdyResumePage;

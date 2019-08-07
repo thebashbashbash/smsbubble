@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import ResumePage from './containers/Pages/ResumePage/ResumePage';
-import TraditionalResumePage from './containers/Pages/TraditionalResumePage/TraditionalResumePage';
+import FunResumePage from './containers/Pages/FunResumePage/FunResumePage';
+import NerdyResumePage from './containers/Pages/NerdyResumePage/NerdyResumePage';
 import ErrorPage from './containers/Pages/ErrorPage/ErrorPage';
 
 const main = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/" exact component={ResumePage} />
-      <Route path="/resume" component={TraditionalResumePage} />
+      <Route path="/" exact component={FunResumePage} />
+      <Route path="/resume" component={NerdyResumePage} />
       <Route component={ErrorPage} />
     </Switch>
   </BrowserRouter>

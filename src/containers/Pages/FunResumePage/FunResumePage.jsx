@@ -11,15 +11,15 @@ import BasharPic from '../../../assets/BasharPic.jpg';
 import SofaTable from '../../../assets/sofatable.jpg';
 
 const Bashar = SubjectType.You;
-const vistor = SubjectType.Me;
+const visitor = SubjectType.Me;
 const interactive = true;
 
 ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-const resumePage = () => (
+const funResumePage = () => (
   <MessageConversation interactive={interactive}>
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={visitor}>
       <Message>Hey!</Message>
       <Message>Bashar Mengana, right? 🤠</Message>
     </MessageContainer>
@@ -30,7 +30,7 @@ const resumePage = () => (
       <Message>My friends call me Bash, though 😊</Message>
     </MessageContainer>
 
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={visitor}>
       <Message>Nice to meet you, Bash! Tell us a bit about yourself?</Message>
       <Message>🙂🎤</Message>
     </MessageContainer>
@@ -42,7 +42,7 @@ const resumePage = () => (
       </Message>
     </MessageContainer>
 
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={visitor}>
       <Message>Interesting! 🤠</Message>
       <Message>Please tell us about your experience in software development.</Message>
     </MessageContainer>
@@ -54,7 +54,7 @@ const resumePage = () => (
       </Message>
     </MessageContainer>
 
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={visitor}>
       <Message>Do you work both back end and front end? 🤓</Message>
     </MessageContainer>
 
@@ -64,7 +64,7 @@ const resumePage = () => (
       </Message>
     </MessageContainer>
 
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={visitor}>
       <Message>Sounds great, Bash!</Message>
       <Message>Are you willing to learn new technologies? 🙂</Message>
     </MessageContainer>
@@ -73,7 +73,7 @@ const resumePage = () => (
       <Message>Absolutely! I'm not afraid of trying and learning new things 💪🏼</Message>
     </MessageContainer>
 
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={visitor}>
       <Message>Great! 😜 And lastly, tell us a bit about how you like to work.</Message>
     </MessageContainer>
 
@@ -86,7 +86,7 @@ const resumePage = () => (
       <Message>Team success > individual success!</Message>
     </MessageContainer>
 
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={visitor}>
       <Message>That's music to our ears! 🎻</Message>
       <Message>Great, Bash! Nice talking to you! 🤗</Message>
       <Message> ... oh, and you said you like being creative? </Message>
@@ -101,7 +101,7 @@ const resumePage = () => (
       <Message>linkedin.com/in/bashar-m</Message>
     </MessageContainer>
 
-    <MessageContainer subject={vistor}>
+    <MessageContainer subject={visitor}>
       <Message>Awesome! Talk to you soon, Bash! ✌🏼</Message>
     </MessageContainer>
 
@@ -110,4 +110,4 @@ const resumePage = () => (
     </MessageContainer>
   </MessageConversation>
 );
-export default resumePage;
+export default funResumePage;
