@@ -1,3 +1,10 @@
+:root {
+  --body-bg: #212529;
+  --body-color: #6c757d;
+  --link-color: #dee2e6;
+  --link-color-hover: #fff;
+}
+
 .Heading {
   background-color: var(--body-bg);
   color: var(--body-color);

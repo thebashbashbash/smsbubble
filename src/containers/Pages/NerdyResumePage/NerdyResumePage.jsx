@@ -36,12 +36,10 @@ const nerdyResumePage = () => (
       displayDataTypes={false}
       displayObjectSize={false}
       shouldCollapse={(field) => {
-        // console.log(field);
-        // return false;
         if (field.name === 'root') {
           return false;
         }
-        if (field.name === 'me') {
+        if (field.name === 'aboutMe') {
           return false;
         }
         return true;

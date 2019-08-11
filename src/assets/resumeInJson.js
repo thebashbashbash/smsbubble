@@ -1,13 +1,13 @@
 import { elapsedYearsBetweenTwoDates, splitDateRangeToArray } from '../helpers/helpers';
 
 const dynamicResumeInJson = {
-  me: {
+  aboutMe: {
     fullName: 'Bashar Mengana',
     age: Number(31),
     email: 'contact@basharmengana.com',
     phoneNumber: Number('0046703794381'),
     address: 'Ringvägen 151A, 11631 Stockholm, Sweden',
-    hasDrivingLicense: true,
+    drivingLicense: true,
     birthday: Number('19880126'),
     totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
       ...splitDateRangeToArray('2013/07 - Now'),
@@ -21,7 +21,7 @@ const dynamicResumeInJson = {
     },
     degree: { englishName: 'Master of Science', swedishName: 'Civilingenjör' },
     city: 'Stockholm',
-    isEducationCompleted: true,
+    educationCompleted: true,
     timePeriod: '2008/07 - 2013/07',
     totalEducationInYears: elapsedYearsBetweenTwoDates(
       ...splitDateRangeToArray('2008/07 - 2013/07'),
@@ -30,13 +30,12 @@ const dynamicResumeInJson = {
   workExperience: {
     fullStackDeveloper: {
       company: 'Scania',
-      position: 'Full stack developer',
       timePeriod: '2017/06 - Now',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2017/06 - Now'),
       ),
       shortDescription:
-        'Full stack developer in a team of 5 (2 developers), with a keen interest in the devops bits.'
+        'Full stack developer in a team of 5 (2 developers), with a keen interest in devops.'
         + ' We design a service that aims to 1) improve the driving behavior of truck drivers,'
         + ' 2) reduce wear and tear of vehicles, by encouraging drivers to engage in improving their driving'
         + ' through gamification. The team uses methods from the lean startup theory'
@@ -72,7 +71,6 @@ const dynamicResumeInJson = {
     },
     serviceDesigner: {
       company: 'Scania',
-      position: 'Service designer',
       timePeriod: '2016/08 - 2017/06',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2016/06 - 2017/06'),
@@ -100,7 +98,6 @@ const dynamicResumeInJson = {
     },
     productOwner: {
       company: 'Scania',
-      position: 'Product owner',
       timePeriod: '2014/12 - 2016/08',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2014/09 - 2016/06'),
@@ -131,7 +128,6 @@ const dynamicResumeInJson = {
     },
     trainee: {
       company: 'Scania',
-      position: 'Trainee',
       timePeriod: '2013/07 - 2014/11',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2013/07 - 2014/09'),

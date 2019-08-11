@@ -4,12 +4,11 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--body-bg);
-  color: var(--body-color);
+  color: #7c868f;
   box-sizing: border-box;
-  height: 100%;
-  height: -moz-available;
-  /* WebKit-based browsers will ignore this. */
-  height: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
-  height: stretch;
+}
+
+.Container b {
+  font-weight: 600;
+  color: #6c757d;
 }

@@ -12,3 +12,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+h2 {
+  display: inline;
+}
+
+h4 {
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-top: 10px;
+}

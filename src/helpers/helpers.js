@@ -18,6 +18,13 @@ export const isStringEmoji = (string) => {
   return isOnlyEmojis(string);
 };
 
+export const decamelize = (str) => {
+  const result = str.replace(/([A-Z])/g, ' $1');
+  return result.charAt(0) + result.slice(1).toLowerCase();
+};
+
+export const propName = f => /\.([^.;]+);?\s*\}$/.exec(f.toString())[1];
+
 
 export const computeTypingDuration = (content) => {
   if (isStringImage(content) || isStringEmoji(content)) {
