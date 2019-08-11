@@ -1,4 +1,6 @@
 /* eslint-disable max-len */
+import moment from 'moment';
+
 export const combineClasses = (...args) => [...args].join(' ');
 
 export const isStringImage = urlString => /\/static\/media\/.+\.(gif|jpg|jpeg|tiff|png)$/.test(urlString);
@@ -34,3 +36,19 @@ export const computeTypingDuration = (content) => {
 
 // eslint-disable-next-line max-len
 export const getRandomInt = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
+
+export const elapsedYearsBetweenTwoDates = (startDate, endDate) => {
+  let start = moment();
+  if (startDate.toLowerCase() !== 'now') {
+    start = moment(startDate.replace(/\//ig, '-'));
+  }
+
+  let end = moment();
+  if (endDate.toLowerCase() !== 'now') {
+    end = moment(endDate.replace(/\//ig, '-'));
+  }
+
+  return Math.round(end.diff(start, 'years', true) * 100) / 100;
+};
+
+export const splitDateRangeToArray = dateRange => dateRange.replace(/ - /g, '--').split('--');
