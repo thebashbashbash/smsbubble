@@ -5,11 +5,19 @@ import ReactGA from 'react-ga';
 
 import ReactJson from 'react-json-view';
 import Headroom from 'react-headroom';
-import { AwesomeButton } from 'react-awesome-button';
-import 'react-awesome-button/dist/styles.css';
+
+import HighlightIcon from '@material-ui/icons/Highlight';
+import HighlightOutlinedIcon from '@material-ui/icons/HighlightOutlined';
+
+import CodeIcon from '@material-ui/icons/Code';
+
+import DescriptionIcon from '@material-ui/icons/Description';
+import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 
 import { decamelize, propName } from '../../../helpers/helpers';
 import Aux from '../../../helpers/aux';
+import ToggleIconButton from '../../IconButton/ToggleIconButton';
+
 
 import DynamicResumeInJson from '../../../assets/resumeInJson';
 
@@ -20,52 +28,9 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 export const ModeType = {
   NerdResumeMode: 'nerdResumeMode',
-  TraditionalMode: 'traditionalNightMode',
+  TraditionalResumeMode: 'traditionalResumeMode',
 };
 
-export const TraditionalResumeTheme = {
-  Day: 'Day',
-  Night: 'Night',
-};
-
-const nerdyResume = (
-  <div className={classes.ContainerJsonView}>
-    <ReactJson
-      iconStyle="triangle"
-      theme={{
-        base00: 'rgb(245, 245, 245)', // Default Background
-        base01: '#ddd', // Lighter Background (Used for status bars)
-        base02: '#ddd', // Selection Background
-        base03: '#444', // Comments, Invisible, Line Highlighting
-        base04: '#444', // Dark Foreground (Used for status bars)
-        base05: '#444', // Default Foreground, Caret, Delimiters, Operators
-        base06: '#444', // Light Foreground (Not often used)
-        base07: 'rgb(15,15,15)', // Light Background (Not often used)
-        base08: '#444', // Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-        base09: 'rgb(110,110,110)', // Integers, Boolean, Constants, XML Attributes, Markup Link Url
-        base0A: '#444', // Classes, Markup Bold, Search Text Background
-        base0B: 'rgb(0,168,107)', // Strings, Inherited Class, Markup Code, Diff Inserted
-        base0C: '#444', // Support, Regular Expressions, Escape Characters, Markup Quotes
-        base0D: 'rgb(110,110,110)', // Functions, Methods, Attribute IDs, Headings
-        base0E: 'rgb(155,155,155)', // Keywords, Storage, Selector, Markup Italic, Diff Changed
-        base0F: 'rgb(0,168,107)', // Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
-      }}
-      displayDataTypes={false}
-      displayObjectSize={false}
-      shouldCollapse={(field) => {
-        if (field.name === 'root') {
-          return false;
-        }
-        if (field.name === 'aboutMe') {
-          return false;
-        }
-        return true;
-      }}
-      enableClipboard={false}
-      src={DynamicResumeInJson}
-    />
-  </div>
-);
 
 class NerdyResumePage extends React.Component {
   constructor(props) {
@@ -73,16 +38,16 @@ class NerdyResumePage extends React.Component {
 
     this.state = {
       mode: ModeType.TraditionalResumeDayMode,
-      traditionalResumeTheme: TraditionalResumeTheme.Day,
+      lightTheme: true,
     };
   }
 
 
   render() {
-    const { mode, traditionalResumeTheme } = this.state;
+    const { mode, lightTheme } = this.state;
 
     const traditionalResume = (
-      <div className={traditionalResumeTheme === TraditionalResumeTheme.Day ? classes.ContainerTraditionalResumeDay : classes.ContainerTraditionalResumeNight}>
+      <div className={lightTheme ? classes.ContainerTraditionalResumeDay : classes.ContainerTraditionalResumeNight}>
         <div>
           <h2>{decamelize(propName(() => DynamicResumeInJson.aboutMe))}</h2>
           <ul style={{ listStyleType: 'none', padding: '0px' }}>
@@ -511,47 +476,80 @@ class NerdyResumePage extends React.Component {
     );
 
 
+    const nerdyResume = (
+      <div className={classes.ContainerJsonView}>
+        <ReactJson
+          iconStyle="triangle"
+          theme={{
+            base00: lightTheme ? 'rgb(245, 245, 245)' : '#212529', // Default Background
+            base01: '#ddd', // Lighter Background (Used for status bars)
+            base02: '#ddd', // Selection Background
+            base03: '#444', // Comments, Invisible, Line Highlighting
+            base04: '#444', // Dark Foreground (Used for status bars)
+            base05: '#444', // Default Foreground, Caret, Delimiters, Operators
+            base06: '#444', // Light Foreground (Not often used)
+            base07: lightTheme ? 'rgb(15,15,15)' : '#7c868f', // Light Background (Not often used)
+            base08: '#444', // Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+            base09: lightTheme ? 'rgb(15,15,15)' : '#939ca3', // Integers, Boolean, Constants, XML Attributes, Markup Link Url
+            base0A: '#444', // Classes, Markup Bold, Search Text Background
+            base0B: 'rgb(0,168,107)', // Strings, Inherited Class, Markup Code, Diff Inserted
+            base0C: '#444', // Support, Regular Expressions, Escape Characters, Markup Quotes
+            base0D: 'rgb(110,110,110)', // Functions, Methods, Attribute IDs, Headings
+            base0E: 'rgb(155,155,155)', // Keywords, Storage, Selector, Markup Italic, Diff Changed
+            base0F: 'rgb(0,168,107)', // Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+          }}
+          displayDataTypes={false}
+          displayObjectSize={false}
+          collapsed={2}
+          enableClipboard={false}
+          src={DynamicResumeInJson}
+        />
+      </div>
+    );
+
     return (
       <Aux>
         <Headroom>
           <div style={{
-            display: 'flex', backgroundColor: mode === ModeType.NerdResumeMode ? 'rgb(245, 245, 245)' : traditionalResumeTheme === TraditionalResumeTheme.Day ? 'white' : '#212529', justifyContent: 'flex-end', padding: '10px',
+            display: 'flex', backgroundColor: lightTheme ? 'rgb(245, 245, 245)' : '#212529', justifyContent: 'space-between', padding: '10px',
           }}
           >
-            <AwesomeButton
-              style={{ margin: '5px' }}
-              type="primary"
-              onPress={() => {
-                this.setState({ mode: ModeType.TraditionalMode, traditionalResumeTheme: TraditionalResumeTheme.Night });
-              }}
-            >
-Night mode
+            <div>
+              <ToggleIconButton
+                iconUntoggled={<DescriptionOutlinedIcon />}
+                iconToggled={<DescriptionIcon />}
+                label="Switch-theme"
+                color="green"
+                onClick={() => {
+                  this.setState({ mode: ModeType.TraditionalResumeMode, lightTheme });
+                }}
+              />
+              <ToggleIconButton
+                iconUntoggled={<CodeIcon />}
+                iconToggled={<CodeIcon />}
+                label="Switch-theme"
+                color="green"
+                onClick={() => {
+                  this.setState({ mode: ModeType.NerdResumeMode, lightTheme });
+                }}
+              />
 
-            </AwesomeButton>
-            <AwesomeButton
-              style={{ margin: '5px' }}
-              type="primary"
-              // disabled={!(mode === ModeType.TraditionalMode && traditionalResumeTheme === TraditionalResumeTheme.Day)}
-              onPress={() => {
-                this.setState({ mode: ModeType.TraditionalDayMode, traditionalResumeTheme: TraditionalResumeTheme.Day });
-              }}
-            >
-Day mode
+            </div>
 
-            </AwesomeButton>
-            <AwesomeButton
-              style={{ margin: '5px' }}
-              type="primary"
-              onPress={() => {
-                this.setState({ mode: ModeType.NerdResumeMode });
+            <ToggleIconButton
+              iconUntoggled={<HighlightOutlinedIcon />}
+              iconToggled={<HighlightIcon />}
+              label="Switch-theme"
+              color="green"
+              onClick={() => {
+                this.setState({ mode, lightTheme: !lightTheme });
               }}
-            >
-Code mode
-
-            </AwesomeButton>
+            />
           </div>
+
+
         </Headroom>
-        <div>
+        <div style={{ backgroundColor: 'red' }}>
           {mode === ModeType.NerdResumeMode ? nerdyResume
             : mode === ModeType.TraditionalResumeDayMode ? traditionalResume : traditionalResume}
         </div>
