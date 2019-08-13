@@ -1,5 +1,8 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable max-len */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/accessible-emoji */
+
 import React from 'react';
 import ReactGA from 'react-ga';
 
@@ -11,17 +14,32 @@ import HighlightOutlinedIcon from '@material-ui/icons/HighlightOutlined';
 
 import CodeIcon from '@material-ui/icons/Code';
 
+import TextSMSIcon from '@material-ui/icons/ChatBubble';
+import TextSMSOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineRounded';
+
 import DescriptionIcon from '@material-ui/icons/Description';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 
-import { decamelize, propName, isDayTime } from '../../../helpers/helpers';
+import {
+  decamelize, propName, isDayTime, combineClasses,
+} from '../../../helpers/helpers';
 import Aux from '../../../helpers/aux';
 import ToggleIconButton from '../../IconButton/ToggleIconButton';
 
-
 import DynamicResumeInJson from '../../../assets/resumeInJson';
 
+import Message, { SubjectType } from '../../Message/Message';
+import MessageContainer from '../../MessageContainer/MessageContainer';
+import MessageConversation from '../../MessageConversation/MessageConversation';
+
+import BasharPic from '../../../assets/BasharPic.jpg';
+import SofaTable from '../../../assets/sofatable.jpg';
+
 import classes from './ResumePage.module.css';
+
+const Bashar = SubjectType.You;
+const visitor = SubjectType.Me;
+const interactive = true;
 
 ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -29,6 +47,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 export const ModeType = {
   NerdResumeMode: 'nerdResumeMode',
   TraditionalResumeMode: 'traditionalResumeMode',
+  FunResumeMode: 'funResumeMode',
 };
 
 const greenColor = '#029c63';
@@ -477,7 +496,6 @@ class ResumePage extends React.Component {
       </div>
     );
 
-
     const nerdyResume = (
       <div className={classes.ContainerJsonView}>
         <ReactJson
@@ -509,51 +527,231 @@ class ResumePage extends React.Component {
       </div>
     );
 
-    return (
-      <Aux>
-        <Headroom>
-          <div style={{
-            display: 'flex', backgroundColor: lightTheme ? 'rgb(245, 245, 245)' : '#212529', justifyContent: 'space-between', padding: '10px',
+    const funResume = (
+      <div style={{ marginTop: '30px' }}>
+        <MessageConversation interactive={interactive} autoscroll>
+          <MessageContainer subject={visitor}>
+            <Message>Hey!</Message>
+            <Message>Bashar Mengana, right? 🤠</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={Bashar}>
+            <Message>Hey there! Yeah, that's me! </Message>
+            <Message>{BasharPic}</Message>
+            <Message>My friends call me Bash, though 😊</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={visitor}>
+            <Message>Nice to meet you, Bash! Tell us a bit about yourself?</Message>
+            <Message>🙂🎤</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={Bashar}>
+            <Message>
+        There's a lot to say here, but my three main interests are software development 🤓, all
+        kinds of social activities and being creative!
+            </Message>
+          </MessageContainer>
+
+          <MessageContainer subject={visitor}>
+            <Message>Interesting! 🤠</Message>
+            <Message>Please tell us about your experience in software development.</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={Bashar}>
+            <Message>
+        I'm experienced with modern JavaScript/CSS/HTML coding (React) and automation techniques
+        (Gitlab CI + Serverless or AWS CodePipeline).
+            </Message>
+          </MessageContainer>
+
+          <MessageContainer subject={visitor}>
+            <Message>Do you work both back end and front end? 🤓</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={Bashar}>
+            <Message>
+        I do! For back end I've used Python and Java with AWS services such as DynamoDB and Lambda.
+            </Message>
+          </MessageContainer>
+
+          <MessageContainer subject={visitor}>
+            <Message>Sounds great, Bash!</Message>
+            <Message>Are you willing to learn new technologies? 🙂</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={Bashar}>
+            <Message>Absolutely! I'm not afraid of trying and learning new things 💪🏼</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={visitor}>
+            <Message>Great! 😜 And lastly, tell us a bit about how you like to work.</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={Bashar}>
+            <Message>
+        I'm most comfortable working in an agile team with the customer in the loop, and, I like to
+        challenge both myself and the team to improve! 🏆
+            </Message>
+            <Message>👩🏻‍🔬👨🏻‍🔧👨🏼‍🚀👩🏽‍🎨</Message>
+            <Message>Team success > individual success!</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={visitor}>
+            <Message>That's music to our ears! 🎻</Message>
+            <Message>Great, Bash! Nice talking to you! 🤗</Message>
+            <Message> ... oh, and you said you like being creative? </Message>
+          </MessageContainer>
+
+          <MessageContainer subject={Bashar}>
+            <Message>Yeah! Here's a "plant stand" that I've built 👷🏻‍♂️</Message>
+            <Message>{SofaTable}</Message>
+            <Message>... and here's an e-book http://tiny.cc/theoddfables that I've authored </Message>
+            <Message>Please get in touch if you want to talk some more!</Message>
+            <Message>contact@basharmengana.com</Message>
+            <Message>linkedin.com/in/bashar-m</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={visitor}>
+            <Message>Awesome! Talk to you soon, Bash! ✌🏼</Message>
+          </MessageContainer>
+
+          <MessageContainer subject={Bashar}>
+            <Message>✌🏼</Message>
+          </MessageContainer>
+        </MessageConversation>
+      </div>
+    );
+
+    let resume = traditionalResume;
+    if (mode === ModeType.NerdResumeMode) {
+      resume = nerdyResume;
+    } else if (mode === ModeType.FunResumeMode) {
+      resume = funResume;
+    }
+
+    const fixedHeader = (
+      <div style={{
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        right: '0',
+        display: 'flex',
+        zIndex: 1,
+        backgroundColor: lightTheme ? 'rgb(245, 245, 245)' : '#212529',
+        justifyContent: 'space-between',
+        padding: '10px',
+      }}
+      >
+        <div>
+          <ToggleIconButton
+            iconUntoggled={<DescriptionOutlinedIcon />}
+            iconToggled={<DescriptionIcon />}
+            label="Switch-theme"
+            color={greenColor}
+            toggled={mode === ModeType.TraditionalResumeMode}
+            onClick={() => {
+              this.setState({ mode: ModeType.TraditionalResumeMode, lightTheme });
+            }}
+          />
+          <ToggleIconButton
+            iconUntoggled={<CodeIcon />}
+            iconToggled={<CodeIcon />}
+            label="Switch-theme"
+            color={greenColor}
+            toggled={mode === ModeType.NerdResumeMode}
+            onClick={() => {
+              this.setState({ mode: ModeType.NerdResumeMode, lightTheme });
+            }}
+          />
+          <ToggleIconButton
+            iconUntoggled={<TextSMSOutlinedIcon />}
+            iconToggled={<TextSMSIcon />}
+            label="Switch-theme"
+            color={greenColor}
+            toggled={mode === ModeType.FunResumeMode}
+            onClick={() => {
+              this.setState({ mode: ModeType.FunResumeMode, lightTheme });
+            }}
+          />
+
+        </div>
+
+        <ToggleIconButton
+          iconUntoggled={<HighlightIcon />}
+          iconToggled={<HighlightOutlinedIcon />}
+          label="Switch-theme"
+          color={greenColor}
+          toggled={lightTheme}
+          onClick={() => {
+            this.setState({ mode, lightTheme: !lightTheme });
           }}
-          >
-            <div>
-              <ToggleIconButton
-                iconUntoggled={<DescriptionOutlinedIcon />}
-                iconToggled={<DescriptionIcon />}
-                label="Switch-theme"
-                color={greenColor}
-                onClick={() => {
-                  this.setState({ mode: ModeType.TraditionalResumeMode, lightTheme });
-                }}
-              />
-              <ToggleIconButton
-                iconUntoggled={<CodeIcon />}
-                iconToggled={<CodeIcon />}
-                label="Switch-theme"
-                color={greenColor}
-                onClick={() => {
-                  this.setState({ mode: ModeType.NerdResumeMode, lightTheme });
-                }}
-              />
+        />
+      </div>
+    );
 
-            </div>
-
+    const floatingHeader = (
+      <Headroom className={combineClasses(classes.headroom, classes.pinned)}>
+        <div style={{
+          display: 'flex',
+          backgroundColor: lightTheme ? 'rgb(245, 245, 245)' : '#212529',
+          justifyContent: 'space-between',
+          padding: '10px',
+        }}
+        >
+          <div>
             <ToggleIconButton
-              iconUntoggled={<HighlightOutlinedIcon />}
-              iconToggled={<HighlightIcon />}
+              iconUntoggled={<DescriptionOutlinedIcon />}
+              iconToggled={<DescriptionIcon />}
               label="Switch-theme"
               color={greenColor}
+              toggled={mode === ModeType.TraditionalResumeMode}
               onClick={() => {
-                this.setState({ mode, lightTheme: !lightTheme });
+                this.setState({ mode: ModeType.TraditionalResumeMode, lightTheme });
               }}
             />
+            <ToggleIconButton
+              iconUntoggled={<CodeIcon />}
+              iconToggled={<CodeIcon />}
+              label="Switch-theme"
+              color={greenColor}
+              toggled={mode === ModeType.NerdResumeMode}
+              onClick={() => {
+                this.setState({ mode: ModeType.NerdResumeMode, lightTheme });
+              }}
+            />
+            <ToggleIconButton
+              iconUntoggled={<TextSMSOutlinedIcon />}
+              iconToggled={<TextSMSIcon />}
+              label="Switch-theme"
+              color={greenColor}
+              toggled={mode === ModeType.FunResumeMode}
+              onClick={() => {
+                this.setState({ mode: ModeType.FunResumeMode, lightTheme: true });
+              }}
+            />
+
           </div>
 
+          <ToggleIconButton
+            iconUntoggled={<HighlightIcon />}
+            iconToggled={<HighlightOutlinedIcon />}
+            label="Switch-theme"
+            color={greenColor}
+            toggled={lightTheme}
+            onClick={() => {
+              this.setState({ mode, lightTheme: !lightTheme });
+            }}
+          />
+        </div>
+      </Headroom>
+    );
 
-        </Headroom>
+    return (
+      <Aux>
+        {mode === ModeType.FunResumeMode ? fixedHeader : floatingHeader}
         <div>
-          {mode === ModeType.NerdResumeMode ? nerdyResume
-            : mode === ModeType.TraditionalResumeDayMode ? traditionalResume : traditionalResume}
+          {resume}
         </div>
       </Aux>
     );

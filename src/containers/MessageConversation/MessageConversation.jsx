@@ -14,14 +14,14 @@ class MessageConversation extends React.Component {
   constructor(props) {
     super(props);
 
-    const { children, interactive } = this.props;
+    const { children, interactive, autoscroll } = this.props;
 
     this.state = {
       messageContainers: children,
       conversationStartDeley: computeConversationStartDeley(),
       messageDelay: computeMessageDeley(children),
       messageContainerTimeDeley: computeMessageContainerTimeDeley(children),
-      autoscroll: true,
+      autoscroll,
       interactive,
     };
   }
@@ -60,6 +60,7 @@ MessageConversation.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
     .isRequired,
   interactive: PropTypes.bool.isRequired,
+  autoscroll: PropTypes.bool.isRequired,
 };
 
 export default MessageConversation;
