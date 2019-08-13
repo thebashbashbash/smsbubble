@@ -31,8 +31,10 @@ export const ModeType = {
   TraditionalResumeMode: 'traditionalResumeMode',
 };
 
+const greenColor = '#029c63';
 
-class NerdyResumePage extends React.Component {
+
+class ResumePage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -483,7 +485,7 @@ class NerdyResumePage extends React.Component {
           theme={{
             base00: lightTheme ? 'rgb(245, 245, 245)' : '#212529', // Default Background
             base01: '#ddd', // Lighter Background (Used for status bars)
-            base02: '#ddd', // Selection Background
+            base02: lightTheme ? '#ddd' : '#37404a', // Selection Background
             base03: '#444', // Comments, Invisible, Line Highlighting
             base04: '#444', // Dark Foreground (Used for status bars)
             base05: '#444', // Default Foreground, Caret, Delimiters, Operators
@@ -492,11 +494,11 @@ class NerdyResumePage extends React.Component {
             base08: '#444', // Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
             base09: lightTheme ? 'rgb(15,15,15)' : '#939ca3', // Integers, Boolean, Constants, XML Attributes, Markup Link Url
             base0A: '#444', // Classes, Markup Bold, Search Text Background
-            base0B: 'rgb(0,168,107)', // Strings, Inherited Class, Markup Code, Diff Inserted
-            base0C: '#444', // Support, Regular Expressions, Escape Characters, Markup Quotes
-            base0D: 'rgb(110,110,110)', // Functions, Methods, Attribute IDs, Headings
-            base0E: 'rgb(155,155,155)', // Keywords, Storage, Selector, Markup Italic, Diff Changed
-            base0F: 'rgb(0,168,107)', // Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+            base0B: '#575757', // Strings, Inherited Class, Markup Code, Diff Inserted
+            base0C: '#5c646b', // Support, Regular Expressions, Escape Characters, Markup Quotes
+            base0D: lightTheme ? 'rgb(115,115,115)' : '#394047', // Functions, Methods, Attribute IDs, Headings
+            base0E: lightTheme ? 'rgb(155,155,155)' : '#515961', // Keywords, Storage, Selector, Markup Italic, Diff Changed
+            base0F: '#575757', // Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
           }}
           displayDataTypes={false}
           displayObjectSize={false}
@@ -519,7 +521,7 @@ class NerdyResumePage extends React.Component {
                 iconUntoggled={<DescriptionOutlinedIcon />}
                 iconToggled={<DescriptionIcon />}
                 label="Switch-theme"
-                color="green"
+                color={greenColor}
                 onClick={() => {
                   this.setState({ mode: ModeType.TraditionalResumeMode, lightTheme });
                 }}
@@ -528,7 +530,7 @@ class NerdyResumePage extends React.Component {
                 iconUntoggled={<CodeIcon />}
                 iconToggled={<CodeIcon />}
                 label="Switch-theme"
-                color="green"
+                color={greenColor}
                 onClick={() => {
                   this.setState({ mode: ModeType.NerdResumeMode, lightTheme });
                 }}
@@ -540,7 +542,7 @@ class NerdyResumePage extends React.Component {
               iconUntoggled={<HighlightOutlinedIcon />}
               iconToggled={<HighlightIcon />}
               label="Switch-theme"
-              color="green"
+              color={greenColor}
               onClick={() => {
                 this.setState({ mode, lightTheme: !lightTheme });
               }}
@@ -549,7 +551,7 @@ class NerdyResumePage extends React.Component {
 
 
         </Headroom>
-        <div style={{ backgroundColor: 'red' }}>
+        <div>
           {mode === ModeType.NerdResumeMode ? nerdyResume
             : mode === ModeType.TraditionalResumeDayMode ? traditionalResume : traditionalResume}
         </div>
@@ -558,4 +560,4 @@ class NerdyResumePage extends React.Component {
   }
 }
 
-export default NerdyResumePage;
+export default ResumePage;

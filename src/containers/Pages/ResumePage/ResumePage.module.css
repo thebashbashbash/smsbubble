@@ -20,6 +20,7 @@
   background-color: #212529;
   color: #7c868f;
   box-sizing: border-box;
+  padding-left: 2px;
 }
 
 .ContainerTraditionalResumeDay {
@@ -30,6 +31,7 @@
   background-color:rgb(245, 245, 245);
   color: #212529;
   box-sizing: border-box;
+  padding-left: 2px;
 }
 
 .Container b {
