@@ -59,3 +59,5 @@ export const elapsedYearsBetweenTwoDates = (startDate, endDate) => {
 };
 
 export const splitDateRangeToArray = dateRange => dateRange.replace(/ - /g, '--').split('--');
+
+export const isDayTime = () => (new Date().getHours()) > 6 && (new Date().getHours()) < 19;

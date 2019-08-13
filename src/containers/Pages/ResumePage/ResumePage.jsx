@@ -14,7 +14,7 @@ import CodeIcon from '@material-ui/icons/Code';
 import DescriptionIcon from '@material-ui/icons/Description';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 
-import { decamelize, propName } from '../../../helpers/helpers';
+import { decamelize, propName, isDayTime } from '../../../helpers/helpers';
 import Aux from '../../../helpers/aux';
 import ToggleIconButton from '../../IconButton/ToggleIconButton';
 
@@ -39,8 +39,8 @@ class ResumePage extends React.Component {
     super(props);
 
     this.state = {
-      mode: ModeType.TraditionalResumeDayMode,
-      lightTheme: true,
+      mode: ModeType.TraditionalResumeMode,
+      lightTheme: isDayTime(),
     };
   }
 
