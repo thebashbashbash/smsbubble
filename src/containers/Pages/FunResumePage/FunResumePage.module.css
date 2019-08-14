@@ -1,0 +1,14 @@
+.CircleImage {
+  height: 15%;
+  width: 15%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .CircleImage {
+    height: 5%;
+    width: 5%;
+  }
+}
