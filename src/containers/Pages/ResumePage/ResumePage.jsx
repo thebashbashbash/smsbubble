@@ -111,6 +111,12 @@ class ResumePage extends React.Component {
               {DynamicResumeInJson.aboutMe.totalWorkExperienceInYears}
             </li>
             <li>
+              <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.elevatorPitch))}</b>
+    :
+              {' '}
+              {DynamicResumeInJson.aboutMe.elevatorPitch}
+            </li>
+            <li>
               <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.spokenLanguages))}</b>
     :
               {' '}

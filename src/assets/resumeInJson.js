@@ -12,6 +12,8 @@ const dynamicResumeInJson = {
     totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
       ...splitDateRangeToArray('2013/07 - Now'),
     ),
+    elevatorPitch: 'A truly full stack developer with a great team sprit and an unsaturated'
+    + ' hunger in service design (user experience research), dev ops, team development and AI.',
     spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
   education: {
@@ -35,13 +37,13 @@ const dynamicResumeInJson = {
         ...splitDateRangeToArray('2017/06 - Now'),
       ),
       shortDescription:
-        'Full stack developer in a team of 5 (2 developers), with a keen interest in devops.'
-        + ' We design a service that aims to 1) improve the driving behavior of truck drivers,'
-        + ' 2) reduce wear and tear of vehicles, by encouraging drivers to engage in improving their driving'
-        + ' through gamification. The team uses methods from the lean startup theory'
-        + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development) as our way of working.',
+        'Full stack developer in a small team of five, with  additional responsibilities in user research and devops.'
+        + ' The team creates a service that aims to 1) improve driving behavior of truck drivers,'
+        + ' 2) reduce wear and tear of vehicles, by engaging drivers in improving their driving style'
+        + ' through gamification. We uses methods from the lean startup theory'
+        + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development).',
       keywords: {
-        frontEnd: ['react.js', 'react-flow', 'react-redux', 'javascript/html', 'css/sass'],
+        frontEnd: ['react.js', 'typescript', 'react-redux', 'javascript/html', 'css/sass'],
         backEnd: [
           'python',
           'java',
@@ -77,9 +79,9 @@ const dynamicResumeInJson = {
       ),
       shortDescription:
         'Researched and helped improve the onboarding process of a fleet management tool. I conducted interviews with'
-        + ' our users and salesmen; designed user stories, empathy maps, territory maps and personas in a team of 4 service designers.'
-        + ' The team also studied how the fleet management tool was sold to find pain points and opportunities - both backstage and front stage - to'
-        + " improve the sales process. The team did lightweight MVP's to evaluate concepts quickly and were not afraid to throw them in the bin if the idea didn't fly,",
+        + ' our users and salesmen; designed user stories, empathy maps, territory maps and personas in a team of four service designers.'
+        + " The team also studied how the fleet management tool was sold to find pain points and opportunities,and did lightweight MVP's"
+        + " to evaluate concepts quickly - and were not afraid to throw ideas in the bin if they didn't fly.",
       keywords: [
         'personas',
         'userStories',
@@ -88,7 +90,7 @@ const dynamicResumeInJson = {
         'doubleDiamondProcess',
         'storytelling',
         'businessModelCanvas(bmc)',
-        'MVP',
+        'mvp(minimum viable product)',
         'journeyMapping',
         'userShadowing',
         'userDiaries/probes',
@@ -103,9 +105,9 @@ const dynamicResumeInJson = {
         ...splitDateRangeToArray('2014/09 - 2016/06'),
       ),
       shortDescription:
-        'Responsible for the product backlog of a fleet management iOS and Android app, and the team’s vision and mission.'
+        'Responsible for the product backlog of a fleet management - iOS and Android - app, and the team’s vision and mission.'
         + ' I worked closely with other product owners to help define the future of our product portfolio. My scrum master and I made'
-        + ' sure the team was strong and healthy; and worked with areas such as team happiness, resilience, and growth.',
+        + ' sure the team was healthy by working in areas such as team happiness, resilience, and growth.',
       keywords: [
         'productBacklog',
         'scrum',
@@ -133,9 +135,9 @@ const dynamicResumeInJson = {
         ...splitDateRangeToArray('2013/07 - 2014/09'),
       ),
       shortDescription:
-        'The trainee program gave me a comprehensive helicopter view of the operations of a big corporation.'
+        'The trainee program gave me a comprehensive view of the operations of a big corporation.'
         + " During my trainee year, I spent time in Scania's sales organization, at a distributor in Switzerland and Scania's R&D organization."
-        + ' I learned about the logistics business, heavy-duty vehicles and the future of autonomous trucks.',
+        + ' I learned about the logistics business and the future of autonomous trucks.',
       keywords: [
         'sales',
         'productDevelopment',
