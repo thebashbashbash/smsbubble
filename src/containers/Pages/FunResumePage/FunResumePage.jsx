@@ -8,6 +8,7 @@ import { withRouter } from 'react-router-dom';
 
 import ArrowBack from '@material-ui/icons/ArrowBackIos';
 import IconButton from '@material-ui/core/IconButton';
+import ForwardArrow from '@material-ui/icons/KeyboardArrowRightOutlined';
 
 import Message, { SubjectType } from '../../Message/Message';
 import MessageContainer from '../../MessageContainer/MessageContainer';
@@ -71,7 +72,24 @@ export class FunResumePage extends Component {
             }}
             >
               <img className={classes.CircleImage} src={BasharPic} alt="avatar" />
-              <font size="2">Bashar Mengana</font>
+              <a style={{ color: 'black', textAlign: 'center', textDecoration: 'none' }} href="tel://0046703794381">
+                <div style={{ display: 'inline-flex' }}>
+                  <font
+                    size="3"
+                    style={{
+                      display: 'flex',
+                      alignSelf: 'baseline',
+                    }}
+                  >
+Bashar Mengana
+
+                  </font>
+                  <font size="1px" color="gray" style={{ verticalAlign: 'top' }}>
+                    {' '}
+                    <ForwardArrow />
+                  </font>
+                </div>
+              </a>
             </div>
           </div>
         ) : (null)}
