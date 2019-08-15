@@ -80,12 +80,17 @@ class ResumePage extends React.Component {
               <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.email))}</b>
     :
               {' '}
-              {DynamicResumeInJson.aboutMe.email}
+              <a href="contact@basharmengana.com">{DynamicResumeInJson.aboutMe.email}</a>
             </li>
             <li>
               <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.phoneNumber))}</b>
-    : 00
-              {DynamicResumeInJson.aboutMe.phoneNumber}
+    :
+              {' '}
+              <a href="tel://0046703794381">
+00
+                {DynamicResumeInJson.aboutMe.phoneNumber}
+
+              </a>
             </li>
             <li>
               <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.address))}</b>
@@ -583,6 +588,10 @@ class ResumePage extends React.Component {
         </div>
       </Headroom>
     );
+
+    if (mode === ModeType.FunResumeMode) {
+      document.body.style.background = 'white';
+    }
 
     return (
       <Aux>

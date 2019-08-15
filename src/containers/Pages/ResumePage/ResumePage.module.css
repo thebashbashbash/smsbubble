@@ -21,6 +21,10 @@
   padding-left: 10px;
 }
 
+.ContainerTraditionalResumeNight a{
+  color: #7c868f
+}
+
 .ContainerTraditionalResumeNight li{
   margin: 3px 0;
 }
@@ -34,6 +38,10 @@
   color: #212529;
   box-sizing: border-box;
   padding-left: 2px;
+}
+
+.ContainerTraditionalResumeDay a{
+  color: #212529
 }
 
 .Container b {
