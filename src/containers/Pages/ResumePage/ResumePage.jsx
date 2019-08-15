@@ -80,7 +80,7 @@ class ResumePage extends React.Component {
               <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.email))}</b>
     :
               {' '}
-              <a href="contact@basharmengana.com">{DynamicResumeInJson.aboutMe.email}</a>
+              <a href="mailto:contact@basharmengana.com">{DynamicResumeInJson.aboutMe.email}</a>
             </li>
             <li>
               <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.phoneNumber))}</b>
