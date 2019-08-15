@@ -87,7 +87,7 @@ class ResumePage extends React.Component {
     :
               {' '}
               <a href="tel://0046703794381">
-00
++
                 {DynamicResumeInJson.aboutMe.phoneNumber}
 
               </a>
