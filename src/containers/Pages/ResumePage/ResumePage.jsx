@@ -52,6 +52,9 @@ class ResumePage extends React.Component {
     };
   }
 
+  componentDidMount() {
+    document.body.style.background = greenColor;
+  }
 
   render() {
     const { mode, lightTheme } = this.state;
@@ -558,7 +561,7 @@ class ResumePage extends React.Component {
               label="Switch-theme"
               iconColor="#0085D1"
               toggled={mode === ModeType.FunResumeMode}
-              href="/"
+              href="/smsresume"
               color="primary"
               onClick={() => {
                 this.setState({ mode: ModeType.FunResumeMode, lightTheme: true });

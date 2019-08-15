@@ -40,7 +40,7 @@ const dynamicResumeInJson = {
         'Full stack developer in a small team of five, with  additional responsibilities in user research and devops.'
         + ' The team creates a service that aims to 1) improve driving behavior of truck drivers,'
         + ' 2) reduce wear and tear of vehicles, by engaging drivers in improving their driving style'
-        + ' through gamification. We uses methods from the lean startup theory'
+        + ' through gamification. We use methods from the lean startup theory'
         + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development).',
       keywords: {
         frontEnd: ['react.js', 'typescript', 'react-redux', 'javascript/html', 'css/sass'],
@@ -80,8 +80,8 @@ const dynamicResumeInJson = {
       shortDescription:
         'Researched and helped improve the onboarding process of a fleet management tool. I conducted interviews with'
         + ' our users and salesmen; designed user stories, empathy maps, territory maps and personas in a team of four service designers.'
-        + " The team also studied how the fleet management tool was sold to find pain points and opportunities,and did lightweight MVP's"
-        + " to evaluate concepts quickly - and were not afraid to throw ideas in the bin if they didn't fly.",
+        + " We also studied how the fleet management tool was sold to find pain points and opportunities, and did lightweight MVP's"
+        + " to evaluate concepts quickly - and we weren't afraid to throw ideas in the bin if they didn't fly.",
       keywords: [
         'personas',
         'userStories',
@@ -120,7 +120,7 @@ const dynamicResumeInJson = {
         'migrationFromMonolith',
         'sprintPlanning',
         'certifiedProductOwner',
-        'certifiedScrum<aster',
+        'certifiedScrumaster',
         'scrumOfScrum',
         'productOwnerForum',
         'benchmarking',
