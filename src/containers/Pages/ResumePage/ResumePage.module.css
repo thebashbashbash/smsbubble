@@ -6,9 +6,7 @@
   box-sizing: border-box;
   height: 100%;
   height: -moz-available;
-  /* WebKit-based browsers will ignore this. */
   height: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
   height: stretch;
 }
 
@@ -20,7 +18,11 @@
   background-color: #212529;
   color: #7c868f;
   box-sizing: border-box;
-  padding-left: 2px;
+  padding-left: 10px;
+}
+
+.ContainerTraditionalResumeNight li{
+  margin: 3px 0;
 }
 
 .ContainerTraditionalResumeDay {

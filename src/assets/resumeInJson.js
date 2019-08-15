@@ -41,7 +41,7 @@ const dynamicResumeInJson = {
         + ' through gamification. The team uses methods from the lean startup theory'
         + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development) as our way of working.',
       keywords: {
-        frontEnd: ['react.js', 'react-flow', 'react-redux', 'javascript/html', 'CSS/SASS'],
+        frontEnd: ['react.js', 'react-flow', 'react-redux', 'javascript/html', 'css/sass'],
         backEnd: [
           'python',
           'java',
@@ -87,7 +87,7 @@ const dynamicResumeInJson = {
         'territoryMaps',
         'doubleDiamondProcess',
         'storytelling',
-        'businessModelCanvas(BMC)',
+        'businessModelCanvas(bmc)',
         'MVP',
         'journeyMapping',
         'userShadowing',
@@ -123,7 +123,7 @@ const dynamicResumeInJson = {
         'productOwnerForum',
         'benchmarking',
         'competitorAnalysis',
-        'GDPR',
+        'gdpr',
       ],
     },
     trainee: {

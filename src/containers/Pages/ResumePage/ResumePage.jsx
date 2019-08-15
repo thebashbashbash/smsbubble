@@ -170,8 +170,8 @@ class ResumePage extends React.Component {
         <div>
           <h2>{decamelize(propName(() => DynamicResumeInJson.workExperience))}</h2>
           <div>
-            <h4>{decamelize(propName(() => DynamicResumeInJson.workExperience.fullStackDeveloper))}</h4>
-            <ul style={{ listStyleType: 'none', padding: '0px' }}>
+            <h3>{decamelize(propName(() => DynamicResumeInJson.workExperience.fullStackDeveloper))}</h3>
+            <ul style={{ listStyleType: 'none', padding: '0px 5px', marginTop: '0px' }}>
               <li>
                 <b>
                   {decamelize(
@@ -289,8 +289,8 @@ class ResumePage extends React.Component {
             </ul>
           </div>
           <div>
-            <h4>{decamelize(propName(() => DynamicResumeInJson.workExperience.serviceDesigner))}</h4>
-            <ul style={{ listStyleType: 'none', padding: '0px' }}>
+            <h3>{decamelize(propName(() => DynamicResumeInJson.workExperience.serviceDesigner))}</h3>
+            <ul style={{ listStyleType: 'none', padding: '0px 5px', marginTop: '0px' }}>
               <li>
                 <b>
                   {decamelize(
@@ -352,8 +352,8 @@ class ResumePage extends React.Component {
             </ul>
           </div>
           <div>
-            <h4>{decamelize(propName(() => DynamicResumeInJson.workExperience.productOwner))}</h4>
-            <ul style={{ listStyleType: 'none', padding: '0px' }}>
+            <h3>{decamelize(propName(() => DynamicResumeInJson.workExperience.productOwner))}</h3>
+            <ul style={{ listStyleType: 'none', padding: '0px 5px', marginTop: '0px' }}>
               <li>
                 <b>
                   {decamelize(propName(() => DynamicResumeInJson.workExperience.productOwner.company))}
@@ -409,8 +409,8 @@ class ResumePage extends React.Component {
             </ul>
           </div>
           <div>
-            <h4>{decamelize(propName(() => DynamicResumeInJson.workExperience.trainee))}</h4>
-            <ul style={{ listStyleType: 'none', padding: '0px' }}>
+            <h3>{decamelize(propName(() => DynamicResumeInJson.workExperience.trainee))}</h3>
+            <ul style={{ listStyleType: 'none', padding: '0px 5px', marginTop: '0px' }}>
               <li>
                 <b>{decamelize(propName(() => DynamicResumeInJson.workExperience.trainee.company))}</b>
     :
@@ -546,15 +546,6 @@ class ResumePage extends React.Component {
                 this.setState({ mode: ModeType.NerdResumeMode, lightTheme });
               }}
             />
-            {/* <IconButton
-              component={Link}
-              to="/"
-              color="primary"
-              style={{ color: '#0085D1' }}
-              aria-label="back_arrow"
-            >
-              <TextSMSIcon />
-            </IconButton> */}
             <ToggleIconButton
               iconUntoggled={<TextSMSOutlinedIcon />}
               iconToggled={<TextSMSIcon />}
