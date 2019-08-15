@@ -76,7 +76,7 @@ export class FunResumePage extends Component {
           </div>
         ) : (null)}
 
-        <div style={{ marginTop: location.pathname === '/smsresume' ? '90px' : '10px' }}>
+        <div style={{ marginTop: location.pathname === '/smsresume' ? '90px' : '0px' }}>
           <MessageConversation interactive={interactive} autoscroll>
             <MessageContainer subject={visitor}>
               <Message>Hey!</Message>
