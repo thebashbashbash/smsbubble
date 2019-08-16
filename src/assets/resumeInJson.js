@@ -12,7 +12,7 @@ const dynamicResumeInJson = {
     totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
       ...splitDateRangeToArray('2013/07 - Now'),
     ),
-    elevatorPitch: 'A truly full stack developer with a great team sprit and an unsaturated'
+    elevatorPitch: 'A truly full stack web developer with a great team sprit and an unsaturated'
     + ' hunger for service design (user experience research), dev ops, team development and AI.',
     spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
@@ -30,14 +30,14 @@ const dynamicResumeInJson = {
     ),
   },
   workExperience: {
-    fullStackDeveloper: {
+    fullStackWebDeveloper: {
       company: 'Scania',
       timePeriod: '2017/06 - Now',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2017/06 - Now'),
       ),
       shortDescription:
-        'Full stack developer in a small team of five, with  additional responsibilities in user research and devops.'
+        'Full stack web developer in a small team of five, with  additional responsibilities in user research and devops.'
         + ' The team creates a service that aims to 1) improve driving behavior of truck drivers,'
         + ' 2) reduce wear and tear of vehicles, by engaging drivers in improving their driving style'
         + ' through gamification. We use methods from the lean startup theory'
@@ -161,7 +161,7 @@ const dynamicResumeInJson = {
     'scrumMaster',
     'graphicalDesign',
   ],
-  interests: ['coding', 'plants', 'travelling', 'architecture', 'building', 'gym'],
+  interests: ['coding', 'plants', 'travelling', 'architecture', 'landscapes', 'diy', 'gym'],
 };
 
 export default dynamicResumeInJson;
