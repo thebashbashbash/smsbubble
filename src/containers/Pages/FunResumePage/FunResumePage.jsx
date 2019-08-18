@@ -176,6 +176,7 @@ Bashar Mengana
               <Message>Please get in touch if you want to talk some more!</Message>
               <Message>contact@basharmengana.com</Message>
               <Message>linkedin.com/in/bashar-m</Message>
+              <Message>basharmengana.com/resume</Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
