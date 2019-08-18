@@ -5,6 +5,7 @@ const dynamicResumeInJson = {
     fullName: 'Bashar Mengana',
     age: Number(31),
     email: 'contact@basharmengana.com',
+    home: 'Stockholm, Sweden',
     phoneNumber: Number('0046703794381'),
     address: 'Ringvägen 151A, 11631 Stockholm, Sweden',
     drivingLicense: true,
@@ -16,6 +17,7 @@ const dynamicResumeInJson = {
     + ' hunger for service design (user experience research), dev ops, team development and AI.',
     spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
+  interests: ['coding', 'plants', 'travelling', 'architecture', 'landscapes', 'diy', 'gym'],
   education: {
     school: {
       englishName: 'Royal Institute of Technology',
@@ -161,7 +163,6 @@ const dynamicResumeInJson = {
     'scrumMaster',
     'graphicalDesign',
   ],
-  interests: ['coding', 'plants', 'travelling', 'architecture', 'landscapes', 'diy', 'gym'],
 };
 
 export default dynamicResumeInJson;

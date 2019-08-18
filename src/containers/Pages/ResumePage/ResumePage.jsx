@@ -77,6 +77,12 @@ class ResumePage extends React.Component {
               {DynamicResumeInJson.aboutMe.age}
             </li>
             <li>
+              <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.home))}</b>
+    :
+              {' '}
+              {DynamicResumeInJson.aboutMe.home}
+            </li>
+            <li>
               <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.email))}</b>
     :
               {' '}
@@ -129,6 +135,29 @@ class ResumePage extends React.Component {
     :
               {' '}
               {DynamicResumeInJson.aboutMe.spokenLanguages.join(', ')}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>{decamelize(propName(() => DynamicResumeInJson.interests))}</h2>
+          <ul style={{ listStyleType: 'none', padding: '0px' }}>
+            <li>
+              <b>{decamelize(propName(() => DynamicResumeInJson.interests))}</b>
+    :
+              {' '}
+              {DynamicResumeInJson.interests.map(interest => decamelize(interest)).join(', ')}
+            </li>
+            <li>
+              <font size="4">
+              Have a look at my
+                {' '}
+                <a href="/projects">projects page</a>
+                {' '}
+if you're curious about what I have created.
+                {' '}
+
+
+              </font>
             </li>
           </ul>
         </div>
@@ -482,17 +511,6 @@ class ResumePage extends React.Component {
     :
               {' '}
               {DynamicResumeInJson.skills.map(skill => decamelize(skill)).join(', ')}
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2>{decamelize(propName(() => DynamicResumeInJson.interests))}</h2>
-          <ul style={{ listStyleType: 'none', padding: '0px' }}>
-            <li>
-              <b>{decamelize(propName(() => DynamicResumeInJson.interests))}</b>
-    :
-              {' '}
-              {DynamicResumeInJson.interests.map(interest => decamelize(interest)).join(', ')}
             </li>
           </ul>
         </div>

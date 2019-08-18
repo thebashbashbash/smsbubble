@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // eslint-disable-next-line import/no-named-as-default
 import FunResumePage from './containers/Pages/FunResumePage/FunResumePage';
 import ResumePage from './containers/Pages/ResumePage/ResumePage';
+import ProjectsPage from './containers/Pages/ProjectsPage/ProjectsPage';
 import ErrorPage from './containers/Pages/ErrorPage/ErrorPage';
 
 const main = () => (
@@ -12,6 +13,7 @@ const main = () => (
       <Route path="/" exact component={FunResumePage} />
       <Route path="/resume" exact component={ResumePage} />
       <Route path="/smsresume" exact component={FunResumePage} />
+      <Route path="/projects" exact component={ProjectsPage} />
       <Route component={ErrorPage} />
     </Switch>
   </BrowserRouter>

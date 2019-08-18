@@ -1,0 +1,45 @@
+  .ContainerTraditionalResumeNight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #212529;
+    color: #7c868f;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+
+  .ContainerTraditionalResumeDay {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+    color: #212529;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+
+  .ContainerTraditionalResumeNight a {
+    color: #7c868f
+  }
+
+  .ContainerTraditionalResumeDay a {
+    color: #212529
+  }
+
+  .ContainerTraditionalResumeNight li {
+    margin: 3px 0;
+  }
+
+  .ContainerTraditionalResumeDay li {
+    margin: 3px 0;
+  }
+
+  .ContainerTraditionalResumeNight b {
+    font-weight: 600;
+  }
+
+  .ContainerTraditionalResumeDay b {
+    font-weight: 600;
+  }
