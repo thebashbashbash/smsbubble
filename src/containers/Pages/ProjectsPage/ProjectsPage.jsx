@@ -62,8 +62,8 @@ class ProjectsPage extends React.Component {
                 <img
                   style={{
                     display: 'block',
-                    height: '90%',
-                    width: '90%',
+                    height: '70%',
+                    width: '70%',
                     margin: 'px',
                     paddingTop: '10px',
                     borderRadius: '5%',
