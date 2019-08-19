@@ -54,6 +54,7 @@ class ProjectsPage extends React.Component {
         <div className={lightTheme ? classes.LightTheme : classes.DarkTheme}>
           <div>
             <h2>Projects</h2>
+            <p>The following projects are designed and built by myself as a way to express creativity and to get to work with both wood and iron.</p>
             <div>
               <h3>Memory Cove</h3>
               <ul style={{ listStyleType: 'none', padding: '0px 0px', marginTop: '0px' }}>
@@ -129,7 +130,7 @@ An art installment about letting go of memories.
                   {' '}
                   <i>FLOWERPOWER, FPOW3.</i>
                   {' '}
-Flower bed suitable for growing wild summer flowers indoors, in wintertime To promote good growth all year round, the garden has its own 55W full spectrum 3500 K grow light, and a drainage system.
+Flower bed suitable for growing wild summer flowers indoors, in wintertime. To promote good growth all year round, the flower bed has its own 55W full spectrum 3500 K grow light, and a drainage system.
                   <img
                     style={{
                       display: 'block',
