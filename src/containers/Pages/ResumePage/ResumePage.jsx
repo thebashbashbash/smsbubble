@@ -142,9 +142,6 @@ class ResumePage extends React.Component {
           <h2>{decamelize(propName(() => DynamicResumeInJson.interests))}</h2>
           <ul style={{ listStyleType: 'none', padding: '0px' }}>
             <li>
-              <b>{decamelize(propName(() => DynamicResumeInJson.interests))}</b>
-    :
-              {' '}
               {DynamicResumeInJson.interests.map(interest => decamelize(interest)).join(', ')}
             </li>
             <li>
@@ -168,9 +165,6 @@ if you're curious about what I've created.
           <h2>{decamelize(propName(() => DynamicResumeInJson.skills))}</h2>
           <ul style={{ listStyleType: 'none', padding: '0px' }}>
             <li>
-              <b>{decamelize(propName(() => DynamicResumeInJson.skills))}</b>
-    :
-              {' '}
               {DynamicResumeInJson.skills.map(skill => decamelize(skill)).join(', ')}
             </li>
           </ul>

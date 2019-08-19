@@ -17,7 +17,18 @@ const dynamicResumeInJson = {
     + ' hunger for service design, dev ops, team development and AI.',
     spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
-  interests: ['coding', 'plants', 'travelling', 'architecture', 'landscapes', 'diy', 'AI', 'gym'],
+  interests: ['coding', 'plants', 'travelling', 'architecture', 'landscapes', 'diy', 'ai', 'gym'],
+  skills: [
+    'frontend',
+    'backend',
+    'devops',
+    'aws',
+    'serviceDesign',
+    'hypothesisDrivenDevelopment',
+    'productOwner',
+    'scrumMaster',
+    'graphicalDesign',
+  ],
   education: {
     school: {
       englishName: 'Royal Institute of Technology',
@@ -152,17 +163,6 @@ const dynamicResumeInJson = {
       ],
     },
   },
-  skills: [
-    'frontend',
-    'backend',
-    'devops',
-    'aws',
-    'serviceDesign',
-    'hypothesisDrivenDevelopment',
-    'productOwner',
-    'scrumMaster',
-    'graphicalDesign',
-  ],
 };
 
 export default dynamicResumeInJson;
