@@ -49,7 +49,7 @@ export class FunResumePage extends Component {
           }}
           >
             <IconButton
-              href="https://basharmengana.com/resume"
+              href="/resume"
               style={{
                 color: '#0085D1',
                 height: 'fit-content',

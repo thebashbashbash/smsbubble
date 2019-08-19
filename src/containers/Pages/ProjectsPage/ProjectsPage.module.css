@@ -1,45 +1,43 @@
-  .ContainerTraditionalResumeNight {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #212529;
-    color: #7c868f;
-    box-sizing: border-box;
-    padding-left: 10px;
-  }
+.ContainerTraditionalResume {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
 
-  .ContainerTraditionalResumeDay {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgb(245, 245, 245);
-    color: #212529;
-    box-sizing: border-box;
-    padding-left: 10px;
-  }
+.ContainerTraditionalResume .DarkTheme {
+  background-color: #212529;
+  color: #7c868f;
+  padding-left: 10px;
+}
 
-  .ContainerTraditionalResumeNight a {
-    color: #7c868f
-  }
+.ContainerTraditionalResume .LightTheme {
+  background-color: rgb(245, 245, 245);
+  color: #212529;
+  padding-left: 10px;
+}
 
-  .ContainerTraditionalResumeDay a {
-    color: #212529
-  }
+.DarkTheme a {
+  color: #7c868f
+}
 
-  .ContainerTraditionalResumeNight li {
-    margin: 3px 0;
-  }
+.LightTheme a {
+  color: #212529
+}
 
-  .ContainerTraditionalResumeDay li {
-    margin: 3px 0;
-  }
+.DarkTheme li {
+  margin: 3px 0;
+}
 
-  .ContainerTraditionalResumeNight b {
-    font-weight: 600;
-  }
+.LightTheme li {
+  margin: 3px 0;
+}
 
-  .ContainerTraditionalResumeDay b {
-    font-weight: 600;
-  }
+.DarkTheme b {
+  font-weight: 600;
+}
+
+.LightTheme b {
+  font-weight: 600;
+}

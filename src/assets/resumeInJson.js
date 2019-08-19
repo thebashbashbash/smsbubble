@@ -14,10 +14,10 @@ const dynamicResumeInJson = {
       ...splitDateRangeToArray('2013/07 - Now'),
     ),
     elevatorPitch: 'A truly full stack web developer with a great team sprit and an unsaturated'
-    + ' hunger for service design (user experience research), dev ops, team development and AI.',
+    + ' hunger for service design, dev ops, team development and AI.',
     spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
-  interests: ['coding', 'plants', 'travelling', 'architecture', 'landscapes', 'diy', 'gym'],
+  interests: ['coding', 'plants', 'travelling', 'architecture', 'landscapes', 'diy', 'AI', 'gym'],
   education: {
     school: {
       englishName: 'Royal Institute of Technology',

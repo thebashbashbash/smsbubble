@@ -12,9 +12,15 @@ import HighlightIcon from '@material-ui/icons/Highlight';
 import HighlightOutlinedIcon from '@material-ui/icons/HighlightOutlined';
 
 import IconButton from '@material-ui/core/IconButton';
-import ArrowBack from '@material-ui/icons/KeyboardArrowLeftOutlined';
+import ArrowBack from '@material-ui/icons/ArrowBackOutlined';
 
 import PlantStand from '../../../assets/plantstand.jpg';
+import GardenBarrel from '../../../assets/garden.jpg';
+import Lamp from '../../../assets/lamp.jpg';
+import MossBarell from '../../../assets/mossbarrel.jpg';
+import PlantWall from '../../../assets/plantwall.jpg';
+import FlowerBed from '../../../assets/FlowerBed.jpg';
+
 
 import { isDayTime, combineClasses } from '../../../helpers/helpers';
 import Aux from '../../../helpers/aux';
@@ -43,40 +49,193 @@ class ProjectsPage extends React.Component {
   render() {
     const { mode, lightTheme } = this.state;
 
-    const traditionalResume = (
-      <div className={lightTheme ? classes.ContainerTraditionalResumeDay : classes.ContainerTraditionalResumeNight}>
-        <div>
-          <h2>Projects</h2>
+    const projects = (
+      <div className={classes.ContainerTraditionalResume}>
+        <div className={lightTheme ? classes.LightTheme : classes.DarkTheme}>
           <div>
-            <h3>Plant stand</h3>
-            <ul style={{ listStyleType: 'none', padding: '0px 0px', marginTop: '0px' }}>
-              <li>
-                <b>Built</b>
-                : 2018
-              </li>
-              <li>
-                <b>
+            <h2>Projects</h2>
+            <div>
+              <h3>Memory Cove</h3>
+              <ul style={{ listStyleType: 'none', padding: '0px 0px', marginTop: '0px' }}>
+                <li>
+                  <b>Built</b>
+                : 2019
+                </li>
+                <li>
+                  <b>
                   Short description
-                </b>
-                : PLANT STAND, PS12. Birch hexagonal tray with resin lining suitable for planting; attached adjustable ambient lamp for cozy atmosphere.
-                <img
-                  style={{
-                    display: 'block',
-                    height: '70%',
-                    width: '70%',
-                    margin: 'px',
-                    paddingTop: '10px',
-                    borderRadius: '5%',
-                  }}
-                  src={PlantStand}
-                  alt="Plant stand"
-                />
-              </li>
-            </ul>
+                  </b>
+                :
+                  {' '}
+                  <i>MEMORYCOVE, MEMC1.</i>
+                  {' '}
+An art installment about letting go of memories.
+                  <img
+                    style={{
+                      display: 'block',
+                      height: '70%',
+                      width: '70%',
+                      margin: '10px 0px',
+                      borderRadius: '6%',
+                    }}
+                    src={MossBarell}
+                    alt="Plant stand"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Aragog</h3>
+              <ul style={{ listStyleType: 'none', padding: '0px 0px', marginTop: '0px' }}>
+                <li>
+                  <b>Built</b>
+                : 2019
+                </li>
+                <li>
+                  <b>
+                  Short description
+                  </b>
+                :
+                  {' '}
+                  <i>ARAGOG, AGOG1.</i>
+                  {' '}
+                  This ceiling lamp is made out of eight desktop lamps. Each lamp is connected to a steel circular armature that is attached to the roof via an adjustable beam. The lamps are flexible in four pivot points, with an RGB color spectrum ranging between 0-255 (which is controlled via WiFi). AGOG1 is suitable for creating all kind of light installments - from arctic aurora to savannah sunset.
+                  <img
+                    style={{
+                      display: 'block',
+                      height: '70%',
+                      width: '70%',
+                      margin: '10px 0px',
+                      borderRadius: '6%',
+                    }}
+                    src={Lamp}
+                    alt="Lamp"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Flower power</h3>
+              <ul style={{ listStyleType: 'none', padding: '0px 0px', marginTop: '0px' }}>
+                <li>
+                  <b>Built</b>
+                : 2018
+                </li>
+                <li>
+                  <b>
+                  Short description
+                  </b>
+                :
+                  {' '}
+                  <i>FLOWERPOWER, FPOW3.</i>
+                  {' '}
+Flower bed suitable for growing wild summer flowers indoors, in wintertime To promote good growth all year round, the garden has its own 55W full spectrum 3500 K grow light, and a drainage system.
+                  <img
+                    style={{
+                      display: 'block',
+                      height: '70%',
+                      width: '70%',
+                      margin: '10px 0px',
+                      borderRadius: '6%',
+                    }}
+                    src={FlowerBed}
+                    alt="Plant stand"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Plant stand</h3>
+              <ul style={{ listStyleType: 'none', padding: '0px 0px', marginTop: '0px' }}>
+                <li>
+                  <b>Built</b>
+                : 2018
+                </li>
+                <li>
+                  <b>
+                  Short description
+                  </b>
+                :
+                  {' '}
+                  <i>PLANTSTAND, PS12.</i>
+                  {' '}
+Birch hexagonal tray with resin lining suitable for planting; attached adjustable ambient lamp for cozy atmosphere.
+                  <img
+                    style={{
+                      display: 'block',
+                      height: '70%',
+                      width: '70%',
+                      margin: '10px 0px',
+                      borderRadius: '6%',
+                    }}
+                    src={PlantStand}
+                    alt="Plant stand"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Plant wall</h3>
+              <ul style={{ listStyleType: 'none', padding: '0px 0px', marginTop: '0px' }}>
+                <li>
+                  <b>Built</b>
+                : 2016
+                </li>
+                <li>
+                  <b>
+                  Short description
+                  </b>
+                :
+                  {' '}
+                  <i>PLANTWALL, PW07</i>
+                  {' '}
+                  Glass flasks encased in black electrical tape, and connected to a black fence using normal birchwood pegs. PW07 is suitable for growing a wall garden, and for casting eerie shadows in the evening to create a scary atmosphere.
+                  <img
+                    style={{
+                      display: 'block',
+                      height: '70%',
+                      width: '70%',
+                      margin: '10px 0px',
+                      borderRadius: '6%',
+                    }}
+                    src={PlantWall}
+                    alt="Plant stand"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Garden</h3>
+              <ul style={{ listStyleType: 'none', padding: '0px 0px', marginTop: '0px' }}>
+                <li>
+                  <b>Built</b>
+                : 2016
+                </li>
+                <li>
+                  <b>
+                  Short description
+                  </b>
+                :
+                  {' '}
+                  <i>GARDEN, GDEN8.</i>
+                  {' '}
+Indoor garden suitable for growing tomatoes, lettuce, onions and kale indoor. To promote good growth all year round the garden has its own 55W full spectrum 3500 K grow light, and a drainage system.
+                  <img
+                    style={{
+                      display: 'block',
+                      height: '70%',
+                      width: '70%',
+                      margin: '10px 0px',
+                      borderRadius: '6%',
+                    }}
+                    src={GardenBarrel}
+                    alt="Plant stand"
+                  />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-
       </div>
     );
 
@@ -90,7 +249,7 @@ class ProjectsPage extends React.Component {
         }}
         >
           <IconButton
-            href="https://basharmengana.com/resume"
+            href="/resume"
             style={{
               color: greenColor,
               height: 'fit-content',
@@ -120,7 +279,7 @@ class ProjectsPage extends React.Component {
       <Aux>
         {floatingHeader}
         <div>
-          {traditionalResume}
+          {projects}
         </div>
       </Aux>
     );

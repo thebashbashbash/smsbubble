@@ -149,15 +149,29 @@ class ResumePage extends React.Component {
             </li>
             <li>
               <font size="4">
+                <i>
               Have a look at my
-                {' '}
-                <a href="/projects">projects page</a>
-                {' '}
-if you're curious about what I have created.
+                  {' '}
+                  <a href="/projects">project portfolio</a>
+                  {' '}
+if you're curious about what I've created.
+
+                </i>
                 {' '}
 
 
               </font>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>{decamelize(propName(() => DynamicResumeInJson.skills))}</h2>
+          <ul style={{ listStyleType: 'none', padding: '0px' }}>
+            <li>
+              <b>{decamelize(propName(() => DynamicResumeInJson.skills))}</b>
+    :
+              {' '}
+              {DynamicResumeInJson.skills.map(skill => decamelize(skill)).join(', ')}
             </li>
           </ul>
         </div>
@@ -502,17 +516,6 @@ if you're curious about what I have created.
               </li>
             </ul>
           </div>
-        </div>
-        <div>
-          <h2>{decamelize(propName(() => DynamicResumeInJson.skills))}</h2>
-          <ul style={{ listStyleType: 'none', padding: '0px' }}>
-            <li>
-              <b>{decamelize(propName(() => DynamicResumeInJson.skills))}</b>
-    :
-              {' '}
-              {DynamicResumeInJson.skills.map(skill => decamelize(skill)).join(', ')}
-            </li>
-          </ul>
         </div>
       </div>
     );

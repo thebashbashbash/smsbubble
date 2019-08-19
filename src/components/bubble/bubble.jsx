@@ -74,13 +74,12 @@ const bubble = ({
     }
   >
     <div
-      className={combineClasses(
-        color !== ColorType.None && !emojiContent
-          ? color === ColorType.Blue
-            ? classes.Blue
-            : classes.Gray
-          : classes.Bubble,
-      )}
+      className={color !== ColorType.None && !emojiContent
+        ? color === ColorType.Blue
+          ? classes.Blue
+          : classes.Gray
+        : classes.Bubble
+      }
     >
       <div
         style={{
