@@ -17,7 +17,7 @@ const dynamicResumeInJson = {
     + ' hunger for service design, dev ops, team development and AI.',
     spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
-  interests: ['coding', 'plants', 'travelling', 'architecture', 'landscapes', 'diy', 'ai', 'gym'],
+  interests: ['coding', 'plants', 'travelling', 'architecture', 'art', 'landscapes', 'buildingThings', 'ai', 'gym'],
   skills: [
     'frontend',
     'backend',
