@@ -14,16 +14,16 @@ const dynamicResumeInJson = {
       ...splitDateRangeToArray('2013/07 - Now'),
     ),
     elevatorPitch: 'A truly full stack web developer with a great team sprit and an unsaturated'
-    + ' hunger for service design, dev ops, team development and AI.',
+    + ' hunger for service design, devops, team development and AI.',
     spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
   interests: ['coding', 'plants', 'travelling', 'architecture', 'art', 'landscapes', 'buildingThings', 'ai', 'gym'],
   skills: {
-    frontEnd: ['html/javascript/css(bem)/typeScript', 'sass', 'bootstrap/semanticUi', 'BuildTools', 'React', 'Testing (jest)'],
-    backEnd: ['Python', 'Express/node.js', 'PacketManager', 'awsServices', 'rest', 'authentication', 'NoSql (dynamodb)', 'sql (postgresql', 'Unit/Integration testing'],
-    devops: ['gitlab-ci', 'serverlessframework', 'terraform', 'awsSam', 'docker', 'kubernetes', '~linux', 'terminalLife', 'aws', '~heroku', 'infrastructureMonitoring (datadog)'],
-    serviceDesign: ['user journey', 'personas', 'doubleDiamondProcess', 'serviceBlueprint', 'user research', 'empathy/territory maps'],
-    wayOfWorking: ['build-measure-learn loop', 'lean startup', 'scrum/sprint', 'hypothesis-driven development', 'team development'],
+    frontEnd: ['html/javascript/css(bem)/typescript', 'sass', 'bootstrap/semanticui', 'buildTools', 'react', 'testing (jest)'],
+    backEnd: ['python', 'express/node.js', 'PacketManager', 'awsServices', 'rest', 'authentication', 'nosql (dynamodb)', 'sql (postgresql', 'unit/integration testing'],
+    devops: ['gitlab-ci', 'serverless-framework', 'terraform', 'awsSam', 'docker', 'kubernetes', '~linux', 'terminal', 'aws', '~heroku', 'infrastructureMonitoring (datadog)'],
+    serviceDesign: ['user journey', 'personas', 'doubleDiamondProcess', 'serviceBlueprint', 'userResearch', 'empathy/territory maps'],
+    wayOfWorking: ['build-measure-learn loop', 'leanStartup', 'scrum/sprint', 'hypothesis-driven development', 'team development'],
   },
   education: {
     school: {
