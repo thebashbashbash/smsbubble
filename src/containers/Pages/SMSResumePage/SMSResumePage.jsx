@@ -126,7 +126,7 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-            I'm very experienced with modern JavaScript/CSS/HTML coding (React) and automation techniques
+            I'm experienced with modern JavaScript/CSS/HTML coding (React) and automation techniques
             (Gitlab CI + Serverless/Terraform).
               </Message>
             </MessageContainer>

@@ -155,8 +155,6 @@ if you're curious about my projects
 
                 </i>
                 {' '}
-
-
               </font>
             </li>
           </ul>
@@ -164,8 +162,75 @@ if you're curious about my projects
         <div>
           <h2>{decamelize(propName(() => DynamicResumeInJson.skills))}</h2>
           <ul style={{ listStyleType: 'none', padding: '0px' }}>
-            <li>
-              {DynamicResumeInJson.skills.map(skill => decamelize(skill)).join(', ')}
+            <li style={{ marginTop: '0px' }}>
+              <b>
+                {decamelize(
+                  propName(
+                    () => DynamicResumeInJson.skills.frontEnd,
+                  ),
+                )}
+              </b>
+                    :
+              {' '}
+              {DynamicResumeInJson.skills.frontEnd
+                .map(skill => decamelize(skill))
+                .join(', ')}
+            </li>
+            <li style={{ marginTop: '0px' }}>
+              <b>
+                {decamelize(
+                  propName(
+                    () => DynamicResumeInJson.skills.backEnd,
+                  ),
+                )}
+              </b>
+                    :
+              {' '}
+              {DynamicResumeInJson.skills.backEnd
+                .map(skill => decamelize(skill))
+                .join(', ')}
+            </li>
+            <li style={{ marginTop: '0px' }}>
+              <b>
+                {decamelize(
+                  propName(
+                    () => DynamicResumeInJson.skills.devops,
+                  ),
+                )}
+              </b>
+                    :
+              {' '}
+              {DynamicResumeInJson.skills.devops
+                .map(skill => decamelize(skill))
+                .join(', ')}
+            </li>
+            <li style={{ marginTop: '0px' }}>
+              <b>
+                {decamelize(
+                  propName(
+                    () => DynamicResumeInJson.skills.serviceDesign,
+                  ),
+                )}
+              </b>
+                    :
+              {' '}
+              {DynamicResumeInJson.skills.serviceDesign
+                .map(skill => decamelize(skill))
+                .join(', ')}
+            </li>
+            <li style={{ marginTop: '0px' }}>
+              <b>
+                {decamelize(
+                  propName(
+                    () => DynamicResumeInJson.skills.wayOfWorking,
+                  ),
+                )}
+              </b>
+                    :
+              {' '}
+              {DynamicResumeInJson.skills.wayOfWorking
+                .map(skill => decamelize(skill))
+                .join(', ')}
             </li>
           </ul>
         </div>
@@ -273,7 +338,7 @@ if you're curious about my projects
               <li>
                 <b>
                   {decamelize(
-                    propName(() => DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords),
+                    propName(() => DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack),
                   )}
                 </b>
                 :
@@ -283,13 +348,13 @@ if you're curious about my projects
                     <b>
                       {decamelize(
                         propName(
-                          () => DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords.frontEnd,
+                          () => DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack.frontEnd,
                         ),
                       )}
                     </b>
                     :
                     {' '}
-                    {DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords.frontEnd
+                    {DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack.frontEnd
                       .map(keyword => decamelize(keyword))
                       .join(', ')}
                   </li>
@@ -297,13 +362,13 @@ if you're curious about my projects
                     <b>
                       {decamelize(
                         propName(
-                          () => DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords.backEnd,
+                          () => DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack.backEnd,
                         ),
                       )}
                     </b>
                     :
                     {' '}
-                    {DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords.backEnd
+                    {DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack.backEnd
                       .map(keyword => decamelize(keyword))
                       .join(', ')}
                   </li>
@@ -311,13 +376,13 @@ if you're curious about my projects
                     <b>
                       {decamelize(
                         propName(
-                          () => DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords.automation,
+                          () => DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack.devops,
                         ),
                       )}
                     </b>
                     :
                     {' '}
-                    {DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords.automation
+                    {DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack.devops
                       .map(keyword => decamelize(keyword))
                       .join(', ')}
                   </li>
@@ -325,13 +390,13 @@ if you're curious about my projects
                     <b>
                       {decamelize(
                         propName(
-                          () => DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords.wayOfWorking,
+                          () => DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack.wayOfWorking,
                         ),
                       )}
                     </b>
                     :
                     {' '}
-                    {DynamicResumeInJson.workExperience.fullStackWebDeveloper.keywords.wayOfWorking
+                    {DynamicResumeInJson.workExperience.fullStackWebDeveloper.stack.wayOfWorking
                       .map(keyword => decamelize(keyword))
                       .join(', ')}
                   </li>
@@ -391,12 +456,12 @@ if you're curious about my projects
               <li style={{ marginTop: '0px' }}>
                 <b>
                   {decamelize(
-                    propName(() => DynamicResumeInJson.workExperience.serviceDesigner.keywords),
+                    propName(() => DynamicResumeInJson.workExperience.serviceDesigner.stack),
                   )}
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.serviceDesigner.keywords
+                {DynamicResumeInJson.workExperience.serviceDesigner.stack
                   .map(keyword => decamelize(keyword))
                   .join(', ')}
               </li>
@@ -449,11 +514,11 @@ if you're curious about my projects
               </li>
               <li style={{ marginTop: '0px' }}>
                 <b>
-                  {decamelize(propName(() => DynamicResumeInJson.workExperience.productOwner.keywords))}
+                  {decamelize(propName(() => DynamicResumeInJson.workExperience.productOwner.stack))}
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.productOwner.keywords
+                {DynamicResumeInJson.workExperience.productOwner.stack
                   .map(keyword => decamelize(keyword))
                   .join(', ')}
               </li>
@@ -501,10 +566,10 @@ if you're curious about my projects
                 {DynamicResumeInJson.workExperience.trainee.shortDescription}
               </li>
               <li style={{ marginTop: '0px' }}>
-                <b>{decamelize(propName(() => DynamicResumeInJson.workExperience.trainee.keywords))}</b>
+                <b>{decamelize(propName(() => DynamicResumeInJson.workExperience.trainee.stack))}</b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.trainee.keywords
+                {DynamicResumeInJson.workExperience.trainee.stack
                   .map(keyword => decamelize(keyword))
                   .join(', ')}
               </li>
@@ -533,7 +598,7 @@ if you're curious about my projects
             base0B: '#575757', // Strings, Inherited Class, Markup Code, Diff Inserted
             base0C: '#5c646b', // Support, Regular Expressions, Escape Characters, Markup Quotes
             base0D: lightTheme ? 'rgb(115,115,115)' : '#394047', // Functions, Methods, Attribute IDs, Headings
-            base0E: lightTheme ? 'rgb(155,155,155)' : '#515961', // Keywords, Storage, Selector, Markup Italic, Diff Changed
+            base0E: lightTheme ? 'rgb(155,155,155)' : '#515961', // stack, Storage, Selector, Markup Italic, Diff Changed
             base0F: '#575757', // Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
           }}
           displayDataTypes={false}

@@ -18,17 +18,13 @@ const dynamicResumeInJson = {
     spokenLanguages: ['🇸🇪(swedish)', '🇺🇸(english)', '🇮🇶(arabic)', '🇩🇪(german)'],
   },
   interests: ['coding', 'plants', 'travelling', 'architecture', 'art', 'landscapes', 'buildingThings', 'ai', 'gym'],
-  skills: [
-    'frontend',
-    'backend',
-    'devops',
-    'aws',
-    'serviceDesign',
-    'hypothesisDrivenDevelopment',
-    'productOwner',
-    'scrumMaster',
-    'graphicalDesign',
-  ],
+  skills: {
+    frontEnd: ['html/javascript/css(bem)/typeScript', 'sass', 'bootstrap/semanticUi', 'BuildTools', 'React', 'Testing (jest)'],
+    backEnd: ['Python', 'Express/node.js', 'PacketManager', 'awsServices', 'rest', 'authentication', 'NoSql (dynamodb)', 'sql (postgresql', 'Unit/Integration testing'],
+    devops: ['gitlab-ci', 'serverlessframework', 'terraform', 'awsSam', 'docker', 'kubernetes', '~linux', 'terminalLife', 'aws', '~heroku', 'infrastructureMonitoring (datadog)'],
+    serviceDesign: ['user journey', 'personas', 'doubleDiamondProcess', 'serviceBlueprint', 'user research', 'empathy/territory maps'],
+    wayOfWorking: ['build-measure-learn loop', 'lean startup', 'scrum/sprint', 'hypothesis-driven development', 'team development'],
+  },
   education: {
     school: {
       englishName: 'Royal Institute of Technology',
@@ -55,13 +51,13 @@ const dynamicResumeInJson = {
         + ' 2) reduce wear and tear of vehicles, by engaging drivers in improving their driving style'
         + ' through gamification. We use methods from the lean startup theory'
         + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development).',
-      keywords: {
-        frontEnd: ['react.js', 'typescript', 'react-redux', 'javascript/html', 'css/sass'],
+      stack: {
+        frontEnd: ['react', 'typescript', 'react-redux', 'javascript/html/css', 'sass', 'jest'],
         backEnd: [
           'python',
           'java',
           'aws lambda, step functions',
-          'aws dyanmodb, sqs, kms',
+          'aws dyanmodb, aws sqs, aws kms',
           'aws sns',
           'aws secret store',
           'aws s3',
@@ -69,9 +65,9 @@ const dynamicResumeInJson = {
           'aws cloudlog',
           'monitoring',
         ],
-        automation: [
+        devops: [
           'gitlab-ci',
-          'serverless framework',
+          'serverlessframework/terraform',
           'aws cloudformation',
           'spring',
           'aws cloudlog',
@@ -95,7 +91,7 @@ const dynamicResumeInJson = {
         + ' our users and salesmen; designed user stories, empathy maps, territory maps and personas in a team of four service designers.'
         + " We also studied how the fleet management tool was sold to find pain points and opportunities, and did lightweight MVP's"
         + " to evaluate concepts quickly - and we weren't afraid to throw ideas in the bin if they didn't fly.",
-      keywords: [
+      stack: [
         'personas',
         'userStories',
         'empathyMaps',
@@ -121,7 +117,7 @@ const dynamicResumeInJson = {
         'Responsible for the product backlog of a fleet management - iOS and Android - app, and the team’s vision and mission.'
         + ' I worked closely with other product owners to help define the future of our product portfolio. My scrum master and I made'
         + ' sure the team was healthy by working in areas such as team happiness, resilience, and growth.',
-      keywords: [
+      stack: [
         'productBacklog',
         'scrum',
         'sprints',
@@ -151,7 +147,7 @@ const dynamicResumeInJson = {
         'The trainee program gave me a comprehensive view of the operations of a big corporation.'
         + " During my trainee year, I spent time in Scania's sales organization, at a distributor in Switzerland and Scania's R&D organization."
         + ' I learned about the logistics business and the future of autonomous trucks.',
-      keywords: [
+      stack: [
         'sales',
         'productDevelopment',
         'autonomousVehicles',
