@@ -114,20 +114,20 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-            There's a lot to say here, but my three main interests are software development 🤓, all
+            There's a lot to say here, but my three main interests are web development 🤓, all
             kinds of social activities and being creative!
               </Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
               <Message>Interesting! 🤠</Message>
-              <Message>Please tell us about your experience in software development.</Message>
+              <Message>Please tell us about your experience in web development.</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
               <Message>
-            I'm experienced with modern JavaScript/CSS/HTML coding (React) and automation techniques
-            (Gitlab CI + Serverless or AWS CodePipeline).
+            I'm very experienced with modern JavaScript/CSS/HTML coding (React) and automation techniques
+            (Gitlab CI + Serverless/Terraform).
               </Message>
             </MessageContainer>
 
@@ -137,13 +137,18 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-              I do! For back end I've used Python and Javascript (Express) with with AWS services such as DynamoDB and Lambda.
+              Yes! I consider myself a full stack web developer with a strong interest in devops and service design.
+              </Message>
+              <Message>
+                  🐙
+              </Message>
+              <Message>
+              For back end I've used Express and Python with AWS services such as DynamoDB, Lambda and RDS.
               </Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
-              <Message>Sounds great, Bash!</Message>
-              <Message>Are you willing to learn new technologies? 🙂</Message>
+              <Message>Sounds great, Bash! Are you willing to learn new technologies? 🙂</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
