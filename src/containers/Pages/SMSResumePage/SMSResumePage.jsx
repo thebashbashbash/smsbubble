@@ -19,7 +19,7 @@ import SofaTable from '../../../assets/sofatable.jpg';
 
 import Aux from '../../../helpers/aux';
 
-import classes from './FunResumePage.module.css';
+import classes from './SMSResumePage.module.css';
 
 
 const Bashar = SubjectType.You;
@@ -30,7 +30,7 @@ ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 // eslint-disable-next-line react/prefer-stateless-function
-export class FunResumePage extends Component {
+export class ConversationResumePage extends Component {
   render() {
     const { location } = this.props;
     return (
@@ -193,4 +193,4 @@ Bashar Mengana
   }
 }
 
-export default withRouter(FunResumePage);
+export default withRouter(ConversationResumePage);
