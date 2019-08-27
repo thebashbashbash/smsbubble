@@ -137,7 +137,7 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-              I do! For back end I've used Python and Java with AWS services such as DynamoDB and Lambda.
+              I do! For back end I've used Python and Javascript (Express) with with AWS services such as DynamoDB and Lambda.
               </Message>
             </MessageContainer>
 
@@ -160,7 +160,7 @@ Bashar Mengana
             challenge both myself and the team to improve! 🏆
               </Message>
               <Message>👩🏻‍🔬👨🏻‍🔧👨🏼‍🚀👩🏽‍🎨</Message>
-              <Message>Team success > individual success!</Message>
+              <Message>Team success over individual success!</Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
