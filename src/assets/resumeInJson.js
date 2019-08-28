@@ -75,8 +75,8 @@ const dynamicResumeInJson = {
         wayOfWorking: [
           'mvp (minimum viable product) development process',
           'lean startup / build-measure-learn loop',
-          'hypothesis/risk driven development',
-          'jira/trello',
+          'hypothesis-driven development',
+          'jira/trello/sprint',
         ],
       },
     },
