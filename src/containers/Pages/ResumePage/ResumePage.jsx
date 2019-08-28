@@ -118,11 +118,11 @@ class ResumePage extends React.Component {
             </li>
             <li>
               <b>
-                {decamelize(propName(() => DynamicResumeInJson.aboutMe.totalWorkExperienceInYears))}
+                {decamelize(propName(() => DynamicResumeInJson.aboutMe.totalWorkExperience))}
               </b>
               :
               {' '}
-              {DynamicResumeInJson.aboutMe.totalWorkExperienceInYears}
+              {DynamicResumeInJson.aboutMe.totalWorkExperience}
             </li>
             <li>
               <b>{decamelize(propName(() => DynamicResumeInJson.aboutMe.elevatorPitch))}</b>
@@ -276,10 +276,10 @@ if you have the time
               {DynamicResumeInJson.education.timePeriod}
             </li>
             <li>
-              <b>{decamelize(propName(() => DynamicResumeInJson.education.totalEducationInYears))}</b>
+              <b>{decamelize(propName(() => DynamicResumeInJson.education.totalEducation))}</b>
     :
               {' '}
-              {DynamicResumeInJson.education.totalEducationInYears}
+              {DynamicResumeInJson.education.totalEducation}
             </li>
           </ul>
         </div>
@@ -313,13 +313,13 @@ if you have the time
                   {decamelize(
                     propName(
                       () => DynamicResumeInJson.workExperience.fullStackWebDeveloper
-                        .totalWorkExperienceInYears,
+                        .totalWorkExperience,
                     ),
                   )}
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.fullStackWebDeveloper.totalWorkExperienceInYears}
+                {DynamicResumeInJson.workExperience.fullStackWebDeveloper.totalWorkExperience}
               </li>
               <li>
                 <b>
@@ -431,13 +431,13 @@ if you have the time
                 <b>
                   {decamelize(
                     propName(
-                      () => DynamicResumeInJson.workExperience.serviceDesigner.totalWorkExperienceInYears,
+                      () => DynamicResumeInJson.workExperience.serviceDesigner.totalWorkExperience,
                     ),
                   )}
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.serviceDesigner.totalWorkExperienceInYears}
+                {DynamicResumeInJson.workExperience.serviceDesigner.totalWorkExperience}
               </li>
               <li>
                 <b>
@@ -492,13 +492,13 @@ if you have the time
                 <b>
                   {decamelize(
                     propName(
-                      () => DynamicResumeInJson.workExperience.productOwner.totalWorkExperienceInYears,
+                      () => DynamicResumeInJson.workExperience.productOwner.totalWorkExperience,
                     ),
                   )}
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.productOwner.totalWorkExperienceInYears}
+                {DynamicResumeInJson.workExperience.productOwner.totalWorkExperience}
               </li>
               <li>
                 <b>
@@ -545,13 +545,13 @@ if you have the time
                 <b>
                   {decamelize(
                     propName(
-                      () => DynamicResumeInJson.workExperience.trainee.totalWorkExperienceInYears,
+                      () => DynamicResumeInJson.workExperience.trainee.totalWorkExperience,
                     ),
                   )}
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.trainee.totalWorkExperienceInYears}
+                {DynamicResumeInJson.workExperience.trainee.totalWorkExperience}
               </li>
               <li>
                 <b>

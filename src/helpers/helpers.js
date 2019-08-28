@@ -55,7 +55,26 @@ export const elapsedYearsBetweenTwoDates = (startDate, endDate) => {
     end = moment(endDate.replace(/\//ig, '-'));
   }
 
-  return Math.round(end.diff(start, 'years', true) * 100) / 100;
+  const duration = Math.round(end.diff(start, 'years', true) * 100) / 100;
+  const years = Math.trunc(duration);
+  const months = Math.ceil((duration - Math.trunc(duration)) * 12);
+
+  let monthsLabel = 'month';
+  if (months > 1) {
+    monthsLabel = 'months';
+  }
+
+  let yearsLabel = 'year';
+  if (years > 1) {
+    yearsLabel = 'years';
+  }
+
+  let durationString = `${years} ${yearsLabel}  ${months} ${monthsLabel}`;
+  if (months === 0) {
+    durationString = `${years} ${yearsLabel}`;
+  }
+
+  return durationString;
 };
 
 export const splitDateRangeToArray = dateRange => dateRange.replace(/ - /g, '--').split('--');

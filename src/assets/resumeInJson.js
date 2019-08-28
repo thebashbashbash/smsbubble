@@ -10,7 +10,7 @@ const dynamicResumeInJson = {
     address: 'Ringvägen 151A, 11631 Stockholm, Sweden',
     drivingLicense: true,
     birthday: Number('19880126'),
-    totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+    totalWorkExperience: elapsedYearsBetweenTwoDates(
       ...splitDateRangeToArray('2013/07 - Now'),
     ),
     elevatorPitch: 'A truly full stack web developer with a great team sprit and an unsaturated'
@@ -34,7 +34,7 @@ const dynamicResumeInJson = {
     city: 'Stockholm',
     educationCompleted: true,
     timePeriod: '2008/07 - 2013/07',
-    totalEducationInYears: elapsedYearsBetweenTwoDates(
+    totalEducation: elapsedYearsBetweenTwoDates(
       ...splitDateRangeToArray('2008/07 - 2013/07'),
     ),
   },
@@ -42,7 +42,7 @@ const dynamicResumeInJson = {
     fullStackWebDeveloper: {
       company: 'Scania',
       timePeriod: '2017/06 - Now',
-      totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+      totalWorkExperience: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2017/06 - Now'),
       ),
       shortDescription:
@@ -83,7 +83,7 @@ const dynamicResumeInJson = {
     serviceDesigner: {
       company: 'Scania',
       timePeriod: '2016/06 - 2017/06',
-      totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+      totalWorkExperience: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2016/06 - 2017/06'),
       ),
       shortDescription:
@@ -110,7 +110,7 @@ const dynamicResumeInJson = {
     productOwner: {
       company: 'Scania',
       timePeriod: '2014/09 - 2016/06',
-      totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+      totalWorkExperience: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2014/09 - 2016/06'),
       ),
       shortDescription:
@@ -140,7 +140,7 @@ const dynamicResumeInJson = {
     trainee: {
       company: 'Scania',
       timePeriod: '2013/07 - 2014/09',
-      totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
+      totalWorkExperience: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2013/07 - 2014/09'),
       ),
       shortDescription:
