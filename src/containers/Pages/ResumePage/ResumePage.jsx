@@ -149,9 +149,9 @@ class ResumePage extends React.Component {
                 <i>
               Have a look at my
                   {' '}
-                  <a href="/projects">building project portfolio</a>
+                  <a href="/projects">building projects portfolio</a>
                   {' '}
-if you're curious about my projects
+if you have the time
 
                 </i>
                 {' '}
