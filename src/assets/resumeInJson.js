@@ -52,7 +52,7 @@ const dynamicResumeInJson = {
         + ' through gamification. We use methods from the lean startup theory'
         + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development).',
       stack: {
-        frontEnd: ['react', 'typescript', 'react-redux', 'javascript/html/css', 'sass', 'jest'],
+        frontEnd: ['react', 'typescript', 'react-redux', 'javascript/html/css', 'sass', 'jest', 'material-ui'],
         backEnd: [
           'python',
           'java',
@@ -69,7 +69,7 @@ const dynamicResumeInJson = {
           'gitlab-ci',
           'serverless framework/terraform',
           'aws cloudformation',
-          'spring',
+          'datadog',
           'aws cloudlog',
         ],
         wayOfWorking: [
