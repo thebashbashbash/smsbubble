@@ -82,7 +82,7 @@ const dynamicResumeInJson = {
     },
     serviceDesigner: {
       company: 'Scania',
-      timePeriod: '2016/08 - 2017/06',
+      timePeriod: '2016/06 - 2017/06',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2016/06 - 2017/06'),
       ),
@@ -109,7 +109,7 @@ const dynamicResumeInJson = {
     },
     productOwner: {
       company: 'Scania',
-      timePeriod: '2014/12 - 2016/08',
+      timePeriod: '2014/09 - 2016/06',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2014/09 - 2016/06'),
       ),
@@ -139,7 +139,7 @@ const dynamicResumeInJson = {
     },
     trainee: {
       company: 'Scania',
-      timePeriod: '2013/07 - 2014/11',
+      timePeriod: '2013/07 - 2014/09',
       totalWorkExperienceInYears: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2013/07 - 2014/09'),
       ),
