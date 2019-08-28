@@ -19,11 +19,11 @@ const dynamicResumeInJson = {
   },
   interests: ['coding', 'plants', 'travelling', 'architecture', 'art', 'landscapes', 'buildingThings', 'ai', 'gym'],
   skills: {
-    frontEnd: ['html/javascript/css(bem)/typescript', 'sass', 'bootstrap/semanticui', 'buildTools', 'react', 'testing (jest)'],
-    backEnd: ['python', 'express/node.js', 'PacketManager', 'awsServices', 'rest', 'authentication', 'nosql (dynamodb)', 'sql (postgresql', 'unit/integration testing'],
-    devops: ['gitlab-ci', 'serverless-framework', 'terraform', 'awsSam', 'docker', 'kubernetes', '~linux', 'terminal', 'aws', '~heroku', 'infrastructureMonitoring (datadog)'],
-    serviceDesign: ['user journey', 'personas', 'doubleDiamondProcess', 'serviceBlueprint', 'userResearch', 'empathy/territory maps'],
-    wayOfWorking: ['build-measure-learn loop', 'leanStartup', 'scrum/sprint', 'hypothesis-driven development', 'team development'],
+    frontEnd: ['html/javascript/css(bem)/typescript', 'sass', 'material-ui/semantic-ui', 'build tools', 'react', 'testing (jest)'],
+    backEnd: ['python', 'express/node.js', 'package manager', 'aws services', 'rest', 'authentication/authorization', 'nosql (dynamodb)', 'sql (postgresql', 'unit/integration testing'],
+    devops: ['gitlab-ci', 'serverless framework', 'terraform', 'aws cloudformation', 'docker', 'kubernetes', '~linux', 'terminal', 'aws', '~heroku', 'infrastructure monitoring (datadog)'],
+    serviceDesign: ['user journey', 'personas', 'double diamond process', 'serviceBlueprint', 'userResearch', 'empathy/territory maps'],
+    wayOfWorking: ['build-measure-learn loop', 'lean startup', 'scrum/sprint', 'hypothesis-driven development', 'team development'],
   },
   education: {
     school: {
@@ -67,7 +67,7 @@ const dynamicResumeInJson = {
         ],
         devops: [
           'gitlab-ci',
-          'serverlessframework/terraform',
+          'serverless framework/terraform',
           'aws cloudformation',
           'spring',
           'aws cloudlog',
