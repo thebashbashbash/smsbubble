@@ -652,7 +652,7 @@ if you have the time
               iconColor="gray"
               toggled={mode === ModeType.FunResumeMode}
               href={ResumePDF}
-              color="primary"
+              color="default"
               onClick={() => {
                 this.setState({ mode: ModeType.FunResumeMode, lightTheme: true });
               }}
