@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  computeMessageDeley,
-  computeConversationStartDeley,
-  computeMessageContainerTimeDeley,
-  computeAccumulatedMessageDeley,
+  computeMessageDelay,
+  computeConversationStartDelay,
+  computeMessageContainerTimeDelay,
+  computeAccumulatedMessageDelay,
 } from './helpers';
 
 import classes from './MessageConversation.module.css';
@@ -18,9 +18,9 @@ class MessageConversation extends React.Component {
 
     this.state = {
       messageContainers: children,
-      conversationStartDeley: computeConversationStartDeley(),
-      messageDelay: computeMessageDeley(children),
-      messageContainerTimeDeley: computeMessageContainerTimeDeley(children),
+      conversationStartDeley: computeConversationStartDelay(),
+      messageDelay: computeMessageDelay(children),
+      messageContainerTimeDeley: computeMessageContainerTimeDelay(children),
       autoscroll,
       interactive,
     };
@@ -45,7 +45,7 @@ class MessageConversation extends React.Component {
                 index === 0
                   ? conversationStartDeley
                   : conversationStartDeley
-                    + computeAccumulatedMessageDeley(messageDelay, index)
+                    + computeAccumulatedMessageDelay(messageDelay, index)
                     + messageContainerTimeDeley[index],
             autoscroll,
             interactive,

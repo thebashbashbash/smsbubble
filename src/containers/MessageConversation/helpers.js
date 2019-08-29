@@ -4,7 +4,7 @@ import { computeTypingDuration, getRandomInt } from '../../helpers/helpers';
 export const messageDelayMinDefault = 700;
 export const messageDelayMaxDefault = 1450;
 
-export const computeMessageDeley = (
+export const computeMessageDelay = (
   children,
   messageDelayMin = messageDelayMinDefault,
   messageDelayMax = messageDelayMaxDefault,
@@ -20,12 +20,12 @@ export const computeMessageDeley = (
     ? children.props.children.map(() => getRandomInt(messageDelayMin, messageDelayMax))
     : getRandomInt(messageDelayMin, messageDelayMax));
 
-export const computeConversationStartDeley = (
+export const computeConversationStartDelay = (
   messageDelayMin = messageDelayMinDefault / 2,
   messageDelayMax = messageDelayMaxDefault / 2,
 ) => getRandomInt(messageDelayMin / 2, messageDelayMax / 2);
 
-export const computeMessageContainerTimeDeley = children => (children instanceof Array
+export const computeMessageContainerTimeDelay = children => (children instanceof Array
   ? children
     .map(child => child.props.children)
     .map(element => (element instanceof Array
@@ -45,7 +45,7 @@ export const computeMessageContainerTimeDeley = children => (children instanceof
     .slice(0, -1)
   : [0]);
 
-export const computeAccumulatedMessageDeley = (messageDelay, index) => messageDelay
+export const computeAccumulatedMessageDelay = (messageDelay, index) => messageDelay
   .map(element => (element instanceof Array ? element.reduce((a, b) => a + b, 0) : element))
   .reduce(
     (previous, current, subIndex) => {
