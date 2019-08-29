@@ -20,11 +20,16 @@ import TextSMSOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineRounded';
 import DescriptionIcon from '@material-ui/icons/Description';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 
+import PrintOutlinedIcon from '@material-ui/icons/PrintOutlined';
+
+import ToggleIconButton from '../../IconButton/ToggleIconButton';
+
+import ResumePDF from '../../../assets/bashar_mengana_resume.pdf';
+
 import {
   decamelize, propName, isDayTime, combineClasses,
 } from '../../../helpers/helpers';
 import Aux from '../../../helpers/aux';
-import ToggleIconButton from '../../IconButton/ToggleIconButton';
 
 import DynamicResumeInJson from '../../../assets/resumeInJson';
 
@@ -638,6 +643,18 @@ if you have the time
               toggled={mode === ModeType.NerdResumeMode}
               onClick={() => {
                 this.setState({ mode: ModeType.NerdResumeMode, lightTheme });
+              }}
+            />
+            <ToggleIconButton
+              iconUntoggled={<PrintOutlinedIcon />}
+              iconToggled={<PrintOutlinedIcon />}
+              label="Switch-theme"
+              iconColor="gray"
+              toggled={mode === ModeType.FunResumeMode}
+              href={ResumePDF}
+              color="primary"
+              onClick={() => {
+                this.setState({ mode: ModeType.FunResumeMode, lightTheme: true });
               }}
             />
             <ToggleIconButton
