@@ -19,7 +19,7 @@ const dynamicResumeInJson = {
   },
   interests: ['coding', 'plants', 'travelling', 'architecture', 'art', 'landscapes', 'buildingThings', 'ai', 'gym'],
   skills: {
-    frontEnd: ['html/javascript/css(bem)/typescript', 'sass', 'material-ui/semantic-ui', 'build tools', 'react', 'testing (jest)'],
+    frontEnd: ['html/javascript/css(bem)/typescript', 'sass', 'material-ui/semantic-ui', 'build tools', 'react16+', 'testing (jest/enzyme)'],
     backEnd: ['python', 'express/node.js', 'package manager', 'aws services', 'rest', 'authentication/authorization', 'nosql (dynamodb)', 'sql (postgresql)', 'unit/integration testing'],
     devops: ['gitlab-ci', 'serverless framework', 'terraform', 'aws cloudformation', 'docker', 'kubernetes', '~linux', 'terminal', 'aws', '~heroku', 'infrastructure monitoring (datadog)'],
     serviceDesign: ['user journey', 'personas', 'double diamond process', 'serviceBlueprint', 'userResearch', 'empathy/territory maps'],
@@ -52,7 +52,7 @@ const dynamicResumeInJson = {
         + ' through gamification. We use methods from the lean startup theory'
         + ' (e.g. build-measure-learn loop, MVP,  hypothesis-driven development).',
       stack: {
-        frontEnd: ['react', 'typescript', 'react-redux', 'javascript/html/css', 'sass', 'jest', 'material-ui'],
+        frontEnd: ['react16+', 'typescript', 'react-redux', 'javascript/html/css(bem)', 'sass', 'jest/enzyme', 'material-ui'],
         backEnd: [
           'python',
           'java',
