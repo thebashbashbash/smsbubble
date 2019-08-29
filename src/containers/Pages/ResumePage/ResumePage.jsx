@@ -525,51 +525,51 @@ if you have the time
             </ul>
           </div>
           <div>
-            <h3>{decamelize(propName(() => DynamicResumeInJson.workExperience.trainee))}</h3>
+            <h3>{decamelize(propName(() => DynamicResumeInJson.workExperience.managementTrainee))}</h3>
             <ul style={{ listStyleType: 'none', padding: '0px 5px', marginTop: '0px' }}>
               <li>
-                <b>{decamelize(propName(() => DynamicResumeInJson.workExperience.trainee.company))}</b>
+                <b>{decamelize(propName(() => DynamicResumeInJson.workExperience.managementTrainee.company))}</b>
     :
                 {' '}
-                {DynamicResumeInJson.workExperience.trainee.company}
+                {DynamicResumeInJson.workExperience.managementTrainee.company}
               </li>
               <li>
                 <b>
-                  {decamelize(propName(() => DynamicResumeInJson.workExperience.trainee.timePeriod))}
+                  {decamelize(propName(() => DynamicResumeInJson.workExperience.managementTrainee.timePeriod))}
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.trainee.timePeriod}
+                {DynamicResumeInJson.workExperience.managementTrainee.timePeriod}
               </li>
               <li>
                 <b>
                   {decamelize(
                     propName(
-                      () => DynamicResumeInJson.workExperience.trainee.totalWorkExperience,
+                      () => DynamicResumeInJson.workExperience.managementTrainee.totalWorkExperience,
                     ),
                   )}
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.trainee.totalWorkExperience}
+                {DynamicResumeInJson.workExperience.managementTrainee.totalWorkExperience}
               </li>
               <li>
                 <b>
                   <b>
                     {decamelize(
-                      propName(() => DynamicResumeInJson.workExperience.trainee.shortDescription),
+                      propName(() => DynamicResumeInJson.workExperience.managementTrainee.shortDescription),
                     )}
                   </b>
                 </b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.trainee.shortDescription}
+                {DynamicResumeInJson.workExperience.managementTrainee.shortDescription}
               </li>
               <li style={{ marginTop: '0px' }}>
-                <b>{decamelize(propName(() => DynamicResumeInJson.workExperience.trainee.stack))}</b>
+                <b>{decamelize(propName(() => DynamicResumeInJson.workExperience.managementTrainee.stack))}</b>
                 :
                 {' '}
-                {DynamicResumeInJson.workExperience.trainee.stack
+                {DynamicResumeInJson.workExperience.managementTrainee.stack
                   .map(keyword => decamelize(keyword))
                   .join(', ')}
               </li>

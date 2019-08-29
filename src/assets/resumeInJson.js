@@ -137,14 +137,14 @@ const dynamicResumeInJson = {
         'gdpr',
       ],
     },
-    trainee: {
+    managementTrainee: {
       company: 'Scania',
       timePeriod: '2013/07 - 2014/09',
       totalWorkExperience: elapsedYearsBetweenTwoDates(
         ...splitDateRangeToArray('2013/07 - 2014/09'),
       ),
       shortDescription:
-        'The trainee program gave me a comprehensive view of the operations of a big corporation.'
+        'The management trainee program gave me a comprehensive view of the operations of a big corporation.'
         + " During my trainee year, I spent time in Scania's sales organization, at a distributor in Switzerland and Scania's R&D organization."
         + ' I learned about the logistics business and the future of autonomous trucks.',
       stack: [
