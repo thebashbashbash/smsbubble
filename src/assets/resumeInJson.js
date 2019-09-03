@@ -41,9 +41,9 @@ const dynamicResumeInJson = {
   workExperience: {
     fullStackWebDeveloper: {
       company: 'Scania',
-      timePeriod: '2017/06 - Now',
+      timePeriod: '2017/03 - Now',
       totalWorkExperience: elapsedYearsBetweenTwoDates(
-        ...splitDateRangeToArray('2017/06 - Now'),
+        ...splitDateRangeToArray('2017/03 - Now'),
       ),
       shortDescription:
         'Full stack web developer in a small team of five, with  additional responsibilities in user research and devops.'
@@ -83,9 +83,9 @@ const dynamicResumeInJson = {
     },
     serviceDesigner: {
       company: 'Scania',
-      timePeriod: '2016/06 - 2017/06',
+      timePeriod: '2016/04 - 2017/03',
       totalWorkExperience: elapsedYearsBetweenTwoDates(
-        ...splitDateRangeToArray('2016/06 - 2017/06'),
+        ...splitDateRangeToArray('2016/04 - 2017/03'),
       ),
       shortDescription:
         'Researched and helped improve the onboarding process of a fleet management tool. I conducted interviews with'
@@ -110,9 +110,9 @@ const dynamicResumeInJson = {
     },
     productOwner: {
       company: 'Scania',
-      timePeriod: '2014/09 - 2016/06',
+      timePeriod: '2014/09 - 2016/04',
       totalWorkExperience: elapsedYearsBetweenTwoDates(
-        ...splitDateRangeToArray('2014/09 - 2016/06'),
+        ...splitDateRangeToArray('2014/09 - 2016/04'),
       ),
       shortDescription:
         'Responsible for the product backlog of a fleet management - iOS and Android - app, and the team’s vision and mission.'
