@@ -126,7 +126,7 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-            I'm experienced with modern javascript/css/html coding (react) and CI/CD (gitlab CI + serverless framework, cloudia.js or terraform).
+            I'm experienced with modern javascript/css/html coding (react) and CI/CD (gitlab-CI + serverless-framework, cloudia.js or terraform).
               </Message>
             </MessageContainer>
 
@@ -136,13 +136,13 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-              Yes! I consider myself a full stack web developer with a strong interest in devops and service design.
+              Yes, I do both! I consider myself a fullstack web developer with a strong interest in DevOps and service design.
               </Message>
               <Message>
                   🐙
               </Message>
               <Message>
-              For back end I've used node.js/express, and python with AWS services such as dynamoDB, lambda and RDS.
+              For backend I've used node.js/express, and python with AWS services such as dynamoDB, lambda and RDS.
               </Message>
             </MessageContainer>
 
