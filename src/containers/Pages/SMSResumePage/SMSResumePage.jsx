@@ -94,7 +94,7 @@ Bashar Mengana
           </div>
         ) : (null)}
 
-        <div style={{ marginTop: location.pathname === '/smsresume' ? '90px' : '0px' }}>
+        <div style={{ marginTop: location.pathname === '/smsresume' ? '100px' : '0px' }}>
           <MessageConversation interactive={interactive} autoscroll>
             <MessageContainer subject={visitor}>
               <Message>Hey!</Message>
@@ -126,12 +126,12 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-            I'm experienced with modern JavaScript/CSS/HTML coding (React) and CI/CD (Gitlab CI + Serverless or Terraform).
+            I'm experienced with modern javascript/css/html coding (react) and CI/CD (gitlab CI + serverless framework, cloudia.js or terraform).
               </Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
-              <Message>Do you work both back end and front end? 🤓</Message>
+              <Message>Do you work both backend and frontend? 🤓</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
@@ -142,7 +142,7 @@ Bashar Mengana
                   🐙
               </Message>
               <Message>
-              For back end I've used Express and Python with AWS services such as DynamoDB, Lambda and RDS.
+              For back end I've used node.js/express, and python with AWS services such as dynamoDB, lambda and RDS.
               </Message>
             </MessageContainer>
 
