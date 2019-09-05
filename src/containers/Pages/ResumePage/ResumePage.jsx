@@ -5,6 +5,8 @@
 
 import React from 'react';
 import ReactGA from 'react-ga';
+import { withRouter } from 'react-router-dom';
+
 
 import ReactJson from 'react-json-view';
 import Headroom from 'react-headroom';
@@ -654,7 +656,7 @@ if you have the time
               href={ResumePDF}
               color="default"
               onClick={() => {
-                this.setState({ mode: ModeType.FunResumeMode, lightTheme: true });
+                this.setState({ lightTheme: true });
               }}
             />
             <ToggleIconButton
@@ -701,4 +703,4 @@ if you have the time
   }
 }
 
-export default ResumePage;
+export default withRouter(ResumePage);

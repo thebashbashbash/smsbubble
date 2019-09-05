@@ -6,6 +6,8 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 
+import { withRouter } from 'react-router-dom';
+
 import Headroom from 'react-headroom';
 
 import HighlightIcon from '@material-ui/icons/Highlight';
@@ -287,4 +289,4 @@ Indoor garden suitable for growing tomatoes, lettuce, onions and kale indoor. To
   }
 }
 
-export default ProjectsPage;
+export default withRouter(ProjectsPage);
