@@ -24,7 +24,7 @@ import classes from './SMSResumePage.module.css';
 
 const Bashar = SubjectType.You;
 const visitor = SubjectType.Me;
-const interactive = true;
+const interactive = false;
 
 ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -126,7 +126,7 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-            I'm experienced with modern javascript/css/html coding (react) and CI/CD (gitlab-CI + serverless-framework, cloudia.js or terraform).
+            I'm experienced with modern javascript/css/html coding (preferably react, but angular works too of course 😁) and CI/CD (gitlab-CI + serverless framework, cloudia.js or terraform).
               </Message>
             </MessageContainer>
 
