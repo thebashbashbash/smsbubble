@@ -24,7 +24,7 @@ import classes from './SMSResumePage.module.css';
 
 const Bashar = SubjectType.You;
 const visitor = SubjectType.Me;
-const interactive = false;
+const interactive = true;
 
 ReactGA.initialize('UA-139986234-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
