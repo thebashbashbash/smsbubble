@@ -175,7 +175,7 @@ Bashar Mengana
             <MessageContainer subject={Bashar}>
               <Message>Yeah! Here's a "plant stand" that I've built 👷🏻‍♂️</Message>
               <Message>{SofaTable}</Message>
-              <Message>Check out my projects on basharmengana.com/projects</Message>
+              <Message>Check out my projects at basharmengana.com/projects</Message>
               <Message>... and here's an e-book tiny.cc/theoddfables that I've authored</Message>
               <Message>Please get in touch if you want to talk some more!</Message>
               <Message>contact@basharmengana.com</Message>
