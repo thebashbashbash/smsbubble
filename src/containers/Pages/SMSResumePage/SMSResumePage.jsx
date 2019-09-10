@@ -160,7 +160,7 @@ Bashar Mengana
 
             <MessageContainer subject={Bashar}>
               <Message>
-            I'm most comfortable working in an agile team with the customer in the loop, and, I like to
+            I'm most comfortable working in an agile team with the end user in the loop, and, I like to
             challenge both myself and the team to improve! 🏆
               </Message>
               <Message>👩🏻‍🔬👨🏻‍🔧👨🏼‍🚀👩🏽‍🎨</Message>
