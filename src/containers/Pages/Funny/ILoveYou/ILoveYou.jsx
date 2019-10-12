@@ -40,7 +40,7 @@ export class ConversationResumePage extends Component {
 
             <MessageContainer subject={Them}>
               <Message>Ok ...</Message>
-              <Message>I             love              you</Message>
+              <Message>I        love         you</Message>
             </MessageContainer>
           </MessageConversation>
         </div>
