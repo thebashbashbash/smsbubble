@@ -29,7 +29,7 @@ export class ConversationResumePage extends Component {
         <div style={{ marginTop: '10px' }}>
           <MessageConversation interactive={interactive} autoscroll messageDelayMin={1500}>
             <MessageContainer subject={Them}>
-              <Message>hey, you there?</Message>
+              <Message>hey ... you still awake?</Message>
               <Message>🥺</Message>
               <Message>I love you</Message>
             </MessageContainer>
@@ -40,9 +40,6 @@ export class ConversationResumePage extends Component {
 
             <MessageContainer subject={Them}>
               <Message>Ok ...</Message>
-            </MessageContainer>
-
-            <MessageContainer subject={Them}>
               <Message>I             love              you</Message>
             </MessageContainer>
           </MessageConversation>
