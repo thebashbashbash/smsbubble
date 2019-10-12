@@ -29,9 +29,9 @@ export class ConversationResumePage extends Component {
         <div style={{ marginTop: '10px' }}>
           <MessageConversation interactive={interactive} autoscroll messageDelayMin={1500}>
             <MessageContainer subject={Them}>
-              <Message>hey ... you still awake?</Message>
-              <Message>🥺</Message>
+              <Message>hey ... you still awake? I need to tell you something 🙂</Message>
               <Message>I love you</Message>
+              <Message>🥺</Message>
             </MessageContainer>
 
             <MessageContainer subject={Me}>
