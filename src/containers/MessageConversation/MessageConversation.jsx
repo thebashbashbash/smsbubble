@@ -6,6 +6,8 @@ import {
   computeConversationStartDelay,
   computeMessageContainerTimeDelay,
   computeAccumulatedMessageDelay,
+  messageDelayMinDefault,
+  messageDelayMaxDefault,
 } from './helpers';
 
 import classes from './MessageConversation.module.css';
@@ -14,12 +16,17 @@ class MessageConversation extends React.Component {
   constructor(props) {
     super(props);
 
-    const { children, interactive, autoscroll } = this.props;
+    const {
+      children, interactive, autoscroll, messageDelayMin, messageDelayMax,
+    } = this.props;
 
     this.state = {
       messageContainers: children,
-      conversationStartDeley: computeConversationStartDelay(),
-      messageDelay: computeMessageDelay(children),
+      conversationStartDeley: computeConversationStartDelay(
+        messageDelayMinDefault / 2,
+        messageDelayMaxDefault / 2,
+      ),
+      messageDelay: computeMessageDelay(children, messageDelayMin, messageDelayMax),
       messageContainerTimeDeley: computeMessageContainerTimeDelay(children),
       autoscroll,
       interactive,
@@ -61,6 +68,13 @@ MessageConversation.propTypes = {
     .isRequired,
   interactive: PropTypes.bool.isRequired,
   autoscroll: PropTypes.bool.isRequired,
+  messageDelayMin: PropTypes.number,
+  messageDelayMax: PropTypes.number,
+};
+
+MessageConversation.defaultProps = {
+  messageDelayMin: messageDelayMinDefault,
+  messageDelayMax: messageDelayMaxDefault,
 };
 
 export default MessageConversation;

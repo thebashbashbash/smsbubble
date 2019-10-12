@@ -86,6 +86,7 @@ const bubble = ({
           padding: imageContent || emojiContent ? 0 : [],
           overflow: imageContent ? 'hidden' : [],
           fontSize: emojiContent ? '3.5rem' : 'inherit',
+          whiteSpace: 'pre-wrap',
         }}
         className={combineClasses(
           classes.Bubble,

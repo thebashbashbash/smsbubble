@@ -6,8 +6,8 @@ export const messageDelayMaxDefault = 1450;
 
 export const computeMessageDelay = (
   children,
-  messageDelayMin = messageDelayMinDefault,
-  messageDelayMax = messageDelayMaxDefault,
+  messageDelayMin,
+  messageDelayMax,
 ) => (children instanceof Array
   ? children
     .map(child => child.props.children)
@@ -21,8 +21,8 @@ export const computeMessageDelay = (
     : getRandomInt(messageDelayMin, messageDelayMax));
 
 export const computeConversationStartDelay = (
-  messageDelayMin = messageDelayMinDefault / 2,
-  messageDelayMax = messageDelayMaxDefault / 2,
+  messageDelayMin,
+  messageDelayMax,
 ) => getRandomInt(messageDelayMin / 2, messageDelayMax / 2);
 
 export const computeMessageContainerTimeDelay = children => (children instanceof Array
