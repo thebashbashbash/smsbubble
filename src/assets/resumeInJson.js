@@ -20,7 +20,7 @@ const dynamicResumeInJson = {
   interests: ['coding', 'plants', 'travelling', 'architecture', 'art', 'landscapes', 'buildingThings', 'ai', 'gym'],
   skills: {
     frontEnd: ['html/javascript/css(bem)/typescript', 'scss', 'design systems(material-ui/semantic-ui)', 'build tools', 'react16+', 'angular', 'testing (jest/enzyme)'],
-    backEnd: ['python', 'node.js/express', 'package manager', 'aws services', 'rest', 'authentication/authorization', 'nosql (dynamodb)', 'sql (postgresql)', 'unit/integration testing'],
+    backEnd: ['python', 'node.js/express', 'package manager', 'aws services', 'rest', 'authentication/authorization', 'nosql (dynamodb)', 'unit/integration testing'],
     devops: ['gitlab-ci', 'serverless framework', 'terraform', 'cloudia.js', 'aws cloudformation', 'docker', '~linux', 'terminal', 'aws', '~heroku', 'infrastructure monitoring (datadog)'],
     serviceDesign: ['user journey', 'personas', 'double diamond process', 'serviceBlueprint', 'userResearch', 'empathy/territory maps'],
     wayOfWorking: ['build-measure-learn loop', 'lean startup', 'scrum/sprint', 'hypothesis-driven development', 'team development'],
