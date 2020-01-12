@@ -6,7 +6,6 @@ const dynamicResumeInJson = {
     age: Number(31),
     email: 'contact@basharmengana.com',
     home: 'Stockholm, Sweden',
-    phoneNumber: Number('0046703794381'),
     address: 'Ringvägen 151A, 11631 Stockholm, Sweden',
     drivingLicense: true,
     birthday: Number('19880126'),
@@ -21,7 +20,7 @@ const dynamicResumeInJson = {
   skills: {
     frontEnd: ['html/javascript/css(bem)/typescript', 'scss', 'design systems(material-ui/semantic-ui)', 'build tools', 'react16+', 'angular', 'testing (jest/enzyme)'],
     backEnd: ['python', 'node.js/express', 'package manager', 'aws services', 'rest', 'authentication/authorization', 'nosql (dynamodb)', 'unit/integration testing'],
-    devops: ['gitlab-ci', 'serverless framework', 'terraform', 'cloudia.js', 'aws cloudformation', 'docker', '~linux', 'terminal', 'aws', '~heroku', 'infrastructure monitoring (datadog)'],
+    devops: ['gitlab-ci', 'serverless framework', 'terraform', 'cloudia.js', 'aws cloudformation', 'docker', '~linux', 'terminal', 'aws', 'infrastructure monitoring (datadog)'],
     serviceDesign: ['user journey', 'personas', 'double diamond process', 'serviceBlueprint', 'userResearch', 'empathy/territory maps'],
     wayOfWorking: ['build-measure-learn loop', 'lean startup', 'scrum/sprint', 'hypothesis-driven development', 'team development'],
   },

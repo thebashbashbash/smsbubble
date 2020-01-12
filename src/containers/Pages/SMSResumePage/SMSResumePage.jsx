@@ -21,7 +21,6 @@ import Aux from '../../../helpers/aux';
 
 import classes from './SMSResumePage.module.css';
 
-
 const Bashar = SubjectType.You;
 const visitor = SubjectType.Me;
 const interactive = true;
@@ -72,7 +71,7 @@ export class ConversationResumePage extends Component {
             }}
             >
               <img className={classes.CircleImage} src={BasharPic} alt="avatar" />
-              <a style={{ color: 'black', textAlign: 'center', textDecoration: 'none' }} href="tel://0046703794381">
+              <a style={{ color: 'black', textAlign: 'center', textDecoration: 'none' }} href="mailto:contact@basharmengana.com">
                 <div style={{ display: 'inline-flex' }}>
                   <font
                     size="3"
