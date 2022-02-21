@@ -142,52 +142,63 @@ export class ConversationResumePage extends Component {
 
             <MessageContainer subject={visitor}>
               <Message>Interesting, Bash! 🤠</Message>
-              <Message>Please tell us about your experience in coding.</Message>
+              <Message>Please tell us about your experience in coding</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
               <Message>Sure!</Message>
               <Message>
-                Front end wise I have years of experience in React in JS/TS. I
-                am experienced in building components using hooks, local and
-                global state, testing them using JEST or with visual testing.
+                Front end wise I have years of experience in React Native in
+                JS/TS
+              </Message>
+              <Message>Hooks 🪝, components 🧩</Message>
+              <Message>
+                React Testing Library / JEST 🧪, Storybook, Visual tests 🔬
+              </Message>
+              <Message>
+                I could continue on and on ... please stop me, hehe 😄
+              </Message>
+              <Message>😅</Message>
+              <Message>
+                Oh, I also do non-coding work, like organizing team collabs,
+                grooming tickets 🪒
               </Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
-              <Message>Do you work in backend too? 🤓</Message>
+              <Message>😎</Message>
+              <Message>Do you also work backend? 🤓</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
-              <Message>Oh yeah!</Message>
+              <Message>I do</Message>
               <Message>🐙</Message>
               <Message>
-                Yes, I do both REST (NodeJS Express) and GraphQL (ApolloServer
-                with ApolloClient) at my current job!
+                Both REST and GraphQL using Postgres DB or AWS DynamoDB!
               </Message>
               <Message>
-                I consider myself a fullstack developer with an interest in
-                DevOps and smooth user experiences!
+                I'm fullstack developer with an interest in smooth user
+                experiences!
               </Message>
+              <Message>🧼</Message>
 
               <Message>
-                I also know how to debug and solve problems when something goes
-                wrong! 🕵🏻‍♂️
+                and I also know how to debug and solve problems when something
+                goes wrong! 🕵🏻‍♂️
               </Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
-              <Message>That sounds great, Bash! 😜</Message>
+              <Message>Sounds great, Bash! 😜</Message>
               <Message>
                 Lastly, tell us a bit about how you like to work?
               </Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
+              <Message>In an agile and autonomous team</Message>
               <Message>
-                I would like to work in an agile and autonomous team, preferably
-                in a team that focuses on the user's experience of the product
-                or service.
+                Preferably in a team that focuses on the user's experience
               </Message>
               <Message>
                 However, more importantly, I value good team vibes and team
@@ -208,7 +219,10 @@ export class ConversationResumePage extends Component {
               <Message>Yeah! Here's a "plant stand" I've built 👷🏻‍♂️</Message>
               <Message>{SofaTable}</Message>
               <Message>
-                And check out my projects at basharmengana.com/projects
+                and check out my projects at basharmengana.com/projects
+              </Message>
+              <Message>
+                ... or my art page on Instagram instagram.com/callmesourcandy
               </Message>
               <Message>
                 ... and here's an e-book tiny.cc/theoddfables that I've authored
