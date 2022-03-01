@@ -212,10 +212,10 @@ export class ConversationResumePage extends Component {
                 Check out my other projects at basharmengana.com/projects
               </Message>
               <Message>
-                My art page on Instagram instagram.com/callmesourcandy
+                My art page on Instagram tiny.cc/callmesourcandy
               </Message>
               <Message>
-                Here's an e-book tiny.cc/theoddfables that I've authored
+                Here's an e-book tiny.cc/the-odd-fables that I've authored
               </Message>
               <Message>Please get in touch if you want to talk more!</Message>
               <Message>contact@basharmengana.com</Message>
