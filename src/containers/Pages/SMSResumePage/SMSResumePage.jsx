@@ -109,11 +109,7 @@ export class ConversationResumePage extends Component {
           </div>
         ) : null}
 
-        <div
-          style={{
-            marginTop: location.pathname === "/smsresume" ? "100px" : "0px",
-          }}
-        >
+        <div>
           <MessageConversation interactive={interactive} autoscroll>
             <MessageContainer subject={visitor}>
               <Message>Hey!</Message>
@@ -127,47 +123,39 @@ export class ConversationResumePage extends Component {
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
-              <Message>
-                Nice to meet you, Bash! Tell us a bit about yourself?
-              </Message>
+              <Message>Nice to meet you, Bash! Tell us about yourself?</Message>
               <Message>🙂🎤</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
               <Message>
-                There's a lot to say, but my three main interests are coding 🤓,
-                social and creative activities!
+                My three main interests are coding 🤓, social and creative
+                activities!
               </Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
               <Message>Interesting, Bash! 🤠</Message>
-              <Message>Please tell us about your experience in coding</Message>
+              <Message>Please tell us about your coding experience</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
               <Message>Sure!</Message>
               <Message>
-                Front end wise I have years of experience in React Native in
-                JS/TS
+                Front end wise I have years of experience in React, React Native
+                in JS/TS
               </Message>
-              <Message>Hooks 🪝, components 🧩</Message>
+              <Message>Hooks 🪝, components 🧩, Redux 🌍</Message>
               <Message>
-                React Testing Library / JEST 🧪, Storybook, Visual tests 🔬
+                React Testing Library / JEST 🧪, Storybook 📕, automated visual
+                testing 🤖🔬
               </Message>
-              <Message>
-                I could continue on and on ... please stop me, hehe 😄
-              </Message>
-              <Message>😅</Message>
-              <Message>
-                Oh, I also do non-coding work, like organizing team collabs,
-                grooming tickets 🪒
-              </Message>
+              <Message>I could go on and on ... please stop me 😄!</Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
-              <Message>😎</Message>
-              <Message>Do you also work backend? 🤓</Message>
+              <Message>Haha!</Message>
+              <Message>Do you also work in backend? 🤓</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
@@ -181,17 +169,19 @@ export class ConversationResumePage extends Component {
                 experiences!
               </Message>
               <Message>🧼</Message>
-
               <Message>
-                and I also know how to debug and solve problems when something
-                goes wrong! 🕵🏻‍♂️
+                I also debug and solve problems when something goes wrong! 🕵🏻‍♂️
+              </Message>
+              <Message>
+                Oh, I also do non-coding work, like organizing team collabs,
+                grooming tickets 🪒, mentoring 🧑🏻‍🏫!
               </Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
               <Message>Sounds great, Bash! 😜</Message>
               <Message>
-                Lastly, tell us a bit about how you like to work?
+                Lastly, tell us a bit about how you'd like to work?
               </Message>
             </MessageContainer>
 
@@ -201,7 +191,7 @@ export class ConversationResumePage extends Component {
                 Preferably in a team that focuses on the user's experience
               </Message>
               <Message>
-                However, more importantly, I value good team vibes and team
+                However, and more importantly, I value good team vibes and team
                 sprit! 🤙
               </Message>
               <Message>👩🏻‍🔬👨🏻‍🔧👨🏼‍🚀👩🏽‍🎨</Message>
@@ -219,18 +209,17 @@ export class ConversationResumePage extends Component {
               <Message>Yeah! Here's a "plant stand" I've built 👷🏻‍♂️</Message>
               <Message>{SofaTable}</Message>
               <Message>
-                and check out my projects at basharmengana.com/projects
+                Check out my other projects at basharmengana.com/projects
               </Message>
               <Message>
-                ... or my art page on Instagram instagram.com/callmesourcandy
+                My art page on Instagram instagram.com/callmesourcandy
               </Message>
               <Message>
-                ... and here's an e-book tiny.cc/theoddfables that I've authored
+                Here's an e-book tiny.cc/theoddfables that I've authored
               </Message>
               <Message>Please get in touch if you want to talk more!</Message>
               <Message>contact@basharmengana.com</Message>
               <Message>linkedin.com/in/bashar-m</Message>
-              <Message>basharmengana.com/resume</Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
