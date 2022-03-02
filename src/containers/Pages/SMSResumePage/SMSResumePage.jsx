@@ -100,7 +100,6 @@ export class ConversationResumePage extends Component {
                     color="gray"
                     style={{ verticalAlign: "top" }}
                   >
-                    {" "}
                     <ForwardArrow />
                   </font>
                 </div>
