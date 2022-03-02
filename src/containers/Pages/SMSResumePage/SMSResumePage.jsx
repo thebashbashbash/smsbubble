@@ -129,7 +129,7 @@ export class ConversationResumePage extends Component {
 
             <MessageContainer subject={Bashar}>
               <Message>
-                My three main interests are coding 🤓, social and creative
+                My 3 main interests are coding 🤓, social and creative
                 activities!
               </Message>
             </MessageContainer>
@@ -142,27 +142,29 @@ export class ConversationResumePage extends Component {
             <MessageContainer subject={Bashar}>
               <Message>Sure!</Message>
               <Message>
-                Front end wise I have years of experience in React, React Native
+                Frontend wise I have years of experience in React, React Native
                 in JS/TS
               </Message>
+              <Message>Ps. I ❤️ TS </Message>
               <Message>Hooks 🪝, components 🧩, Redux 🌍</Message>
+              <Message>React Testing Library🧪, JEST, Storybook 📕</Message>
               <Message>
-                React Testing Library / JEST 🧪, Storybook 📕, automated visual
-                testing 🤖🔬
+                Automated visual testing 🤖🔬, Monitoring, logging 🪵
               </Message>
-              <Message>I could go on and on ... please stop me 😄!</Message>
+              <Message>I could go on, and on ... please stop me 😄!</Message>
             </MessageContainer>
 
             <MessageContainer subject={visitor}>
               <Message>Haha!</Message>
-              <Message>Do you also work in backend? 🤓</Message>
+              <Message>And also backend? 🤓</Message>
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
-              <Message>I do</Message>
+              <Message>Yes, I do backend too</Message>
               <Message>🐙</Message>
+              <Message>Both REST and GraphQL using NodeJS, Express</Message>
               <Message>
-                Both REST and GraphQL using Postgres DB or AWS DynamoDB!
+                I have experience in both Postgres DB or AWS DynamoDB 💽
               </Message>
               <Message>
                 I'm fullstack developer with an interest in smooth user
@@ -186,7 +188,7 @@ export class ConversationResumePage extends Component {
             </MessageContainer>
 
             <MessageContainer subject={Bashar}>
-              <Message>In an agile and autonomous team</Message>
+              <Message>In an empowered and autonomous team</Message>
               <Message>
                 Preferably in a team that focuses on the user's experience
               </Message>
@@ -209,15 +211,15 @@ export class ConversationResumePage extends Component {
               <Message>Yeah! Here's a "plant stand" I've built 👷🏻‍♂️</Message>
               <Message>{SofaTable}</Message>
               <Message>
-                Check out my other projects at basharmengana.com/projects
+                Check out other projects at basharmengana.com/projects
               </Message>
               <Message>
-                My art page on Instagram tiny.cc/callmesourcandy
+                My artsy page on Instagram tiny.cc/callmesourcandy
               </Message>
               <Message>
                 Here's an e-book tiny.cc/the-odd-fables that I've authored
               </Message>
-              <Message>Please get in touch if you want to talk more!</Message>
+              <Message>Get in touch if you want to talk some more!</Message>
               <Message>contact@basharmengana.com</Message>
               <Message>linkedin.com/in/bashar-m</Message>
             </MessageContainer>
