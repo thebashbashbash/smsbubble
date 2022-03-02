@@ -13,9 +13,6 @@ import Headroom from "react-headroom";
 import HighlightIcon from "@material-ui/icons/Highlight";
 import HighlightOutlinedIcon from "@material-ui/icons/HighlightOutlined";
 
-import IconButton from "@material-ui/core/IconButton";
-import ArrowBack from "@material-ui/icons/ArrowBackOutlined";
-
 import PlantStand from "../../../assets/plantstand.jpg";
 import GardenBarrel from "../../../assets/garden.jpg";
 import Lamp from "../../../assets/lamp.jpg";
