@@ -35,7 +35,7 @@ export class ConversationResumePage extends Component {
     const { location } = this.props;
     return (
       <div>
-        <Helmet>
+        {/* <Helmet>
           <title>Bashar Mengana</title>
           <meta
             name="description"
@@ -48,7 +48,7 @@ export class ConversationResumePage extends Component {
             property="og:description"
             content="Do you want to get to know me - Bashar Mengana - better? Check out this website!"
           />
-        </Helmet>
+        </Helmet> */}
 
         <Aux>
           {location.pathname === "/smsresume" ? (
