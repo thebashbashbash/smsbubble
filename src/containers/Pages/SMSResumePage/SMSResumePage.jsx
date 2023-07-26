@@ -142,13 +142,12 @@ export class ConversationResumePage extends Component {
               <Message>Sure!</Message>
               <Message>
                 Frontend wise I have years of experience in React, React Native
-                in JS/TS
               </Message>
-              <Message>Ps. I ❤️ TS </Message>
+              <Message>I ❤️ TS </Message>
               <Message>Hooks 🪝, components 🧩, Redux 🌍</Message>
               <Message>React Testing Library🧪, JEST, Storybook 📕</Message>
               <Message>
-                Automated visual testing 🤖🔬, Monitoring, logging 🪵
+                Visual testing 🤖🔬, Datadog monitoring and dashboards, logging 🪵
               </Message>
               <Message>I could go on, and on ... please stop me 😄!</Message>
             </MessageContainer>
@@ -161,9 +160,9 @@ export class ConversationResumePage extends Component {
             <MessageContainer subject={Bashar}>
               <Message>Yes, I do backend too</Message>
               <Message>🐙</Message>
-              <Message>Both REST and GraphQL using NodeJS, Express</Message>
+              <Message>I work in NodeJS, Express but have experience in GraphQL as well</Message>
               <Message>
-                I have experience in both Postgres DB or AWS DynamoDB 💽
+                I have experience in both Postgres DB, AWS Managed DBs 💽
               </Message>
               <Message>
                 I'm fullstack developer with an interest in smooth user

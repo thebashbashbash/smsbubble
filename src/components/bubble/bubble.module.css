@@ -94,7 +94,7 @@
 
 .Blue .Bubble {
   color: white;
-  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background: #0085D1 100%;
   background-attachment: fixed;
   position: relative;
 }
@@ -107,7 +107,7 @@
   right: -8px;
   height: 20px;
   width: 20px;
-  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background: #0085D1;
   background-attachment: fixed;
   border-bottom-left-radius: 15px;
   -webkit-animation: PointerTail 0.5s;
@@ -135,7 +135,7 @@
   right: -4px;
   height: 14px;
   width: 14px;
-  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background: #0085D1;
   background-attachment: fixed;
   border-radius: 50%;
   -webkit-animation: pulsateSecondBubble 1.5s infinite alternate;
@@ -151,7 +151,7 @@
   right: -12px;
   height: 7px;
   width: 7px;
-  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+  background: #0085D1;
   background-attachment: fixed;
   border-radius: 50%;
   -webkit-animation: pulsateFirstBubble 1s infinite alternate;
