@@ -14,7 +14,7 @@ const main = () => <BrowserRouter>
         {/* <Route path="/resume" exact component={ResumePage} /> */}
         {/* <Route path="/smsresume" exact component={SMSResumePage} /> */}
         <Route path="/projects" exact component={ProjectsPage} />
-        <Route path="/iloveyou" exact component={ILoveYou} /> 
+        {/* <Route path="/iloveyou" exact component={ILoveYou} />  */}
         <Route component={ErrorPage} />
     </Switch>
 </BrowserRouter>;
