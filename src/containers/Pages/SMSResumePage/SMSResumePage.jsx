@@ -162,10 +162,10 @@ export class ConversationResumePage extends Component {
               <Message>🐙</Message>
               <Message>I work in NodeJS, Express but have experience in GraphQL as well</Message>
               <Message>
-                I have experience in both Postgres DB, AWS Managed DBs 💽
+                I have experience in both Postgres DB, AWS Dynamo DB 💽
               </Message>
               <Message>
-                I'm fullstack developer with an interest in smooth user
+                I'm full-stack senior software engineer with an interest in smooth user
                 experiences!
               </Message>
               <Message>🧼</Message>
